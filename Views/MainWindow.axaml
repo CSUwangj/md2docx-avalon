@@ -10,7 +10,8 @@
         x:Name="MainWindow"
         WindowStartupLocation="CenterScreen"
         Background="{x:Null}"
-        Title="md2docx-avalon">
+        Title="md2docx-avalon"
+        FontFamily="Microsoft YaHei,Simsun,苹方-简,宋体-简">
 
   <FluentWindow.Styles>
     <Style Selector="TitleBar:fullscreen">

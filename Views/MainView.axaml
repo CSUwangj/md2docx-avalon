@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:pages="clr-namespace:MD2DocxAvalon"
+             xmlns:pages="clr-namespace:MD2DocxAvalon.Pages"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Views.MainView"
              FontSize="14"
@@ -11,15 +11,15 @@
   <Panel>
     <TabControl x:Name="TabControl" Classes="navtab">
       <TabItem Header="Input/Output">
-        
+        <pages:IO />
       </TabItem>
 
       <TabItem Header="Configuration">
-
+        <pages:Configuration />
       </TabItem>
 
       <TabItem Header="Other">
-
+        <pages:Other />
       </TabItem>
     </TabControl>
   </Panel>

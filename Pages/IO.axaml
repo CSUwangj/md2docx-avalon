@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MD2DocxAvalon.Pages.IO">
+  
+  <StackPanel Spacing="20">
+    <DockPanel LastChildFill="True" Margin="0 40 0 20">
+      <Button DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetInput}">
+        <TextBlock>Set Input Markdown</TextBlock>
+      </Button>
+      <TextBox DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Input}" FontFamily="Microsoft YaHei,Simsun,苹方-简,宋体-简"></TextBox>
+    </DockPanel>
+    <DockPanel LastChildFill="True">
+      <Button DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetOutput}">
+        <TextBlock>Set Output docx</TextBlock>
+      </Button>
+      <TextBox DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Output}"></TextBox>
+    </DockPanel>
+  </StackPanel>
+</UserControl>
