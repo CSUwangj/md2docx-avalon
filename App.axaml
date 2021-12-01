@@ -1,7 +1,7 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:md2docx_avalon"
-             x:Class="md2docx_avalon.App">
+             xmlns:local="using:MD2DocxAvalon"
+             x:Class="MD2DocxAvalon.App">
   <Application.DataTemplates>
     <local:ViewLocator/>
   </Application.DataTemplates>

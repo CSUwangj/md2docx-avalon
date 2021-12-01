@@ -1,9 +1,6 @@
 using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace md2docx_avalon.ViewModels {
+namespace MD2DocxAvalon.ViewModels {
   public class ViewModelBase : ReactiveObject {
   }
 }

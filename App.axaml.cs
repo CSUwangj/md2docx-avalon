@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using md2docx_avalon.ViewModels;
-using md2docx_avalon.Views;
+using MD2DocxAvalon.ViewModels;
+using MD2DocxAvalon.Views;
 
-namespace md2docx_avalon {
+namespace MD2DocxAvalon {
     public class App : Application {
         public override void Initialize() {
             AvaloniaXamlLoader.Load(this);

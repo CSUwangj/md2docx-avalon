@@ -1,9 +1,9 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using md2docx_avalon.ViewModels;
+using MD2DocxAvalon.ViewModels;
 using System;
 
-namespace md2docx_avalon {
+namespace MD2DocxAvalon {
   public class ViewLocator : IDataTemplate {
     public IControl Build(object data) {
       var name = data.GetType().FullName!.Replace("ViewModel", "View");

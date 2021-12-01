@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace md2docx_avalon.Views {
+namespace MD2DocxAvalon.Views {
   public partial class MainWindow : Window {
     public MainWindow() {
       InitializeComponent();
