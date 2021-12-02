@@ -48,7 +48,7 @@ namespace MD2DocxAvalon.ViewModels {
     public string FontSizeString {
       get => fontSizeString;
       set {
-        if (int.TryParse(value, out int _)) {
+        if (double.TryParse(value, out double _)) {
           fontSize = value;
         } else if (fontmap.ContainsKey(value)) {
           fontSize = fontmap[value];
