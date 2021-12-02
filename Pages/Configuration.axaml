@@ -4,4 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.Configuration">
+  <StackPanel>
+    <TextBox Text="{Binding Name}"></TextBox>
+    <TextBox Text="{Binding Justification}"></TextBox>
+    <TextBox Text="{Binding CnFont}"></TextBox>
+    <TextBox Text="{Binding EnFont}"></TextBox>
+    <TextBox Text="{Binding FontSizeString}"></TextBox>
+    <CheckBox IsChecked="{Binding Outline}" Content="大纲中显示"></CheckBox>
+    <NumericUpDown IsReadOnly="{Binding !Outline}" Value="{Binding OutlineLevel}" Increment="1" Maximum="9" Minimum="1"></NumericUpDown>
+    <CheckBox Content="粗体" IsChecked="{Binding Bold}"></CheckBox>
+    <CheckBox Content="斜体" IsChecked="{Binding Italic}"></CheckBox>
+    <CheckBox Content="下划线" IsChecked="{Binding Underline}"></CheckBox>
+    <CheckBox Content="删除线" IsChecked="{Binding Strike}"></CheckBox>
+    <CheckBox Content="段前分页" IsChecked="{Binding PageBreakBefore}"></CheckBox>
+    <CheckBox Content="段前后空行" IsChecked="{Binding LineBeforeAndAfter}"></CheckBox>
+    <NumericUpDown Value="{Binding Indentation}" Increment="0.25"></NumericUpDown>
+    <NumericUpDown Value="{Binding SpacingBetweenLines}" Increment="0.25"></NumericUpDown>
+
+  </StackPanel>
 </UserControl>
