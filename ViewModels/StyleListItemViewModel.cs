@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Reactive;
 using ReactiveUI;
 
 namespace MD2DocxAvalon.ViewModels {

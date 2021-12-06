@@ -5,21 +5,56 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.Configuration">
   <StackPanel>
-    <TextBox Text="{Binding Name}"></TextBox>
-    <TextBox Text="{Binding Justification}"></TextBox>
-    <TextBox Text="{Binding CnFont}"></TextBox>
-    <TextBox Text="{Binding EnFont}"></TextBox>
-    <TextBox Text="{Binding FontSizeString}"></TextBox>
-    <CheckBox IsChecked="{Binding Outline}" Content="大纲中显示"></CheckBox>
-    <NumericUpDown IsReadOnly="{Binding !Outline}" Value="{Binding OutlineLevel}" Increment="1" Maximum="9" Minimum="1"></NumericUpDown>
-    <CheckBox Content="粗体" IsChecked="{Binding Bold}"></CheckBox>
-    <CheckBox Content="斜体" IsChecked="{Binding Italic}"></CheckBox>
-    <CheckBox Content="下划线" IsChecked="{Binding Underline}"></CheckBox>
-    <CheckBox Content="删除线" IsChecked="{Binding Strike}"></CheckBox>
-    <CheckBox Content="段前分页" IsChecked="{Binding PageBreakBefore}"></CheckBox>
-    <CheckBox Content="段前后空行" IsChecked="{Binding LineBeforeAndAfter}"></CheckBox>
-    <NumericUpDown Value="{Binding Indentation}" Increment="0.25"></NumericUpDown>
-    <NumericUpDown Value="{Binding SpacingBetweenLines}" Increment="0.25"></NumericUpDown>
-
+    <Button Command="{Binding LoadConfig}" Content="读取配置文件"></Button>
+    <Button Command="{Binding AddStyle}" Content="添加新样式"></Button>
+    <ItemsControl Items="{Binding Styles}">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Panel>
+            <StackPanel Orientation="Horizontal">
+              <TextBlock>名称：</TextBlock>
+              <TextBox Text="{Binding Name}"></TextBox>
+              <Separator />
+              <TextBlock>对齐方式：</TextBlock>
+              <TextBox Text="{Binding Justification}"></TextBox>
+              <Separator />
+              <TextBlock>中文字体：</TextBlock>
+              <TextBox Text="{Binding CnFont}"></TextBox>
+              <Separator />
+              <TextBlock>英文字体：</TextBlock>
+              <TextBox Text="{Binding EnFont}"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+              <TextBlock>字体大小：</TextBlock>
+              <TextBox Text="{Binding FontSizeString}"></TextBox>
+              <Separator />
+              <CheckBox IsChecked="{Binding Outline}" Content="大纲中显示"></CheckBox>
+              <Separator />
+              <TextBlock>大纲等级：</TextBlock>
+              <NumericUpDown IsReadOnly="{Binding !Outline}" Value="{Binding OutlineLevel}" Increment="1" Maximum="9" Minimum="1"></NumericUpDown>
+              <Separator />
+              <TextBlock>首行缩进：</TextBlock>
+              <NumericUpDown Value="{Binding Indentation}" Increment="0.25"></NumericUpDown>
+              <Separator />
+              <TextBlock>行间距：</TextBlock>
+              <NumericUpDown Value="{Binding SpacingBetweenLines}" Increment="0.25"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+              <CheckBox Content="粗体" IsChecked="{Binding Bold}"></CheckBox>
+              <Separator />
+              <CheckBox Content="斜体" IsChecked="{Binding Italic}"></CheckBox>
+              <Separator />
+              <CheckBox Content="下划线" IsChecked="{Binding Underline}"></CheckBox>
+              <Separator />
+              <CheckBox Content="删除线" IsChecked="{Binding Strike}"></CheckBox>
+              <Separator />
+              <CheckBox Content="段前分页" IsChecked="{Binding PageBreakBefore}"></CheckBox>
+              <Separator />
+              <CheckBox Content="段前后空行" IsChecked="{Binding LineBeforeAndAfter}"></CheckBox>
+            </StackPanel>
+          </Panel>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
   </StackPanel>
 </UserControl>
