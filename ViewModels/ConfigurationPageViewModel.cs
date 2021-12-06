@@ -6,14 +6,14 @@ namespace MD2DocxAvalon.ViewModels {
   class ConfigurationPageViewModel : ViewModelBase {
 
     public ConfigurationPageViewModel() {
-      Styles = new List<StyleListItemViewModel>();
+      styles = new List<StyleListItemViewModel>();
       AddStyle = ReactiveCommand.Create(() => Styles.Add(new StyleListItemViewModel()));
       // @TODO
       LoadConfig = ReactiveCommand.Create(() => { });
     }
 
     public ConfigurationPageViewModel(IEnumerable<StyleListItemViewModel> items) {
-      Styles = new List<StyleListItemViewModel>(items);
+      styles = new List<StyleListItemViewModel>(items);
       AddStyle = ReactiveCommand.Create(() => Styles.Add(new StyleListItemViewModel()));
       // @TODO
       LoadConfig = ReactiveCommand.Create(() => { });
