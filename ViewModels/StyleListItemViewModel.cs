@@ -19,7 +19,13 @@ namespace MD2DocxAvalon.ViewModels {
     bool lineBeforeAndAfter;
     double indentation;
     double spacingBetweenLines;
-    public StyleListItemViewModel() {
+
+    public StyleListItemViewModel Clone() {
+      return (StyleListItemViewModel)this.MemberwiseClone();
+    }
+
+    public StyleListItemViewModel(int id) {
+      ID = id;
       name = "正文";
       justification = "两端对齐";
       cnFont = "宋体";
@@ -28,12 +34,13 @@ namespace MD2DocxAvalon.ViewModels {
       fontSize = "28";
     }
 
+    public int ID { get; set; }
     public string Name {
       get => name;
       set => this.RaiseAndSetIfChanged(ref name, value);
     }
     public string Justification {
-      get => name;
+      get => justification;
       set => this.RaiseAndSetIfChanged(ref justification, value);
     }
     public string CnFont {

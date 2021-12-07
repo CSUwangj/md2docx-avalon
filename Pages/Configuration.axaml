@@ -5,12 +5,16 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.Configuration">
   <StackPanel>
-    <Button Command="{Binding LoadConfig}" Content="读取配置文件"></Button>
-    <Button Command="{Binding AddStyle}" Content="添加新样式"></Button>
+    <Button Command="{Binding LoadConfig}" Content="读取配置文件" />
+    <Button Command="{Binding AddStyle}" Content="添加新样式" />
     <ItemsControl Items="{Binding Styles}">
       <ItemsControl.ItemTemplate>
         <DataTemplate>
           <StackPanel>
+            <StackPanel Orientation="Horizontal">
+              <Button Content="复制样式" Command="{Binding $parent[ItemsControl].DataContext.DuplicateStyle}" CommandParameter="{Binding ID}" />
+              <Button Content="删除样式" Command="{Binding $parent[ItemsControl].DataContext.DeleteStyle}" CommandParameter="{Binding ID}" />
+            </StackPanel>
             <StackPanel Orientation="Horizontal">
               <TextBlock>名称：</TextBlock>
               <TextBox Text="{Binding Name}"></TextBox>
