@@ -10,7 +10,7 @@
     <ItemsControl Items="{Binding Styles}">
       <ItemsControl.ItemTemplate>
         <DataTemplate>
-          <Panel>
+          <StackPanel>
             <StackPanel Orientation="Horizontal">
               <TextBlock>名称：</TextBlock>
               <TextBox Text="{Binding Name}"></TextBox>
@@ -52,7 +52,7 @@
               <Separator />
               <CheckBox Content="段前后空行" IsChecked="{Binding LineBeforeAndAfter}"></CheckBox>
             </StackPanel>
-          </Panel>
+          </StackPanel>
         </DataTemplate>
       </ItemsControl.ItemTemplate>
     </ItemsControl>
