@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Reactive;
 using ReactiveUI;
 
@@ -6,22 +7,22 @@ namespace MD2DocxAvalon.ViewModels {
   class ConfigurationPageViewModel : ViewModelBase {
 
     public ConfigurationPageViewModel() {
-      styles = new List<StyleListItemViewModel>();
+      styles = new ObservableCollection<StyleListItemViewModel>();
       AddStyle = ReactiveCommand.Create(() => Styles.Add(new StyleListItemViewModel()));
       // @TODO
       LoadConfig = ReactiveCommand.Create(() => { });
     }
 
     public ConfigurationPageViewModel(IEnumerable<StyleListItemViewModel> items) {
-      styles = new List<StyleListItemViewModel>(items);
+      styles = new ObservableCollection<StyleListItemViewModel>(items);
       AddStyle = ReactiveCommand.Create(() => Styles.Add(new StyleListItemViewModel()));
       // @TODO
       LoadConfig = ReactiveCommand.Create(() => { });
     }
 
-    List<StyleListItemViewModel> styles;
+    ObservableCollection<StyleListItemViewModel> styles;
 
-    public List<StyleListItemViewModel> Styles { 
+    public ObservableCollection<StyleListItemViewModel> Styles { 
       get => styles;
       set => this.RaiseAndSetIfChanged(ref styles, value);
     }
