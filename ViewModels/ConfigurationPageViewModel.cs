@@ -4,6 +4,11 @@ using System.Linq;
 using System.Reactive;
 using ReactiveUI;
 using MD2DocxAvalon.Models;
+using Avalonia.Controls;
+using MD2DocxAvalon.Views;
+using System;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace MD2DocxAvalon.ViewModels {
   class ConfigurationPageViewModel : ViewModelBase {
@@ -15,7 +20,7 @@ namespace MD2DocxAvalon.ViewModels {
     public bool LatentStyle { get; set; }
     private ObservableCollection<Style> styles;
     private int index = 0;
-    public ObservableCollection<Style> Styles { 
+    public ObservableCollection<Style> Styles {
       get => styles;
       set => this.RaiseAndSetIfChanged(ref styles, value);
     }
@@ -31,9 +36,13 @@ namespace MD2DocxAvalon.ViewModels {
       Footer = Config.Footer;
       LatentStyle = Config.LatentStyle;
       styles = new ObservableCollection<Style>(Config.Styles);
+      foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
+        style.ID = index;
+        this.index = index + 1;
+      }
+
       AddStyle = ReactiveCommand.Create(() => Styles.Add(new Style(index++)));
       DuplicateStyle = ReactiveCommand.Create<int>((id) => {
-        System.Console.WriteLine(id);
         var style = Styles.First(s => s.ID == id).Clone();
         style.ID = index++;
         Styles.Add(style);
@@ -41,11 +50,66 @@ namespace MD2DocxAvalon.ViewModels {
       DeleteStyle = ReactiveCommand.Create<int>((id) => {
         Styles.Remove(Styles.First(s => s.ID == id));
       });
-      // @TODO
-      LoadConfig = ReactiveCommand.Create(() => { });
-      SaveConfig = ReactiveCommand.Create(() => { });
+
+      LoadConfig = ReactiveCommand.Create(() => {
+        OpenFileDialog dialog = new();
+        dialog.Title = "Open Configuration json file";
+        dialog.Filters.Add(new FileDialogFilter() { Name = "JSON File", Extensions = { "json" } });
+        dialog.AllowMultiple = false;
+        if (MainWindow.Instance == null) return;
+        string path = "";
+        dialog.ShowAsync(MainWindow.Instance).ContinueWith((result) => {
+          if (result?.Result?[0] == null) {
+            throw new Exception("No such file or directory");
+          }
+          path = result.Result[0];
+        }).Wait();
+        if (path == "") return;
+        string json = File.ReadAllText(path);
+        var Config = JsonConvert.DeserializeObject<Configuration>(json);
+        if (Config == null) {
+          throw new Exception("Wrong json file");
+        }
+        Cover = Config.Cover;
+        Abstract = Config.Abstract;
+        TOC = Config.TOC;
+        Header = Config.Header;
+        Footer = Config.Footer; 
+        LatentStyle = Config.LatentStyle;
+        Styles = new ObservableCollection<Style>(Config.Styles);
+        foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
+          style.ID = index;
+          this.index = index + 1;
+        }
+      });
+      SaveConfig = ReactiveCommand.Create(() => {
+        SaveFileDialog dialog = new();
+        dialog.Title = "Save Configuration As...";
+        dialog.Filters.Add(new FileDialogFilter() { Name = "JSON File", Extensions = { "json" } });
+        dialog.DefaultExtension = "json";
+        if (MainWindow.Instance == null) return;
+        dialog.ShowAsync(MainWindow.Instance).ContinueWith((result) => {
+          if (result.Result == null) {
+            throw new Exception("Save Error");
+          }
+          string json = JsonConvert.SerializeObject(ToModel());
+          File.WriteAllText(result.Result, json);
+        });
+      });
     }
     private ConfigurationPageViewModel(ConstructorParameters paras) : this(paras.Config) { }
+
+    public Configuration ToModel() {
+      return new Configuration {
+        Cover = Cover,
+        Abstract = Abstract,
+        TOC = TOC,
+        Header = Header,
+        Footer = Footer,
+        LatentStyle = LatentStyle,
+        Styles = Styles
+      };
+    }
 
 
     public ReactiveCommand<Unit, Unit> AddStyle { get; }

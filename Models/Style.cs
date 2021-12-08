@@ -13,6 +13,7 @@ namespace MD2DocxAvalon.Models {
 
     private string fontSizeString = "四号";
     public string FontSize = "28";
+    // Models don't need id for copy, but stupid c# doesn't allow multiple inheritance
     public int ID { get; set; }
     public string Name { get; set; } = "正文";
     public string Justification { get; set; } = "两端对齐";

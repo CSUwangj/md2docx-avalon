@@ -13,6 +13,7 @@ namespace MD2DocxAvalon.ViewModels {
         OpenFileDialog dialog = new();
         dialog.Title = "Open Markdown";
         dialog.Filters.Add(new FileDialogFilter() { Name = "Markdown", Extensions = { "md", "MD" } });
+        dialog.AllowMultiple = false;
         if (MainWindow.Instance == null) return;
         dialog.ShowAsync(MainWindow.Instance).ContinueWith((result) => {
           if (result?.Result?[0] != null) {
