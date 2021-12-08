@@ -7,7 +7,6 @@
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
     <Folder Include="Assets\" />
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
     <None Remove=".gitignore" />
   </ItemGroup>
@@ -17,6 +16,7 @@
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\IO.axaml.cs">

@@ -5,8 +5,11 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.Configuration">
   <StackPanel>
-    <Button Command="{Binding LoadConfig}" Content="读取配置文件" />
-    <Button Command="{Binding AddStyle}" Content="添加新样式" />
+    <StackPanel Orientation="Horizontal">
+      <Button Command="{Binding LoadConfig}" Content="读取配置文件" />
+      <Button Command="{Binding SaveConfig}" Content="保存配置文件" />
+      <Button Command="{Binding AddStyle}" Content="添加新样式" />
+    </StackPanel>
     <ItemsControl Items="{Binding Styles}">
       <ItemsControl.ItemTemplate>
         <DataTemplate>
