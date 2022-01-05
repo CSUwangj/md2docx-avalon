@@ -9,6 +9,10 @@
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="MD2DocxCore\**" />
+    <Compile Remove="MD2DocxCore\**" />
+    <EmbeddedResource Remove="MD2DocxCore\**" />
+    <None Remove="MD2DocxCore\**" />
     <Folder Include="Assets\" />
     <Folder Include="Services\" />
     <None Remove=".gitignore" />
@@ -20,6 +24,9 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="MD2DocxCore\MD2DocxCore.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\IO.axaml.cs">

@@ -10,6 +10,6 @@ namespace MD2DocxAvalon.Models {
     public bool Header { get; set; }
     public bool Footer { get; set; }
     public bool LatentStyle { get; set; }
-    public IEnumerable<Style> Styles { get; set; } = new List<Style>();
+    public IEnumerable<StyleItem> Styles { get; set; } = new List<StyleItem>();
   }
 }

@@ -20,44 +20,44 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
               <TextBlock>名称：</TextBlock>
-              <TextBox Text="{Binding Name}"></TextBox>
+              <TextBox Text="{Binding Style.Name}"></TextBox>
               <Separator />
               <TextBlock>对齐方式：</TextBlock>
-              <TextBox Text="{Binding Justification}"></TextBox>
+              <TextBox Text="{Binding Style.Justification}"></TextBox>
               <Separator />
               <TextBlock>中文字体：</TextBlock>
-              <TextBox Text="{Binding CnFont}"></TextBox>
+              <TextBox Text="{Binding Style.CnFont}"></TextBox>
               <Separator />
               <TextBlock>英文字体：</TextBlock>
-              <TextBox Text="{Binding EnFont}"></TextBox>
+              <TextBox Text="{Binding Style.EnFont}"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
               <TextBlock>字体大小：</TextBlock>
-              <TextBox Text="{Binding FontSizeString}"></TextBox>
+              <TextBox Text="{Binding Style.FontSizeString}"></TextBox>
               <Separator />
-              <CheckBox IsChecked="{Binding Outline}" Content="大纲中显示"></CheckBox>
+              <CheckBox IsChecked="{Binding Style.Outline}" Content="大纲中显示"></CheckBox>
               <Separator />
               <TextBlock>大纲等级：</TextBlock>
-              <NumericUpDown IsReadOnly="{Binding !Outline}" Value="{Binding OutlineLevel}" Increment="1" Maximum="9" Minimum="1"></NumericUpDown>
+              <NumericUpDown IsReadOnly="{Binding !Style.Outline}" Value="{Binding Style.OutlineLevel}" Increment="1" Maximum="9" Minimum="1"></NumericUpDown>
               <Separator />
               <TextBlock>首行缩进：</TextBlock>
-              <NumericUpDown Value="{Binding Indentation}" Increment="0.25"></NumericUpDown>
+              <NumericUpDown Value="{Binding Style.Indentation}" Increment="0.25"></NumericUpDown>
               <Separator />
               <TextBlock>行间距：</TextBlock>
-              <NumericUpDown Value="{Binding SpacingBetweenLines}" Increment="0.25"></NumericUpDown>
+              <NumericUpDown Value="{Binding Style.SpacingBetweenLines}" Increment="0.25"></NumericUpDown>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-              <CheckBox Content="粗体" IsChecked="{Binding Bold}"></CheckBox>
+              <CheckBox Content="粗体" IsChecked="{Binding Style.Bold}"></CheckBox>
               <Separator />
-              <CheckBox Content="斜体" IsChecked="{Binding Italic}"></CheckBox>
+              <CheckBox Content="斜体" IsChecked="{Binding Style.Italic}"></CheckBox>
               <Separator />
-              <CheckBox Content="下划线" IsChecked="{Binding Underline}"></CheckBox>
+              <CheckBox Content="下划线" IsChecked="{Binding Style.Underline}"></CheckBox>
               <Separator />
-              <CheckBox Content="删除线" IsChecked="{Binding Strike}"></CheckBox>
+              <CheckBox Content="删除线" IsChecked="{Binding Style.Strike}"></CheckBox>
               <Separator />
-              <CheckBox Content="段前分页" IsChecked="{Binding PageBreakBefore}"></CheckBox>
+              <CheckBox Content="段前分页" IsChecked="{Binding Style.PageBreakBefore}"></CheckBox>
               <Separator />
-              <CheckBox Content="段前后空行" IsChecked="{Binding LineBeforeAndAfter}"></CheckBox>
+              <CheckBox Content="段前后空行" IsChecked="{Binding Style.LineBeforeAndAfter}"></CheckBox>
             </StackPanel>
           </StackPanel>
         </DataTemplate>

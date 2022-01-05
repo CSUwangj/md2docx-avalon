@@ -18,9 +18,9 @@ namespace MD2DocxAvalon.ViewModels {
     public bool Header { get; set; }
     public bool Footer { get; set; }
     public bool LatentStyle { get; set; }
-    private ObservableCollection<Style> styles;
+    private ObservableCollection<StyleItem> styles;
     private int index = 0;
-    public ObservableCollection<Style> Styles {
+    public ObservableCollection<StyleItem> Styles {
       get => styles;
       set => this.RaiseAndSetIfChanged(ref styles, value);
     }
@@ -35,13 +35,13 @@ namespace MD2DocxAvalon.ViewModels {
       Header = Config.Header;
       Footer = Config.Footer;
       LatentStyle = Config.LatentStyle;
-      styles = new ObservableCollection<Style>(Config.Styles);
+      styles = new ObservableCollection<StyleItem>(Config.Styles);
       foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
         style.ID = index;
         this.index = index + 1;
       }
 
-      AddStyle = ReactiveCommand.Create(() => Styles.Add(new Style(index++)));
+      AddStyle = ReactiveCommand.Create(() => Styles.Add(new StyleItem(index++)));
       DuplicateStyle = ReactiveCommand.Create<int>((id) => {
         var style = Styles.First(s => s.ID == id).Clone();
         style.ID = index++;
@@ -76,7 +76,7 @@ namespace MD2DocxAvalon.ViewModels {
         Header = Config.Header;
         Footer = Config.Footer; 
         LatentStyle = Config.LatentStyle;
-        Styles = new ObservableCollection<Style>(Config.Styles);
+        Styles = new ObservableCollection<StyleItem>(Config.Styles);
         foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
           style.ID = index;
           this.index = index + 1;
@@ -123,7 +123,7 @@ namespace MD2DocxAvalon.ViewModels {
 
       public ConstructorParameters() {
         Config = new Configuration {
-          Styles = new List<Style>()
+          Styles = new List<StyleItem>()
         };
       }
 
