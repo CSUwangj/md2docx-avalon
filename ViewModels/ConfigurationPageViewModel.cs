@@ -12,14 +12,20 @@ using System.IO;
 
 namespace MD2DocxAvalon.ViewModels {
   class ConfigurationPageViewModel : ViewModelBase {
-    public bool Cover { get; set; }
-    public bool Abstract { get; set; }
-    public bool TOC { get; set; }
-    public bool Header { get; set; }
-    public bool Footer { get; set; }
-    public bool LatentStyle { get; set; }
-    private ObservableCollection<StyleItem> styles;
     private int index = 0;
+    bool cover;
+    bool abst;
+    bool toc;
+    bool header;
+    bool footer;
+    bool latentstyle;
+    public bool Cover { get => cover; set => this.RaiseAndSetIfChanged(ref cover, value); }
+    public bool Abstract { get => abst; set => this.RaiseAndSetIfChanged(ref abst, value); }
+    public bool TOC { get => toc; set => this.RaiseAndSetIfChanged(ref toc, value); }
+    public bool Header { get => header; set => this.RaiseAndSetIfChanged(ref header, value); }
+    public bool Footer { get => footer; set => this.RaiseAndSetIfChanged(ref footer, value); }
+    public bool LatentStyle { get => latentstyle; set => this.RaiseAndSetIfChanged(ref latentstyle, value); }
+    private ObservableCollection<StyleItem> styles;
     public ObservableCollection<StyleItem> Styles {
       get => styles;
       set => this.RaiseAndSetIfChanged(ref styles, value);
@@ -74,7 +80,7 @@ namespace MD2DocxAvalon.ViewModels {
         Abstract = Config.Abstract;
         TOC = Config.TOC;
         Header = Config.Header;
-        Footer = Config.Footer; 
+        Footer = Config.Footer;
         LatentStyle = Config.LatentStyle;
         Styles = new ObservableCollection<StyleItem>(Config.Styles);
         foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {

@@ -10,6 +10,17 @@
       <Button Command="{Binding SaveConfig}" Content="保存配置文件" />
       <Button Command="{Binding AddStyle}" Content="添加新样式" />
     </StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <CheckBox Content="目录" IsChecked="{Binding TOC}" />
+      <CheckBox Content="摘要" IsChecked="{Binding Abstract}" />
+      <CheckBox Content="延迟样式（建议勾选）" IsChecked="{Binding LatentStyle}" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <TextBlock>中南专用：</TextBlock>
+      <CheckBox Content="封面" IsChecked="{Binding Cover}" />
+      <CheckBox Content="页眉" IsChecked="{Binding Header}" />
+      <CheckBox Content="页脚" IsChecked="{Binding Footer}" />
+    </StackPanel>
     <ItemsControl Items="{Binding Styles}">
       <ItemsControl.ItemTemplate>
         <DataTemplate>
