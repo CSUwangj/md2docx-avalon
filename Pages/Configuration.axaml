@@ -34,7 +34,10 @@
               <TextBox Text="{Binding Style.Name}"></TextBox>
               <Separator />
               <TextBlock>对齐方式：</TextBlock>
-              <TextBox Text="{Binding Style.Justification}"></TextBox>
+              <ComboBox
+                SelectedItem="{Binding Style.Justification}"
+                Items="{Binding $parent[ItemsControl].DataContext.Justifications}"
+               />
               <Separator />
               <TextBlock>中文字体：</TextBlock>
               <TextBox Text="{Binding Style.CnFont}"></TextBox>

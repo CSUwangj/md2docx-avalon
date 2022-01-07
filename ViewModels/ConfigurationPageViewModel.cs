@@ -27,6 +27,14 @@ namespace MD2DocxAvalon.ViewModels {
     }
 
     public ConfigurationPageViewModel(Configuration Config) {
+      extraConfig = Config.ExtraConfig;
+      Justifications = new ObservableCollection<string> {
+        "左对齐",
+        "居中",
+        "右对齐",
+        "两端对齐",
+        "分散对齐"
+      };
       styles = new ObservableCollection<StyleItem>(Config.Styles);
       foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
         style.ID = index;
