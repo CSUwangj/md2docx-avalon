@@ -9,22 +9,14 @@ using MD2DocxAvalon.Views;
 using System;
 using Newtonsoft.Json;
 using System.IO;
+using MD2DocxCore;
 
 namespace MD2DocxAvalon.ViewModels {
   class ConfigurationPageViewModel : ViewModelBase {
     private int index = 0;
-    bool cover;
-    bool abst;
-    bool toc;
-    bool header;
-    bool footer;
-    bool latentstyle;
-    public bool Cover { get => cover; set => this.RaiseAndSetIfChanged(ref cover, value); }
-    public bool Abstract { get => abst; set => this.RaiseAndSetIfChanged(ref abst, value); }
-    public bool TOC { get => toc; set => this.RaiseAndSetIfChanged(ref toc, value); }
-    public bool Header { get => header; set => this.RaiseAndSetIfChanged(ref header, value); }
-    public bool Footer { get => footer; set => this.RaiseAndSetIfChanged(ref footer, value); }
-    public bool LatentStyle { get => latentstyle; set => this.RaiseAndSetIfChanged(ref latentstyle, value); }
+    ExtraConfiguration extraConfig;
+    public ObservableCollection<string> Justifications { get; private set; }
+    public ExtraConfiguration ExtraConfig { get => extraConfig; set => this.RaiseAndSetIfChanged(ref extraConfig, value); }
     private ObservableCollection<StyleItem> styles;
     public ObservableCollection<StyleItem> Styles {
       get => styles;
@@ -35,12 +27,6 @@ namespace MD2DocxAvalon.ViewModels {
     }
 
     public ConfigurationPageViewModel(Configuration Config) {
-      Cover = Config.Cover;
-      Abstract = Config.Abstract;
-      TOC = Config.TOC;
-      Header = Config.Header;
-      Footer = Config.Footer;
-      LatentStyle = Config.LatentStyle;
       styles = new ObservableCollection<StyleItem>(Config.Styles);
       foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
         style.ID = index;
@@ -76,12 +62,7 @@ namespace MD2DocxAvalon.ViewModels {
         if (Config == null) {
           throw new Exception("Wrong json file");
         }
-        Cover = Config.Cover;
-        Abstract = Config.Abstract;
-        TOC = Config.TOC;
-        Header = Config.Header;
-        Footer = Config.Footer;
-        LatentStyle = Config.LatentStyle;
+        ExtraConfig = Config.ExtraConfig;
         Styles = new ObservableCollection<StyleItem>(Config.Styles);
         foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
           style.ID = index;
@@ -107,12 +88,7 @@ namespace MD2DocxAvalon.ViewModels {
 
     public Configuration ToModel() {
       return new Configuration {
-        Cover = Cover,
-        Abstract = Abstract,
-        TOC = TOC,
-        Header = Header,
-        Footer = Footer,
-        LatentStyle = LatentStyle,
+        ExtraConfig = ExtraConfig,
         Styles = Styles
       };
     }

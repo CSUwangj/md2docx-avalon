@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MD2DocxCore;
 
 namespace MD2DocxAvalon.Models {
   public class StyleItem {
@@ -8,12 +7,12 @@ namespace MD2DocxAvalon.Models {
     }
     // Models don't need id for copy, but stupid c# doesn't allow multiple inheritance
     public int ID { get; set; }
-    public MD2DocxCore.Style Style { get; set; }
+    public Style Style { get; set; }
 
 
     public StyleItem(int id) {
       ID = id;
-      Style = new MD2DocxCore.Style();
+      Style = new Style();
     }
   }
 

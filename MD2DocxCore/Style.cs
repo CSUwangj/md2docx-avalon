@@ -2,31 +2,12 @@
 
 namespace MD2DocxCore {
   public class Style {
-    public Style() {
-      fontSizeString = "四号";
-      FontSize = "28";
-      Name = "正文";
-      Justification = "两端对齐";
-      CnFont = "宋体";
-      EnFont = "Times New Roman";
-      Outline = false;
-      OutlineLevel = 1;
-      Bold = false;
-      Italic = false;
-      Underline = false;
-      Strike = false;
-      LineBeforeAndAfter = false;
-      Indentation = 2;
-      SpacingBetweenLines = 1.5;
-      PageBreakBefore = false;
-    }
-
-    private string fontSizeString;
-    public string FontSize { get; set; }
-    public string Name { get; set; }
-    public string Justification { get; set; } 
-    public string CnFont { get; set; }
-    public string EnFont { get; set; }
+    private string fontSizeString = "四号";
+    public string FontSize { get; set; } = "28";
+    public string Name { get; set; } = "正文";
+    public string Justification { get; set; } = "两端对齐";
+    public string CnFont { get; set; } = "宋体";
+    public string EnFont { get; set; } = "Times New Roman";
     public bool Outline { get; set; }
     public int OutlineLevel { get; set; }
     public bool Bold { get; set; }
