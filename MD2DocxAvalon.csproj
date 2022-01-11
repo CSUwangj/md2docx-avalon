@@ -12,9 +12,9 @@
     <AvaloniaXaml Remove="MD2DocxCore\**" />
     <Compile Remove="MD2DocxCore\**" />
     <EmbeddedResource Remove="MD2DocxCore\**" />
+    <Folder Include="Services\" />
     <None Remove="MD2DocxCore\**" />
     <Folder Include="Assets\" />
-    <Folder Include="Services\" />
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,10 @@ using System.IO;
 using MD2DocxCore;
 
 namespace MD2DocxAvalon.ViewModels {
-  class ConfigurationPageViewModel : ViewModelBase {
+  public class ConfigurationPageViewModel : ViewModelBase {
+    private static readonly ConfigurationPageViewModel instance = new();
+    public static ConfigurationPageViewModel Instance { get => instance; }
+
     private int index = 0;
     ExtraConfiguration extraConfig;
     public ObservableCollection<string> Justifications { get; private set; }

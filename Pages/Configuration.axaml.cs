@@ -6,7 +6,7 @@ namespace MD2DocxAvalon.Pages {
   public partial class Configuration : UserControl {
     public Configuration() {
       InitializeComponent();
-      DataContext = new ConfigurationPageViewModel();
+      DataContext = ConfigurationPageViewModel.Instance;
     }
 
     private void InitializeComponent() {

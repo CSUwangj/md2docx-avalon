@@ -5,6 +5,8 @@ using MD2DocxAvalon.Views;
 
 namespace MD2DocxAvalon.ViewModels {
   public class IOViewModel : ViewModelBase {
+    private static readonly IOViewModel instance = new();
+    public static IOViewModel Instance { get => instance; }
     string input = "";
     string output = "";
 
