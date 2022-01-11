@@ -18,5 +18,8 @@
       </Button>
       <TextBox DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Output}"></TextBox>
     </DockPanel>
+    <DockPanel>
+      <Button Command="{Binding Run}">MD2Docx!</Button>
+    </DockPanel>
   </StackPanel>
 </UserControl>

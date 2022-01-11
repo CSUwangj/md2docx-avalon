@@ -2,6 +2,8 @@
 using ReactiveUI;
 using Avalonia.Controls;
 using MD2DocxAvalon.Views;
+using MD2DocxCore;
+using System.Collections.Generic;
 
 namespace MD2DocxAvalon.ViewModels {
   public class IOViewModel : ViewModelBase {
@@ -35,6 +37,13 @@ namespace MD2DocxAvalon.ViewModels {
           }
         });
       });
+      Run = ReactiveCommand.Create(() => {
+        var styles = new List<Style>();
+        foreach (var style in ConfigurationPageViewModel.Instance.Styles) {
+          styles.Add(style.Style);
+        }
+        MD2Docx.Run(Input, Output, ConfigurationPageViewModel.Instance.ExtraConfig, styles);
+      });
     }
 
     public string Input {
@@ -49,5 +58,6 @@ namespace MD2DocxAvalon.ViewModels {
 
     public ReactiveCommand<Unit, Unit> SetInput { get; }
     public ReactiveCommand<Unit, Unit> SetOutput { get; }
+    public ReactiveCommand<Unit, Unit> Run { get; }
   }
 }
