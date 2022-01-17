@@ -15,10 +15,17 @@ namespace MD2DocxAvalon.ViewModels {
   public class ConfigurationPageViewModel : ViewModelBase {
     private static readonly ConfigurationPageViewModel instance = new();
     public static ConfigurationPageViewModel Instance { get => instance; }
+    public static readonly List<string> justifications = new() {
+      "左对齐",
+      "居中",
+      "右对齐",
+      "两端对齐",
+      "分散对齐"
+    };
+    public static List<string> Justifications { get => justifications; }
 
     private int index = 0;
     ExtraConfiguration extraConfig;
-    public ObservableCollection<string> Justifications { get; private set; }
     public ExtraConfiguration ExtraConfig { get => extraConfig; set => this.RaiseAndSetIfChanged(ref extraConfig, value); }
     private ObservableCollection<StyleItem> styles;
     public ObservableCollection<StyleItem> Styles {
@@ -31,13 +38,6 @@ namespace MD2DocxAvalon.ViewModels {
 
     public ConfigurationPageViewModel(Configuration Config) {
       extraConfig = Config.ExtraConfig;
-      Justifications = new ObservableCollection<string> {
-        "左对齐",
-        "居中",
-        "右对齐",
-        "两端对齐",
-        "分散对齐"
-      };
       styles = new ObservableCollection<StyleItem>(Config.Styles);
       foreach (var (style, index) in Styles.Select((style, i) => (style, i))) {
         style.ID = index;
