@@ -31,12 +31,16 @@
           <StackPanel>
             <StackPanel Orientation="Horizontal">
               <Button Content="复制样式" Command="{Binding $parent[ItemsControl].DataContext.DuplicateStyle}" CommandParameter="{Binding ID}" />
+              <Separator />
               <Button Content="删除样式" Command="{Binding $parent[ItemsControl].DataContext.DeleteStyle}" CommandParameter="{Binding ID}" />
+              <Separator />
+              <TextBlock>对应格式：</TextBlock>
+              <ComboBox
+                SelectedItem="{Binding Style.Mapping}"
+                Items="{Binding Source={StaticResource viewModel}, Path=Mappings, Mode=OneWay}"
+              />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-              <TextBlock>名称：</TextBlock>
-              <TextBox Text="{Binding Style.Name}"></TextBox>
-              <Separator />
               <TextBlock>对齐方式：</TextBlock>
               <ComboBox
                 SelectedItem="{Binding Style.Justification}"

@@ -4,7 +4,6 @@ namespace MD2DocxCore {
   public class Style {
     private string fontSizeString = "四号";
     public string FontSize { get; set; } = "28";
-    public string Name { get; set; } = "正文";
     public string Justification { get; set; } = "两端对齐";
     public string CnFont { get; set; } = "宋体";
     public string EnFont { get; set; } = "Times New Roman";
@@ -18,6 +17,7 @@ namespace MD2DocxCore {
     public bool LineBeforeAndAfter { get; set; }
     public double Indentation { get; set; }
     public double SpacingBetweenLines { get; set; }
+    public string Mapping { get; set; }
     public string FontSizeString {
       get => fontSizeString;
       set {
