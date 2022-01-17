@@ -8,7 +8,7 @@ namespace MD2DocxCore {
     public string CnFont { get; set; } = "宋体";
     public string EnFont { get; set; } = "Times New Roman";
     public bool Outline { get; set; }
-    public int OutlineLevel { get; set; }
+    public int OutlineLevel { get; set; } = 1;
     public bool Bold { get; set; }
     public bool Italic { get; set; }
     public bool Underline { get; set; }
