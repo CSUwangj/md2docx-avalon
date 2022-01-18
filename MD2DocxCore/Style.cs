@@ -2,6 +2,33 @@
 
 namespace MD2DocxCore {
   public class Style {
+    private static readonly List<string> justifications = new() {
+      "左对齐",
+      "居中",
+      "右对齐",
+      "两端对齐",
+      "分散对齐"
+    };
+    public static List<string> Justifications { get => justifications; }
+    private static readonly List<string> mappings = new() {
+      "正文",
+      "一级标题",
+      "二级标题",
+      "三级标题",
+      "四级标题",
+      "五级标题",
+      "六级标题",
+      "七级标题",
+      "八级标题",
+      "九级标题",
+      "代码段",
+      "引用段落",
+      "摘要标题",
+      "摘要正文",
+      "摘要关键字"
+    };
+    public static List<string> Mappings { get => mappings; }
+
     private string fontSizeString = "四号";
     public string FontSize { get; set; } = "28";
     public string Justification { get; set; } = "两端对齐";

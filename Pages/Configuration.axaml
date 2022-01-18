@@ -2,11 +2,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:MD2DocxAvalon.ViewModels"
+             xmlns:core="clr-namespace:MD2DocxCore;assembly=MD2DocxCore"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.Configuration">
   <UserControl.Resources>
-    <vm:ConfigurationPageViewModel x:Key="viewModel"/>
+    <core:Style x:Key="style"/>
   </UserControl.Resources>
   <StackPanel>
     <StackPanel Orientation="Horizontal">
@@ -37,14 +37,14 @@
               <TextBlock>对应格式：</TextBlock>
               <ComboBox
                 SelectedItem="{Binding Style.Mapping}"
-                Items="{Binding Source={StaticResource viewModel}, Path=Mappings, Mode=OneWay}"
+                Items="{Binding Source={StaticResource style}, Path=Mappings, Mode=OneWay}"
               />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
               <TextBlock>对齐方式：</TextBlock>
               <ComboBox
                 SelectedItem="{Binding Style.Justification}"
-                Items="{Binding Source={StaticResource viewModel}, Path=Justifications, Mode=OneWay}"
+                Items="{Binding Source={StaticResource style}, Path=Justifications, Mode=OneWay}"
                />
               <Separator />
               <TextBlock>中文字体：</TextBlock>
