@@ -67,8 +67,8 @@ namespace MD2DocxCore {
 
     public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument) {
 
-      Document document1 = new Document() { MCAttributes = new MarkupCompatibilityAttributes() };
-      Body docBody = new Body();
+      Document document1 = new() { MCAttributes = new MarkupCompatibilityAttributes() };
+      Body docBody = new();
       document1.Append(docBody);
       mainPart.Document = document1;
       // TODO

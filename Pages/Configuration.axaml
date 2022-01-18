@@ -60,7 +60,7 @@
               <CheckBox IsChecked="{Binding Style.Outline}" Content="大纲中显示"></CheckBox>
               <Separator />
               <TextBlock>大纲等级：</TextBlock>
-              <NumericUpDown ToolTip.Tip="若不在大纲中显示则此条无效" Value="{Binding Style.OutlineLevel}" Increment="1" Maximum="9" Minimum="1" />
+              <NumericUpDown ToolTip.Tip="若不在大纲中显示则此条无效" Value="{Binding Style.OutlineLevel}" Increment="1" Maximum="8" Minimum="0" />
               <Separator />
               <TextBlock>首行缩进：</TextBlock>
               <NumericUpDown Value="{Binding Style.Indentation}" Increment="0.25" />
@@ -79,7 +79,8 @@
               <Separator />
               <CheckBox Content="段前分页" IsChecked="{Binding Style.PageBreakBefore}"></CheckBox>
               <Separator />
-              <CheckBox Content="段前后空行" IsChecked="{Binding Style.LineBeforeAndAfter}"></CheckBox>
+              <TextBlock>段前后空行：</TextBlock>
+              <NumericUpDown Value="{Binding Style.LineBeforeAndAfter}" Increment="0.25" />
             </StackPanel>
           </StackPanel>
         </DataTemplate>

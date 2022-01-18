@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD2DocxAvalon", "MD2DocxAvalon.csproj", "{7411CDC2-6305-4EA5-BCD8-B36E7C3F1367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD2DocxCore", "MD2DocxCore\MD2DocxCore.csproj", "{638037DD-DB15-4AC8-BCE2-7BC26F868DEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MD2DocxCore", "MD2DocxCore\MD2DocxCore.csproj", "{638037DD-DB15-4AC8-BCE2-7BC26F868DEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD2DocxCoreTests", "MD2DocxCoreTests\MD2DocxCoreTests.csproj", "{80038BC8-2CDD-4577-9E64-04182B6C27DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{638037DD-DB15-4AC8-BCE2-7BC26F868DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{638037DD-DB15-4AC8-BCE2-7BC26F868DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{638037DD-DB15-4AC8-BCE2-7BC26F868DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80038BC8-2CDD-4577-9E64-04182B6C27DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80038BC8-2CDD-4577-9E64-04182B6C27DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80038BC8-2CDD-4577-9E64-04182B6C27DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80038BC8-2CDD-4577-9E64-04182B6C27DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

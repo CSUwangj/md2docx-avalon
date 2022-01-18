@@ -25,7 +25,8 @@ namespace MD2DocxCore {
       "引用段落",
       "摘要标题",
       "摘要正文",
-      "摘要关键字"
+      "摘要关键字",
+      "参考文献"
     };
     public static List<string> Mappings { get => mappings; }
 
@@ -41,7 +42,7 @@ namespace MD2DocxCore {
     public bool Underline { get; set; }
     public bool Strike { get; set; }
     public bool PageBreakBefore { get; set; }
-    public bool LineBeforeAndAfter { get; set; }
+    public double LineBeforeAndAfter { get; set; }
     public double Indentation { get; set; }
     public double SpacingBetweenLines { get; set; }
     public string Mapping { get; set; }
