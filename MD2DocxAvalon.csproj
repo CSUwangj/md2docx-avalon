@@ -11,10 +11,14 @@
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
+    <AvaloniaXaml Remove="MD2DocxCoreTests\**" />
     <AvaloniaXaml Remove="MD2DocxCore\**" />
+    <Compile Remove="MD2DocxCoreTests\**" />
     <Compile Remove="MD2DocxCore\**" />
+    <EmbeddedResource Remove="MD2DocxCoreTests\**" />
     <EmbeddedResource Remove="MD2DocxCore\**" />
     <Folder Include="Services\" />
+    <None Remove="MD2DocxCoreTests\**" />
     <None Remove="MD2DocxCore\**" />
     <Folder Include="Assets\" />
     <None Remove=".gitignore" />
@@ -26,18 +30,6 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="3.0.2">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="MD2DocxCore\MD2DocxCore.csproj" />

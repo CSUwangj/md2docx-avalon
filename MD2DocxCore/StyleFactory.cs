@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,73 @@ using DocxStyle = DocumentFormat.OpenXml.Wordprocessing.Style;
 namespace MD2DocxCore {
   public class StyleFactory {
     public static DocxStyle GenerateStyle(Style style) {
-      return new();
+      StyleParagraphProperties paragraphProperties = new() {
+        Justification = new Justification { Val = justmap[style.Justification] }
+      };
+      if (style.Outline) {
+        paragraphProperties.OutlineLevel = new OutlineLevel { Val = style.OutlineLevel };
+      }
+      if(style.PageBreakBefore) {
+        paragraphProperties.PageBreakBefore = new();
+      }
+      if(style.Indentation != 0) {
+        paragraphProperties.Indentation = new() {
+          FirstLineChars = (int)(style.Indentation * 100)
+        };
+      }
+      if(style.LineBeforeAndAfter != 0) {
+        paragraphProperties.SpacingBetweenLines = new() {
+          BeforeLines = (int)(style.LineBeforeAndAfter * 100),
+          AfterLines = (int)(style.LineBeforeAndAfter * 100),
+        };
+      }
+      if(style.SpacingBetweenLines != 0) {
+        if (paragraphProperties.SpacingBetweenLines == null) paragraphProperties.SpacingBetweenLines = new();
+        paragraphProperties.SpacingBetweenLines.Line = (style.SpacingBetweenLines * 240).ToString();
+        paragraphProperties.SpacingBetweenLines.LineRule = LineSpacingRuleValues.Auto;
+      }
+      StyleRunProperties runProperties = new() {
+        RunFonts = new RunFonts {
+          Ascii = style.EnFont,
+          HighAnsi = style.EnFont,
+          ComplexScript = style.EnFont,
+          EastAsia = style.CnFont
+        },
+        FontSize = new FontSize { Val = style.FontSize },
+        FontSizeComplexScript = new FontSizeComplexScript { Val = style.FontSize },
+      };
+      if(style.Bold) {
+        runProperties.Bold = new();
+        runProperties.BoldComplexScript = new();
+      }
+      if(style.Italic) {
+        runProperties.Italic = new();
+        runProperties.ItalicComplexScript = new();
+      }
+      if(style.Strike) {
+        runProperties.Strike = new();
+      }
+      if(style.Underline) {
+        runProperties.Underline = new();
+      }
+      DocxStyle result = new() {
+        Type = StyleValues.Paragraph,
+        StyleId = style.Mapping,
+        StyleName = new StyleName { Val = style.Mapping },
+        StyleParagraphProperties = paragraphProperties,
+        StyleRunProperties = runProperties
+      };
+      return result;
     }
+
+    #region justification mapping
+    private static readonly Dictionary<string, JustificationValues> justmap = new() {
+            { "左对齐", JustificationValues.Left },
+            { "居中", JustificationValues.Center },
+            { "右对齐", JustificationValues.Right },
+            { "两端", JustificationValues.Both },
+            { "分散对齐", JustificationValues.Distribute }
+        };
+    #endregion
   }
 }
