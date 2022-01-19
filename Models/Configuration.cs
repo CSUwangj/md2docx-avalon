@@ -8,7 +8,7 @@ namespace MD2DocxAvalon.Models {
     public ExtraConfiguration ExtraConfig { get; set; }
     public IEnumerable<StyleItem> Styles { get; set; } = new List<StyleItem>();
     public Configuration() {
-      ExtraConfig = new ExtraConfiguration();
+      ExtraConfig = new();
     }
   }
 }

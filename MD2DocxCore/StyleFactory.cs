@@ -1,19 +1,16 @@
-﻿using DocumentFormat.OpenXml.Wordprocessing;
-using System;
+﻿ 
+using DocumentFormat.OpenXml.Wordprocessing;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DocxStyle = DocumentFormat.OpenXml.Wordprocessing.Style;
 
 namespace MD2DocxCore {
   public class StyleFactory {
     public static DocxStyle GenerateStyle(Style style) {
       StyleParagraphProperties paragraphProperties = new() {
-        Justification = new Justification { Val = justmap[style.Justification] }
+        Justification = new() { Val = justmap[style.Justification] }
       };
       if (style.Outline) {
-        paragraphProperties.OutlineLevel = new OutlineLevel { Val = style.OutlineLevel };
+        paragraphProperties.OutlineLevel = new() { Val = style.OutlineLevel };
       }
       if(style.PageBreakBefore) {
         paragraphProperties.PageBreakBefore = new();
@@ -35,14 +32,14 @@ namespace MD2DocxCore {
         paragraphProperties.SpacingBetweenLines.LineRule = LineSpacingRuleValues.Auto;
       }
       StyleRunProperties runProperties = new() {
-        RunFonts = new RunFonts {
+        RunFonts = new() {
           Ascii = style.EnFont,
           HighAnsi = style.EnFont,
           ComplexScript = style.EnFont,
           EastAsia = style.CnFont
         },
-        FontSize = new FontSize { Val = style.FontSize },
-        FontSizeComplexScript = new FontSizeComplexScript { Val = style.FontSize },
+        FontSize = new() { Val = style.FontSize },
+        FontSizeComplexScript = new() { Val = style.FontSize },
       };
       if(style.Bold) {
         runProperties.Bold = new();
@@ -61,7 +58,7 @@ namespace MD2DocxCore {
       DocxStyle result = new() {
         Type = StyleValues.Paragraph,
         StyleId = style.Mapping,
-        StyleName = new StyleName { Val = style.Mapping },
+        StyleName = new() { Val = style.Mapping },
         StyleParagraphProperties = paragraphProperties,
         StyleRunProperties = runProperties
       };

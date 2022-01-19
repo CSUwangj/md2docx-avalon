@@ -11,7 +11,7 @@ namespace MD2DocxAvalon.Models {
 
     public StyleItem(int id) {
       ID = id;
-      Style = new Style();
+      Style = new();
     }
   }
 

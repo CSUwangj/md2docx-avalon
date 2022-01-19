@@ -1,5 +1,4 @@
 using DocumentFormat.OpenXml.Wordprocessing;
-using System;
 using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
@@ -51,29 +50,29 @@ namespace MD2DocxCoreTest {
         new DocxStyle {
           Type = StyleValues.Paragraph,
           StyleId = "一级标题",
-          StyleName = new StyleName {
+          StyleName = new() {
             Val = "一级标题"
           },
-          StyleParagraphProperties = new StyleParagraphProperties {
-            PageBreakBefore = new PageBreakBefore(),
-            SpacingBetweenLines = new SpacingBetweenLines() {
+          StyleParagraphProperties = new() {
+            PageBreakBefore = new(),
+            SpacingBetweenLines = new() {
               BeforeLines = 100, AfterLines = 100
             },
-            Justification = new Justification() {
+            Justification = new() {
               Val = JustificationValues.Center
             },
-            OutlineLevel = new OutlineLevel() {
+            OutlineLevel = new() {
               Val = 0
             }
           },
-          StyleRunProperties = new StyleRunProperties {
-            RunFonts = new RunFonts() {
+          StyleRunProperties = new() {
+            RunFonts = new() {
               Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "黑体", ComplexScript = "Times New Roman"
             },
-            FontSize = new FontSize {
+            FontSize = new() {
               Val = "32"
             },
-            FontSizeComplexScript = new FontSizeComplexScript {
+            FontSizeComplexScript = new() {
               Val = "32"
             }
           }
@@ -100,28 +99,28 @@ namespace MD2DocxCoreTest {
         new DocxStyle {
           Type = StyleValues.Paragraph,
           StyleId = "二级标题",
-          StyleName = new StyleName {
+          StyleName = new() {
             Val = "二级标题"
           },
-          StyleParagraphProperties = new StyleParagraphProperties {
-            Justification = new Justification() {
+          StyleParagraphProperties = new() {
+            Justification = new() {
               Val = JustificationValues.Left
             },
-            OutlineLevel = new OutlineLevel() {
+            OutlineLevel = new() {
               Val = 1
             },
-            Indentation = new Indentation() {
+            Indentation = new() {
               FirstLineChars = 200
             },
           },
-          StyleRunProperties = new StyleRunProperties {
-            RunFonts = new RunFonts() {
+          StyleRunProperties = new() {
+            RunFonts = new() {
               Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "黑体", ComplexScript = "Times New Roman"
             },
-            FontSize = new FontSize {
+            FontSize = new() {
               Val = "24"
             },
-            FontSizeComplexScript = new FontSizeComplexScript {
+            FontSizeComplexScript = new() {
               Val = "24"
             }
           }
@@ -148,28 +147,28 @@ namespace MD2DocxCoreTest {
         new DocxStyle {
           Type = StyleValues.Paragraph,
           StyleId = "三级标题",
-          StyleName = new StyleName {
+          StyleName = new() {
             Val = "三级标题"
           },
-          StyleParagraphProperties = new StyleParagraphProperties {
-            Justification = new Justification() {
+          StyleParagraphProperties = new() {
+            Justification = new() {
               Val = JustificationValues.Left
             },
-            OutlineLevel = new OutlineLevel() {
+            OutlineLevel = new() {
               Val = 2
             },
-            Indentation = new Indentation() {
+            Indentation = new() {
               FirstLineChars = 200
             }
           },
-          StyleRunProperties = new StyleRunProperties {
-            RunFonts = new RunFonts() {
+          StyleRunProperties = new() {
+            RunFonts = new() {
               Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "楷体", ComplexScript = "Times New Roman"
             },
-            FontSize = new FontSize {
+            FontSize = new() {
               Val = "24"
             },
-            FontSizeComplexScript = new FontSizeComplexScript {
+            FontSizeComplexScript = new() {
               Val = "24"
             }
           }
@@ -196,28 +195,28 @@ namespace MD2DocxCoreTest {
         new DocxStyle {
           Type = StyleValues.Paragraph,
           StyleId = "正文",
-          StyleName = new StyleName {
+          StyleName = new() {
             Val = "正文"
           },
-          StyleParagraphProperties = new StyleParagraphProperties {
-            Justification = new Justification() {
+          StyleParagraphProperties = new() {
+            Justification = new() {
               Val = JustificationValues.Left
             },
-            Indentation = new Indentation() {
+            Indentation = new() {
               FirstLineChars = 200
             },
-            SpacingBetweenLines = new SpacingBetweenLines {
+            SpacingBetweenLines = new() {
               Line = "360", LineRule = LineSpacingRuleValues.Auto
             }
           },
-          StyleRunProperties = new StyleRunProperties {
-            RunFonts = new RunFonts() {
+          StyleRunProperties = new() {
+            RunFonts = new() {
               Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "宋体", ComplexScript = "Times New Roman"
             },
-            FontSize = new FontSize {
+            FontSize = new() {
               Val = "24"
             },
-            FontSizeComplexScript = new FontSizeComplexScript {
+            FontSizeComplexScript = new() {
               Val = "24"
             }
           }
@@ -244,22 +243,22 @@ namespace MD2DocxCoreTest {
         new DocxStyle {
           Type = StyleValues.Paragraph,
           StyleId = "代码段",
-          StyleName = new StyleName {
+          StyleName = new() {
             Val = "代码段"
           },
-          StyleParagraphProperties = new StyleParagraphProperties {
-            Justification = new Justification() {
+          StyleParagraphProperties = new() {
+            Justification = new() {
               Val = JustificationValues.Left
             },
           },
-          StyleRunProperties = new StyleRunProperties {
-            RunFonts = new RunFonts() {
+          StyleRunProperties = new() {
+            RunFonts = new() {
               Ascii = "Consolas", HighAnsi = "Consolas", EastAsia = "黑体", ComplexScript = "Consolas"
             },
-            FontSize = new FontSize {
+            FontSize = new() {
               Val = "24"
             },
-            FontSizeComplexScript = new FontSizeComplexScript {
+            FontSizeComplexScript = new() {
               Val = "24"
             }
           }
@@ -286,25 +285,25 @@ namespace MD2DocxCoreTest {
         new DocxStyle {
           Type = StyleValues.Paragraph,
           StyleId = "参考文献",
-          StyleName = new StyleName {
+          StyleName = new() {
             Val = "参考文献"
           },
-          StyleParagraphProperties = new StyleParagraphProperties {
-            Justification = new Justification() {
+          StyleParagraphProperties = new() {
+            Justification = new() {
               Val = JustificationValues.Left
             },
-            SpacingBetweenLines = new SpacingBetweenLines {
+            SpacingBetweenLines = new() {
               Line = "360", LineRule = LineSpacingRuleValues.Auto
             }
           },
-          StyleRunProperties = new StyleRunProperties {
-            RunFonts = new RunFonts() {
+          StyleRunProperties = new() {
+            RunFonts = new() {
               Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "黑体", ComplexScript = "Times New Roman"
             },
-            FontSize = new FontSize {
+            FontSize = new() {
               Val = "21"
             },
-            FontSizeComplexScript = new FontSizeComplexScript {
+            FontSizeComplexScript = new() {
               Val = "21"
             }
           }

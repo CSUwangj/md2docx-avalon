@@ -75,16 +75,16 @@ namespace MD2DocxCore {
     }
 
     public static void GenerateStyleDefinitions(StyleDefinitionsPart styleDefinitions, bool latentStyle, IEnumerable<Style> styles) {
-      Styles wordStyles = new () { MCAttributes = new MarkupCompatibilityAttributes() };
+      Styles wordStyles = new() { MCAttributes = new MarkupCompatibilityAttributes() };
 
       DocDefaults docDefaults = new() {
-        RunPropertiesDefault = new RunPropertiesDefault {
-          RunPropertiesBaseStyle = new RunPropertiesBaseStyle {
-            RunFonts = new RunFonts { Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "宋体", ComplexScript = "Times New Roman" },
-            Kern = new Kern { Val = 2U },
-            Languages = new Languages { Val = "en-US", EastAsia = "zh-CN", Bidi = "ar-SA" },
-            FontSize = new FontSize { Val = "24" },
-            FontSizeComplexScript = new FontSizeComplexScript { Val = "24" }
+        RunPropertiesDefault = new() {
+          RunPropertiesBaseStyle = new() {
+            RunFonts = new() { Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "宋体", ComplexScript = "Times New Roman" },
+            Kern = new() { Val = 2U },
+            Languages = new() { Val = "en-US", EastAsia = "zh-CN", Bidi = "ar-SA" },
+            FontSize = new() { Val = "24" },
+            FontSizeComplexScript = new() { Val = "24" }
           }
         },
         ParagraphPropertiesDefault = new ParagraphPropertiesDefault()

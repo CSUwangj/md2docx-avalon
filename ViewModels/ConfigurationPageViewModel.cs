@@ -107,7 +107,7 @@ namespace MD2DocxAvalon.ViewModels {
       public Configuration Config;
 
       public ConstructorParameters() {
-        Config = new Configuration {
+        Config = new() {
           Styles = new List<StyleItem>()
         };
       }

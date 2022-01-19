@@ -20,382 +20,382 @@ namespace MD2DocxCore {
     public static LatentStyles GenerateLatentStyles() {
       LatentStyles latentStyles = new() { DefaultLockedState = false, DefaultUiPriority = 99, DefaultSemiHidden = false, DefaultUnhideWhenUsed = false, DefaultPrimaryStyle = false, Count = 377 };
       LatentStyleExceptionInfo latentStyleExceptionInfo1 = new() { Name = "Normal", UiPriority = 0, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo2 = new LatentStyleExceptionInfo() { Name = "heading 1", UiPriority = 9, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo3 = new LatentStyleExceptionInfo() { Name = "heading 2", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo4 = new LatentStyleExceptionInfo() { Name = "heading 3", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo5 = new LatentStyleExceptionInfo() { Name = "heading 4", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo6 = new LatentStyleExceptionInfo() { Name = "heading 5", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo7 = new LatentStyleExceptionInfo() { Name = "heading 6", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo8 = new LatentStyleExceptionInfo() { Name = "heading 7", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo9 = new LatentStyleExceptionInfo() { Name = "heading 8", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo10 = new LatentStyleExceptionInfo() { Name = "heading 9", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo11 = new LatentStyleExceptionInfo() { Name = "index 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo12 = new LatentStyleExceptionInfo() { Name = "index 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo13 = new LatentStyleExceptionInfo() { Name = "index 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo14 = new LatentStyleExceptionInfo() { Name = "index 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo15 = new LatentStyleExceptionInfo() { Name = "index 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo16 = new LatentStyleExceptionInfo() { Name = "index 6", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo17 = new LatentStyleExceptionInfo() { Name = "index 7", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo18 = new LatentStyleExceptionInfo() { Name = "index 8", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo19 = new LatentStyleExceptionInfo() { Name = "index 9", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo20 = new LatentStyleExceptionInfo() { Name = "toc 1", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo21 = new LatentStyleExceptionInfo() { Name = "toc 2", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo22 = new LatentStyleExceptionInfo() { Name = "toc 3", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo23 = new LatentStyleExceptionInfo() { Name = "toc 4", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo24 = new LatentStyleExceptionInfo() { Name = "toc 5", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo25 = new LatentStyleExceptionInfo() { Name = "toc 6", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo26 = new LatentStyleExceptionInfo() { Name = "toc 7", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo27 = new LatentStyleExceptionInfo() { Name = "toc 8", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo28 = new LatentStyleExceptionInfo() { Name = "toc 9", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo29 = new LatentStyleExceptionInfo() { Name = "Normal Indent", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo30 = new LatentStyleExceptionInfo() { Name = "footnote text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo31 = new LatentStyleExceptionInfo() { Name = "annotation text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo32 = new LatentStyleExceptionInfo() { Name = "header", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo33 = new LatentStyleExceptionInfo() { Name = "footer", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo34 = new LatentStyleExceptionInfo() { Name = "index heading", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo35 = new LatentStyleExceptionInfo() { Name = "caption", UiPriority = 35, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo36 = new LatentStyleExceptionInfo() { Name = "table of figures", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo37 = new LatentStyleExceptionInfo() { Name = "envelope address", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo38 = new LatentStyleExceptionInfo() { Name = "envelope return", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo39 = new LatentStyleExceptionInfo() { Name = "footnote reference", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo40 = new LatentStyleExceptionInfo() { Name = "annotation reference", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo41 = new LatentStyleExceptionInfo() { Name = "line number", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo42 = new LatentStyleExceptionInfo() { Name = "page number", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo43 = new LatentStyleExceptionInfo() { Name = "endnote reference", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo44 = new LatentStyleExceptionInfo() { Name = "endnote text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo45 = new LatentStyleExceptionInfo() { Name = "table of authorities", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo46 = new LatentStyleExceptionInfo() { Name = "macro", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo47 = new LatentStyleExceptionInfo() { Name = "toa heading", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo48 = new LatentStyleExceptionInfo() { Name = "List", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo49 = new LatentStyleExceptionInfo() { Name = "List Bullet", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo50 = new LatentStyleExceptionInfo() { Name = "List Number", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo51 = new LatentStyleExceptionInfo() { Name = "List 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo52 = new LatentStyleExceptionInfo() { Name = "List 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo53 = new LatentStyleExceptionInfo() { Name = "List 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo54 = new LatentStyleExceptionInfo() { Name = "List 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo55 = new LatentStyleExceptionInfo() { Name = "List Bullet 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo56 = new LatentStyleExceptionInfo() { Name = "List Bullet 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo57 = new LatentStyleExceptionInfo() { Name = "List Bullet 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo58 = new LatentStyleExceptionInfo() { Name = "List Bullet 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo59 = new LatentStyleExceptionInfo() { Name = "List Number 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo60 = new LatentStyleExceptionInfo() { Name = "List Number 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo61 = new LatentStyleExceptionInfo() { Name = "List Number 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo62 = new LatentStyleExceptionInfo() { Name = "List Number 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo63 = new LatentStyleExceptionInfo() { Name = "Title", UiPriority = 10, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo64 = new LatentStyleExceptionInfo() { Name = "Closing", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo65 = new LatentStyleExceptionInfo() { Name = "Signature", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo66 = new LatentStyleExceptionInfo() { Name = "Default Paragraph Font", UiPriority = 1, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo67 = new LatentStyleExceptionInfo() { Name = "Body Text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo68 = new LatentStyleExceptionInfo() { Name = "Body Text Indent", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo69 = new LatentStyleExceptionInfo() { Name = "List Continue", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo70 = new LatentStyleExceptionInfo() { Name = "List Continue 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo71 = new LatentStyleExceptionInfo() { Name = "List Continue 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo72 = new LatentStyleExceptionInfo() { Name = "List Continue 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo73 = new LatentStyleExceptionInfo() { Name = "List Continue 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo74 = new LatentStyleExceptionInfo() { Name = "Message Header", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo75 = new LatentStyleExceptionInfo() { Name = "Subtitle", UiPriority = 11, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo76 = new LatentStyleExceptionInfo() { Name = "Salutation", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo77 = new LatentStyleExceptionInfo() { Name = "Date", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo78 = new LatentStyleExceptionInfo() { Name = "Body Text First Indent", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo79 = new LatentStyleExceptionInfo() { Name = "Body Text First Indent 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo80 = new LatentStyleExceptionInfo() { Name = "Note Heading", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo81 = new LatentStyleExceptionInfo() { Name = "Body Text 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo82 = new LatentStyleExceptionInfo() { Name = "Body Text 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo83 = new LatentStyleExceptionInfo() { Name = "Body Text Indent 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo84 = new LatentStyleExceptionInfo() { Name = "Body Text Indent 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo85 = new LatentStyleExceptionInfo() { Name = "Block Text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo86 = new LatentStyleExceptionInfo() { Name = "Hyperlink", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo87 = new LatentStyleExceptionInfo() { Name = "FollowedHyperlink", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo88 = new LatentStyleExceptionInfo() { Name = "Strong", UiPriority = 22, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo89 = new LatentStyleExceptionInfo() { Name = "Emphasis", UiPriority = 20, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo90 = new LatentStyleExceptionInfo() { Name = "Document Map", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo91 = new LatentStyleExceptionInfo() { Name = "Plain Text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo92 = new LatentStyleExceptionInfo() { Name = "E-mail Signature", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo93 = new LatentStyleExceptionInfo() { Name = "HTML Top of Form", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo94 = new LatentStyleExceptionInfo() { Name = "HTML Bottom of Form", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo95 = new LatentStyleExceptionInfo() { Name = "Normal (Web)", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo96 = new LatentStyleExceptionInfo() { Name = "HTML Acronym", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo97 = new LatentStyleExceptionInfo() { Name = "HTML Address", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo98 = new LatentStyleExceptionInfo() { Name = "HTML Cite", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo99 = new LatentStyleExceptionInfo() { Name = "HTML Code", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo100 = new LatentStyleExceptionInfo() { Name = "HTML Definition", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo101 = new LatentStyleExceptionInfo() { Name = "HTML Keyboard", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo102 = new LatentStyleExceptionInfo() { Name = "HTML Preformatted", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo103 = new LatentStyleExceptionInfo() { Name = "HTML Sample", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo104 = new LatentStyleExceptionInfo() { Name = "HTML Typewriter", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo105 = new LatentStyleExceptionInfo() { Name = "HTML Variable", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo106 = new LatentStyleExceptionInfo() { Name = "Normal Table", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo107 = new LatentStyleExceptionInfo() { Name = "annotation subject", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo108 = new LatentStyleExceptionInfo() { Name = "No List", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo109 = new LatentStyleExceptionInfo() { Name = "Outline List 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo110 = new LatentStyleExceptionInfo() { Name = "Outline List 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo111 = new LatentStyleExceptionInfo() { Name = "Outline List 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo112 = new LatentStyleExceptionInfo() { Name = "Table Simple 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo113 = new LatentStyleExceptionInfo() { Name = "Table Simple 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo114 = new LatentStyleExceptionInfo() { Name = "Table Simple 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo115 = new LatentStyleExceptionInfo() { Name = "Table Classic 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo116 = new LatentStyleExceptionInfo() { Name = "Table Classic 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo117 = new LatentStyleExceptionInfo() { Name = "Table Classic 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo118 = new LatentStyleExceptionInfo() { Name = "Table Classic 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo119 = new LatentStyleExceptionInfo() { Name = "Table Colorful 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo120 = new LatentStyleExceptionInfo() { Name = "Table Colorful 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo121 = new LatentStyleExceptionInfo() { Name = "Table Colorful 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo122 = new LatentStyleExceptionInfo() { Name = "Table Columns 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo123 = new LatentStyleExceptionInfo() { Name = "Table Columns 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo124 = new LatentStyleExceptionInfo() { Name = "Table Columns 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo125 = new LatentStyleExceptionInfo() { Name = "Table Columns 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo126 = new LatentStyleExceptionInfo() { Name = "Table Columns 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo127 = new LatentStyleExceptionInfo() { Name = "Table Grid 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo128 = new LatentStyleExceptionInfo() { Name = "Table Grid 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo129 = new LatentStyleExceptionInfo() { Name = "Table Grid 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo130 = new LatentStyleExceptionInfo() { Name = "Table Grid 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo131 = new LatentStyleExceptionInfo() { Name = "Table Grid 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo132 = new LatentStyleExceptionInfo() { Name = "Table Grid 6", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo133 = new LatentStyleExceptionInfo() { Name = "Table Grid 7", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo134 = new LatentStyleExceptionInfo() { Name = "Table Grid 8", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo135 = new LatentStyleExceptionInfo() { Name = "Table List 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo136 = new LatentStyleExceptionInfo() { Name = "Table List 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo137 = new LatentStyleExceptionInfo() { Name = "Table List 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo138 = new LatentStyleExceptionInfo() { Name = "Table List 4", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo139 = new LatentStyleExceptionInfo() { Name = "Table List 5", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo140 = new LatentStyleExceptionInfo() { Name = "Table List 6", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo141 = new LatentStyleExceptionInfo() { Name = "Table List 7", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo142 = new LatentStyleExceptionInfo() { Name = "Table List 8", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo143 = new LatentStyleExceptionInfo() { Name = "Table 3D effects 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo144 = new LatentStyleExceptionInfo() { Name = "Table 3D effects 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo145 = new LatentStyleExceptionInfo() { Name = "Table 3D effects 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo146 = new LatentStyleExceptionInfo() { Name = "Table Contemporary", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo147 = new LatentStyleExceptionInfo() { Name = "Table Elegant", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo148 = new LatentStyleExceptionInfo() { Name = "Table Professional", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo149 = new LatentStyleExceptionInfo() { Name = "Table Subtle 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo150 = new LatentStyleExceptionInfo() { Name = "Table Subtle 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo151 = new LatentStyleExceptionInfo() { Name = "Table Web 1", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo152 = new LatentStyleExceptionInfo() { Name = "Table Web 2", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo153 = new LatentStyleExceptionInfo() { Name = "Table Web 3", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo154 = new LatentStyleExceptionInfo() { Name = "Balloon Text", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo155 = new LatentStyleExceptionInfo() { Name = "Table Grid", UiPriority = 39 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo156 = new LatentStyleExceptionInfo() { Name = "Table Theme", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo157 = new LatentStyleExceptionInfo() { Name = "Placeholder Text", SemiHidden = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo158 = new LatentStyleExceptionInfo() { Name = "No Spacing", UiPriority = 1, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo159 = new LatentStyleExceptionInfo() { Name = "Light Shading", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo160 = new LatentStyleExceptionInfo() { Name = "Light List", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo161 = new LatentStyleExceptionInfo() { Name = "Light Grid", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo162 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo163 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo164 = new LatentStyleExceptionInfo() { Name = "Medium List 1", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo165 = new LatentStyleExceptionInfo() { Name = "Medium List 2", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo166 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo167 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo168 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo169 = new LatentStyleExceptionInfo() { Name = "Dark List", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo170 = new LatentStyleExceptionInfo() { Name = "Colorful Shading", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo171 = new LatentStyleExceptionInfo() { Name = "Colorful List", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo172 = new LatentStyleExceptionInfo() { Name = "Colorful Grid", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo173 = new LatentStyleExceptionInfo() { Name = "Light Shading Accent 1", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo174 = new LatentStyleExceptionInfo() { Name = "Light List Accent 1", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo175 = new LatentStyleExceptionInfo() { Name = "Light Grid Accent 1", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo176 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1 Accent 1", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo177 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2 Accent 1", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo178 = new LatentStyleExceptionInfo() { Name = "Medium List 1 Accent 1", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo179 = new LatentStyleExceptionInfo() { Name = "Revision", SemiHidden = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo180 = new LatentStyleExceptionInfo() { Name = "List Paragraph", UiPriority = 34, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo181 = new LatentStyleExceptionInfo() { Name = "Quote", UiPriority = 29, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo182 = new LatentStyleExceptionInfo() { Name = "Intense Quote", UiPriority = 30, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo183 = new LatentStyleExceptionInfo() { Name = "Medium List 2 Accent 1", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo184 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1 Accent 1", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo185 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2 Accent 1", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo186 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3 Accent 1", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo187 = new LatentStyleExceptionInfo() { Name = "Dark List Accent 1", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo188 = new LatentStyleExceptionInfo() { Name = "Colorful Shading Accent 1", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo189 = new LatentStyleExceptionInfo() { Name = "Colorful List Accent 1", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo190 = new LatentStyleExceptionInfo() { Name = "Colorful Grid Accent 1", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo191 = new LatentStyleExceptionInfo() { Name = "Light Shading Accent 2", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo192 = new LatentStyleExceptionInfo() { Name = "Light List Accent 2", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo193 = new LatentStyleExceptionInfo() { Name = "Light Grid Accent 2", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo194 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1 Accent 2", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo195 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2 Accent 2", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo196 = new LatentStyleExceptionInfo() { Name = "Medium List 1 Accent 2", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo197 = new LatentStyleExceptionInfo() { Name = "Medium List 2 Accent 2", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo198 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1 Accent 2", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo199 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2 Accent 2", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo200 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3 Accent 2", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo201 = new LatentStyleExceptionInfo() { Name = "Dark List Accent 2", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo202 = new LatentStyleExceptionInfo() { Name = "Colorful Shading Accent 2", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo203 = new LatentStyleExceptionInfo() { Name = "Colorful List Accent 2", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo204 = new LatentStyleExceptionInfo() { Name = "Colorful Grid Accent 2", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo205 = new LatentStyleExceptionInfo() { Name = "Light Shading Accent 3", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo206 = new LatentStyleExceptionInfo() { Name = "Light List Accent 3", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo207 = new LatentStyleExceptionInfo() { Name = "Light Grid Accent 3", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo208 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1 Accent 3", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo209 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2 Accent 3", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo210 = new LatentStyleExceptionInfo() { Name = "Medium List 1 Accent 3", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo211 = new LatentStyleExceptionInfo() { Name = "Medium List 2 Accent 3", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo212 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1 Accent 3", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo213 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2 Accent 3", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo214 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3 Accent 3", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo215 = new LatentStyleExceptionInfo() { Name = "Dark List Accent 3", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo216 = new LatentStyleExceptionInfo() { Name = "Colorful Shading Accent 3", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo217 = new LatentStyleExceptionInfo() { Name = "Colorful List Accent 3", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo218 = new LatentStyleExceptionInfo() { Name = "Colorful Grid Accent 3", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo219 = new LatentStyleExceptionInfo() { Name = "Light Shading Accent 4", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo220 = new LatentStyleExceptionInfo() { Name = "Light List Accent 4", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo221 = new LatentStyleExceptionInfo() { Name = "Light Grid Accent 4", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo222 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1 Accent 4", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo223 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2 Accent 4", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo224 = new LatentStyleExceptionInfo() { Name = "Medium List 1 Accent 4", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo225 = new LatentStyleExceptionInfo() { Name = "Medium List 2 Accent 4", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo226 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1 Accent 4", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo227 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2 Accent 4", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo228 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3 Accent 4", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo229 = new LatentStyleExceptionInfo() { Name = "Dark List Accent 4", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo230 = new LatentStyleExceptionInfo() { Name = "Colorful Shading Accent 4", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo231 = new LatentStyleExceptionInfo() { Name = "Colorful List Accent 4", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo232 = new LatentStyleExceptionInfo() { Name = "Colorful Grid Accent 4", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo233 = new LatentStyleExceptionInfo() { Name = "Light Shading Accent 5", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo234 = new LatentStyleExceptionInfo() { Name = "Light List Accent 5", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo235 = new LatentStyleExceptionInfo() { Name = "Light Grid Accent 5", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo236 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1 Accent 5", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo237 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2 Accent 5", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo238 = new LatentStyleExceptionInfo() { Name = "Medium List 1 Accent 5", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo239 = new LatentStyleExceptionInfo() { Name = "Medium List 2 Accent 5", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo240 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1 Accent 5", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo241 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2 Accent 5", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo242 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3 Accent 5", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo243 = new LatentStyleExceptionInfo() { Name = "Dark List Accent 5", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo244 = new LatentStyleExceptionInfo() { Name = "Colorful Shading Accent 5", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo245 = new LatentStyleExceptionInfo() { Name = "Colorful List Accent 5", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo246 = new LatentStyleExceptionInfo() { Name = "Colorful Grid Accent 5", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo247 = new LatentStyleExceptionInfo() { Name = "Light Shading Accent 6", UiPriority = 60 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo248 = new LatentStyleExceptionInfo() { Name = "Light List Accent 6", UiPriority = 61 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo249 = new LatentStyleExceptionInfo() { Name = "Light Grid Accent 6", UiPriority = 62 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo250 = new LatentStyleExceptionInfo() { Name = "Medium Shading 1 Accent 6", UiPriority = 63 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo251 = new LatentStyleExceptionInfo() { Name = "Medium Shading 2 Accent 6", UiPriority = 64 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo252 = new LatentStyleExceptionInfo() { Name = "Medium List 1 Accent 6", UiPriority = 65 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo253 = new LatentStyleExceptionInfo() { Name = "Medium List 2 Accent 6", UiPriority = 66 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo254 = new LatentStyleExceptionInfo() { Name = "Medium Grid 1 Accent 6", UiPriority = 67 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo255 = new LatentStyleExceptionInfo() { Name = "Medium Grid 2 Accent 6", UiPriority = 68 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo256 = new LatentStyleExceptionInfo() { Name = "Medium Grid 3 Accent 6", UiPriority = 69 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo257 = new LatentStyleExceptionInfo() { Name = "Dark List Accent 6", UiPriority = 70 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo258 = new LatentStyleExceptionInfo() { Name = "Colorful Shading Accent 6", UiPriority = 71 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo259 = new LatentStyleExceptionInfo() { Name = "Colorful List Accent 6", UiPriority = 72 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo260 = new LatentStyleExceptionInfo() { Name = "Colorful Grid Accent 6", UiPriority = 73 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo261 = new LatentStyleExceptionInfo() { Name = "Subtle Emphasis", UiPriority = 19, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo262 = new LatentStyleExceptionInfo() { Name = "Intense Emphasis", UiPriority = 21, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo263 = new LatentStyleExceptionInfo() { Name = "Subtle Reference", UiPriority = 31, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo264 = new LatentStyleExceptionInfo() { Name = "Intense Reference", UiPriority = 32, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo265 = new LatentStyleExceptionInfo() { Name = "Book Title", UiPriority = 33, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo266 = new LatentStyleExceptionInfo() { Name = "Bibliography", UiPriority = 37, SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo267 = new LatentStyleExceptionInfo() { Name = "TOC Heading", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo268 = new LatentStyleExceptionInfo() { Name = "Plain Table 1", UiPriority = 41 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo269 = new LatentStyleExceptionInfo() { Name = "Plain Table 2", UiPriority = 42 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo270 = new LatentStyleExceptionInfo() { Name = "Plain Table 3", UiPriority = 43 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo271 = new LatentStyleExceptionInfo() { Name = "Plain Table 4", UiPriority = 44 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo272 = new LatentStyleExceptionInfo() { Name = "Plain Table 5", UiPriority = 45 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo273 = new LatentStyleExceptionInfo() { Name = "Grid Table Light", UiPriority = 40 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo274 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo275 = new LatentStyleExceptionInfo() { Name = "Grid Table 2", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo276 = new LatentStyleExceptionInfo() { Name = "Grid Table 3", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo277 = new LatentStyleExceptionInfo() { Name = "Grid Table 4", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo278 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo279 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo280 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo281 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light Accent 1", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo282 = new LatentStyleExceptionInfo() { Name = "Grid Table 2 Accent 1", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo283 = new LatentStyleExceptionInfo() { Name = "Grid Table 3 Accent 1", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo284 = new LatentStyleExceptionInfo() { Name = "Grid Table 4 Accent 1", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo285 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark Accent 1", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo286 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful Accent 1", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo287 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful Accent 1", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo288 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light Accent 2", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo289 = new LatentStyleExceptionInfo() { Name = "Grid Table 2 Accent 2", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo290 = new LatentStyleExceptionInfo() { Name = "Grid Table 3 Accent 2", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo291 = new LatentStyleExceptionInfo() { Name = "Grid Table 4 Accent 2", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo292 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark Accent 2", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo293 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful Accent 2", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo294 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful Accent 2", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo295 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light Accent 3", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo296 = new LatentStyleExceptionInfo() { Name = "Grid Table 2 Accent 3", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo297 = new LatentStyleExceptionInfo() { Name = "Grid Table 3 Accent 3", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo298 = new LatentStyleExceptionInfo() { Name = "Grid Table 4 Accent 3", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo299 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark Accent 3", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo300 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful Accent 3", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo301 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful Accent 3", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo302 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light Accent 4", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo303 = new LatentStyleExceptionInfo() { Name = "Grid Table 2 Accent 4", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo304 = new LatentStyleExceptionInfo() { Name = "Grid Table 3 Accent 4", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo305 = new LatentStyleExceptionInfo() { Name = "Grid Table 4 Accent 4", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo306 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark Accent 4", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo307 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful Accent 4", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo308 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful Accent 4", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo309 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light Accent 5", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo310 = new LatentStyleExceptionInfo() { Name = "Grid Table 2 Accent 5", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo311 = new LatentStyleExceptionInfo() { Name = "Grid Table 3 Accent 5", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo312 = new LatentStyleExceptionInfo() { Name = "Grid Table 4 Accent 5", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo313 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark Accent 5", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo314 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful Accent 5", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo315 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful Accent 5", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo316 = new LatentStyleExceptionInfo() { Name = "Grid Table 1 Light Accent 6", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo317 = new LatentStyleExceptionInfo() { Name = "Grid Table 2 Accent 6", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo318 = new LatentStyleExceptionInfo() { Name = "Grid Table 3 Accent 6", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo319 = new LatentStyleExceptionInfo() { Name = "Grid Table 4 Accent 6", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo320 = new LatentStyleExceptionInfo() { Name = "Grid Table 5 Dark Accent 6", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo321 = new LatentStyleExceptionInfo() { Name = "Grid Table 6 Colorful Accent 6", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo322 = new LatentStyleExceptionInfo() { Name = "Grid Table 7 Colorful Accent 6", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo323 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo324 = new LatentStyleExceptionInfo() { Name = "List Table 2", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo325 = new LatentStyleExceptionInfo() { Name = "List Table 3", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo326 = new LatentStyleExceptionInfo() { Name = "List Table 4", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo327 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo328 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo329 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo330 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light Accent 1", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo331 = new LatentStyleExceptionInfo() { Name = "List Table 2 Accent 1", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo332 = new LatentStyleExceptionInfo() { Name = "List Table 3 Accent 1", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo333 = new LatentStyleExceptionInfo() { Name = "List Table 4 Accent 1", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo334 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark Accent 1", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo335 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful Accent 1", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo336 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful Accent 1", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo337 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light Accent 2", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo338 = new LatentStyleExceptionInfo() { Name = "List Table 2 Accent 2", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo339 = new LatentStyleExceptionInfo() { Name = "List Table 3 Accent 2", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo340 = new LatentStyleExceptionInfo() { Name = "List Table 4 Accent 2", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo341 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark Accent 2", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo342 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful Accent 2", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo343 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful Accent 2", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo344 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light Accent 3", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo345 = new LatentStyleExceptionInfo() { Name = "List Table 2 Accent 3", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo346 = new LatentStyleExceptionInfo() { Name = "List Table 3 Accent 3", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo347 = new LatentStyleExceptionInfo() { Name = "List Table 4 Accent 3", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo348 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark Accent 3", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo349 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful Accent 3", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo350 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful Accent 3", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo351 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light Accent 4", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo352 = new LatentStyleExceptionInfo() { Name = "List Table 2 Accent 4", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo353 = new LatentStyleExceptionInfo() { Name = "List Table 3 Accent 4", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo354 = new LatentStyleExceptionInfo() { Name = "List Table 4 Accent 4", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo355 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark Accent 4", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo356 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful Accent 4", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo357 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful Accent 4", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo358 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light Accent 5", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo359 = new LatentStyleExceptionInfo() { Name = "List Table 2 Accent 5", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo360 = new LatentStyleExceptionInfo() { Name = "List Table 3 Accent 5", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo361 = new LatentStyleExceptionInfo() { Name = "List Table 4 Accent 5", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo362 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark Accent 5", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo363 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful Accent 5", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo364 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful Accent 5", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo365 = new LatentStyleExceptionInfo() { Name = "List Table 1 Light Accent 6", UiPriority = 46 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo366 = new LatentStyleExceptionInfo() { Name = "List Table 2 Accent 6", UiPriority = 47 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo367 = new LatentStyleExceptionInfo() { Name = "List Table 3 Accent 6", UiPriority = 48 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo368 = new LatentStyleExceptionInfo() { Name = "List Table 4 Accent 6", UiPriority = 49 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo369 = new LatentStyleExceptionInfo() { Name = "List Table 5 Dark Accent 6", UiPriority = 50 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo370 = new LatentStyleExceptionInfo() { Name = "List Table 6 Colorful Accent 6", UiPriority = 51 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo371 = new LatentStyleExceptionInfo() { Name = "List Table 7 Colorful Accent 6", UiPriority = 52 };
-      LatentStyleExceptionInfo latentStyleExceptionInfo372 = new LatentStyleExceptionInfo() { Name = "Mention", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo373 = new LatentStyleExceptionInfo() { Name = "Smart Hyperlink", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo374 = new LatentStyleExceptionInfo() { Name = "Hashtag", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo375 = new LatentStyleExceptionInfo() { Name = "Unresolved Mention", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo376 = new LatentStyleExceptionInfo() { Name = "Smart Link", SemiHidden = true, UnhideWhenUsed = true };
-      LatentStyleExceptionInfo latentStyleExceptionInfo377 = new LatentStyleExceptionInfo() { Name = "Smart Link Error", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo2 = new() { Name = "heading 1", UiPriority = 9, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo3 = new() { Name = "heading 2", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo4 = new() { Name = "heading 3", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo5 = new() { Name = "heading 4", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo6 = new() { Name = "heading 5", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo7 = new() { Name = "heading 6", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo8 = new() { Name = "heading 7", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo9 = new() { Name = "heading 8", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo10 = new() { Name = "heading 9", UiPriority = 9, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo11 = new() { Name = "index 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo12 = new() { Name = "index 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo13 = new() { Name = "index 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo14 = new() { Name = "index 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo15 = new() { Name = "index 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo16 = new() { Name = "index 6", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo17 = new() { Name = "index 7", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo18 = new() { Name = "index 8", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo19 = new() { Name = "index 9", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo20 = new() { Name = "toc 1", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo21 = new() { Name = "toc 2", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo22 = new() { Name = "toc 3", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo23 = new() { Name = "toc 4", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo24 = new() { Name = "toc 5", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo25 = new() { Name = "toc 6", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo26 = new() { Name = "toc 7", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo27 = new() { Name = "toc 8", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo28 = new() { Name = "toc 9", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo29 = new() { Name = "Normal Indent", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo30 = new() { Name = "footnote text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo31 = new() { Name = "annotation text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo32 = new() { Name = "header", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo33 = new() { Name = "footer", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo34 = new() { Name = "index heading", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo35 = new() { Name = "caption", UiPriority = 35, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo36 = new() { Name = "table of figures", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo37 = new() { Name = "envelope address", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo38 = new() { Name = "envelope return", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo39 = new() { Name = "footnote reference", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo40 = new() { Name = "annotation reference", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo41 = new() { Name = "line number", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo42 = new() { Name = "page number", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo43 = new() { Name = "endnote reference", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo44 = new() { Name = "endnote text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo45 = new() { Name = "table of authorities", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo46 = new() { Name = "macro", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo47 = new() { Name = "toa heading", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo48 = new() { Name = "List", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo49 = new() { Name = "List Bullet", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo50 = new() { Name = "List Number", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo51 = new() { Name = "List 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo52 = new() { Name = "List 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo53 = new() { Name = "List 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo54 = new() { Name = "List 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo55 = new() { Name = "List Bullet 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo56 = new() { Name = "List Bullet 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo57 = new() { Name = "List Bullet 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo58 = new() { Name = "List Bullet 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo59 = new() { Name = "List Number 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo60 = new() { Name = "List Number 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo61 = new() { Name = "List Number 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo62 = new() { Name = "List Number 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo63 = new() { Name = "Title", UiPriority = 10, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo64 = new() { Name = "Closing", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo65 = new() { Name = "Signature", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo66 = new() { Name = "Default Paragraph Font", UiPriority = 1, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo67 = new() { Name = "Body Text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo68 = new() { Name = "Body Text Indent", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo69 = new() { Name = "List Continue", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo70 = new() { Name = "List Continue 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo71 = new() { Name = "List Continue 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo72 = new() { Name = "List Continue 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo73 = new() { Name = "List Continue 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo74 = new() { Name = "Message Header", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo75 = new() { Name = "Subtitle", UiPriority = 11, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo76 = new() { Name = "Salutation", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo77 = new() { Name = "Date", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo78 = new() { Name = "Body Text First Indent", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo79 = new() { Name = "Body Text First Indent 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo80 = new() { Name = "Note Heading", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo81 = new() { Name = "Body Text 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo82 = new() { Name = "Body Text 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo83 = new() { Name = "Body Text Indent 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo84 = new() { Name = "Body Text Indent 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo85 = new() { Name = "Block Text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo86 = new() { Name = "Hyperlink", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo87 = new() { Name = "FollowedHyperlink", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo88 = new() { Name = "Strong", UiPriority = 22, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo89 = new() { Name = "Emphasis", UiPriority = 20, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo90 = new() { Name = "Document Map", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo91 = new() { Name = "Plain Text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo92 = new() { Name = "E-mail Signature", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo93 = new() { Name = "HTML Top of Form", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo94 = new() { Name = "HTML Bottom of Form", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo95 = new() { Name = "Normal (Web)", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo96 = new() { Name = "HTML Acronym", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo97 = new() { Name = "HTML Address", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo98 = new() { Name = "HTML Cite", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo99 = new() { Name = "HTML Code", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo100 = new() { Name = "HTML Definition", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo101 = new() { Name = "HTML Keyboard", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo102 = new() { Name = "HTML Preformatted", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo103 = new() { Name = "HTML Sample", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo104 = new() { Name = "HTML Typewriter", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo105 = new() { Name = "HTML Variable", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo106 = new() { Name = "Normal Table", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo107 = new() { Name = "annotation subject", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo108 = new() { Name = "No List", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo109 = new() { Name = "Outline List 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo110 = new() { Name = "Outline List 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo111 = new() { Name = "Outline List 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo112 = new() { Name = "Table Simple 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo113 = new() { Name = "Table Simple 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo114 = new() { Name = "Table Simple 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo115 = new() { Name = "Table Classic 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo116 = new() { Name = "Table Classic 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo117 = new() { Name = "Table Classic 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo118 = new() { Name = "Table Classic 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo119 = new() { Name = "Table Colorful 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo120 = new() { Name = "Table Colorful 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo121 = new() { Name = "Table Colorful 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo122 = new() { Name = "Table Columns 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo123 = new() { Name = "Table Columns 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo124 = new() { Name = "Table Columns 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo125 = new() { Name = "Table Columns 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo126 = new() { Name = "Table Columns 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo127 = new() { Name = "Table Grid 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo128 = new() { Name = "Table Grid 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo129 = new() { Name = "Table Grid 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo130 = new() { Name = "Table Grid 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo131 = new() { Name = "Table Grid 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo132 = new() { Name = "Table Grid 6", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo133 = new() { Name = "Table Grid 7", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo134 = new() { Name = "Table Grid 8", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo135 = new() { Name = "Table List 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo136 = new() { Name = "Table List 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo137 = new() { Name = "Table List 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo138 = new() { Name = "Table List 4", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo139 = new() { Name = "Table List 5", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo140 = new() { Name = "Table List 6", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo141 = new() { Name = "Table List 7", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo142 = new() { Name = "Table List 8", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo143 = new() { Name = "Table 3D effects 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo144 = new() { Name = "Table 3D effects 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo145 = new() { Name = "Table 3D effects 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo146 = new() { Name = "Table Contemporary", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo147 = new() { Name = "Table Elegant", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo148 = new() { Name = "Table Professional", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo149 = new() { Name = "Table Subtle 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo150 = new() { Name = "Table Subtle 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo151 = new() { Name = "Table Web 1", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo152 = new() { Name = "Table Web 2", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo153 = new() { Name = "Table Web 3", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo154 = new() { Name = "Balloon Text", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo155 = new() { Name = "Table Grid", UiPriority = 39 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo156 = new() { Name = "Table Theme", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo157 = new() { Name = "Placeholder Text", SemiHidden = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo158 = new() { Name = "No Spacing", UiPriority = 1, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo159 = new() { Name = "Light Shading", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo160 = new() { Name = "Light List", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo161 = new() { Name = "Light Grid", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo162 = new() { Name = "Medium Shading 1", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo163 = new() { Name = "Medium Shading 2", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo164 = new() { Name = "Medium List 1", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo165 = new() { Name = "Medium List 2", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo166 = new() { Name = "Medium Grid 1", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo167 = new() { Name = "Medium Grid 2", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo168 = new() { Name = "Medium Grid 3", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo169 = new() { Name = "Dark List", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo170 = new() { Name = "Colorful Shading", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo171 = new() { Name = "Colorful List", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo172 = new() { Name = "Colorful Grid", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo173 = new() { Name = "Light Shading Accent 1", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo174 = new() { Name = "Light List Accent 1", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo175 = new() { Name = "Light Grid Accent 1", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo176 = new() { Name = "Medium Shading 1 Accent 1", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo177 = new() { Name = "Medium Shading 2 Accent 1", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo178 = new() { Name = "Medium List 1 Accent 1", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo179 = new() { Name = "Revision", SemiHidden = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo180 = new() { Name = "List Paragraph", UiPriority = 34, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo181 = new() { Name = "Quote", UiPriority = 29, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo182 = new() { Name = "Intense Quote", UiPriority = 30, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo183 = new() { Name = "Medium List 2 Accent 1", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo184 = new() { Name = "Medium Grid 1 Accent 1", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo185 = new() { Name = "Medium Grid 2 Accent 1", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo186 = new() { Name = "Medium Grid 3 Accent 1", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo187 = new() { Name = "Dark List Accent 1", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo188 = new() { Name = "Colorful Shading Accent 1", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo189 = new() { Name = "Colorful List Accent 1", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo190 = new() { Name = "Colorful Grid Accent 1", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo191 = new() { Name = "Light Shading Accent 2", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo192 = new() { Name = "Light List Accent 2", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo193 = new() { Name = "Light Grid Accent 2", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo194 = new() { Name = "Medium Shading 1 Accent 2", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo195 = new() { Name = "Medium Shading 2 Accent 2", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo196 = new() { Name = "Medium List 1 Accent 2", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo197 = new() { Name = "Medium List 2 Accent 2", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo198 = new() { Name = "Medium Grid 1 Accent 2", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo199 = new() { Name = "Medium Grid 2 Accent 2", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo200 = new() { Name = "Medium Grid 3 Accent 2", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo201 = new() { Name = "Dark List Accent 2", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo202 = new() { Name = "Colorful Shading Accent 2", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo203 = new() { Name = "Colorful List Accent 2", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo204 = new() { Name = "Colorful Grid Accent 2", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo205 = new() { Name = "Light Shading Accent 3", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo206 = new() { Name = "Light List Accent 3", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo207 = new() { Name = "Light Grid Accent 3", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo208 = new() { Name = "Medium Shading 1 Accent 3", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo209 = new() { Name = "Medium Shading 2 Accent 3", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo210 = new() { Name = "Medium List 1 Accent 3", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo211 = new() { Name = "Medium List 2 Accent 3", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo212 = new() { Name = "Medium Grid 1 Accent 3", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo213 = new() { Name = "Medium Grid 2 Accent 3", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo214 = new() { Name = "Medium Grid 3 Accent 3", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo215 = new() { Name = "Dark List Accent 3", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo216 = new() { Name = "Colorful Shading Accent 3", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo217 = new() { Name = "Colorful List Accent 3", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo218 = new() { Name = "Colorful Grid Accent 3", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo219 = new() { Name = "Light Shading Accent 4", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo220 = new() { Name = "Light List Accent 4", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo221 = new() { Name = "Light Grid Accent 4", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo222 = new() { Name = "Medium Shading 1 Accent 4", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo223 = new() { Name = "Medium Shading 2 Accent 4", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo224 = new() { Name = "Medium List 1 Accent 4", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo225 = new() { Name = "Medium List 2 Accent 4", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo226 = new() { Name = "Medium Grid 1 Accent 4", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo227 = new() { Name = "Medium Grid 2 Accent 4", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo228 = new() { Name = "Medium Grid 3 Accent 4", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo229 = new() { Name = "Dark List Accent 4", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo230 = new() { Name = "Colorful Shading Accent 4", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo231 = new() { Name = "Colorful List Accent 4", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo232 = new() { Name = "Colorful Grid Accent 4", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo233 = new() { Name = "Light Shading Accent 5", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo234 = new() { Name = "Light List Accent 5", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo235 = new() { Name = "Light Grid Accent 5", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo236 = new() { Name = "Medium Shading 1 Accent 5", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo237 = new() { Name = "Medium Shading 2 Accent 5", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo238 = new() { Name = "Medium List 1 Accent 5", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo239 = new() { Name = "Medium List 2 Accent 5", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo240 = new() { Name = "Medium Grid 1 Accent 5", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo241 = new() { Name = "Medium Grid 2 Accent 5", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo242 = new() { Name = "Medium Grid 3 Accent 5", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo243 = new() { Name = "Dark List Accent 5", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo244 = new() { Name = "Colorful Shading Accent 5", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo245 = new() { Name = "Colorful List Accent 5", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo246 = new() { Name = "Colorful Grid Accent 5", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo247 = new() { Name = "Light Shading Accent 6", UiPriority = 60 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo248 = new() { Name = "Light List Accent 6", UiPriority = 61 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo249 = new() { Name = "Light Grid Accent 6", UiPriority = 62 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo250 = new() { Name = "Medium Shading 1 Accent 6", UiPriority = 63 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo251 = new() { Name = "Medium Shading 2 Accent 6", UiPriority = 64 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo252 = new() { Name = "Medium List 1 Accent 6", UiPriority = 65 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo253 = new() { Name = "Medium List 2 Accent 6", UiPriority = 66 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo254 = new() { Name = "Medium Grid 1 Accent 6", UiPriority = 67 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo255 = new() { Name = "Medium Grid 2 Accent 6", UiPriority = 68 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo256 = new() { Name = "Medium Grid 3 Accent 6", UiPriority = 69 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo257 = new() { Name = "Dark List Accent 6", UiPriority = 70 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo258 = new() { Name = "Colorful Shading Accent 6", UiPriority = 71 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo259 = new() { Name = "Colorful List Accent 6", UiPriority = 72 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo260 = new() { Name = "Colorful Grid Accent 6", UiPriority = 73 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo261 = new() { Name = "Subtle Emphasis", UiPriority = 19, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo262 = new() { Name = "Intense Emphasis", UiPriority = 21, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo263 = new() { Name = "Subtle Reference", UiPriority = 31, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo264 = new() { Name = "Intense Reference", UiPriority = 32, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo265 = new() { Name = "Book Title", UiPriority = 33, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo266 = new() { Name = "Bibliography", UiPriority = 37, SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo267 = new() { Name = "TOC Heading", UiPriority = 39, SemiHidden = true, UnhideWhenUsed = true, PrimaryStyle = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo268 = new() { Name = "Plain Table 1", UiPriority = 41 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo269 = new() { Name = "Plain Table 2", UiPriority = 42 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo270 = new() { Name = "Plain Table 3", UiPriority = 43 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo271 = new() { Name = "Plain Table 4", UiPriority = 44 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo272 = new() { Name = "Plain Table 5", UiPriority = 45 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo273 = new() { Name = "Grid Table Light", UiPriority = 40 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo274 = new() { Name = "Grid Table 1 Light", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo275 = new() { Name = "Grid Table 2", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo276 = new() { Name = "Grid Table 3", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo277 = new() { Name = "Grid Table 4", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo278 = new() { Name = "Grid Table 5 Dark", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo279 = new() { Name = "Grid Table 6 Colorful", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo280 = new() { Name = "Grid Table 7 Colorful", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo281 = new() { Name = "Grid Table 1 Light Accent 1", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo282 = new() { Name = "Grid Table 2 Accent 1", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo283 = new() { Name = "Grid Table 3 Accent 1", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo284 = new() { Name = "Grid Table 4 Accent 1", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo285 = new() { Name = "Grid Table 5 Dark Accent 1", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo286 = new() { Name = "Grid Table 6 Colorful Accent 1", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo287 = new() { Name = "Grid Table 7 Colorful Accent 1", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo288 = new() { Name = "Grid Table 1 Light Accent 2", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo289 = new() { Name = "Grid Table 2 Accent 2", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo290 = new() { Name = "Grid Table 3 Accent 2", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo291 = new() { Name = "Grid Table 4 Accent 2", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo292 = new() { Name = "Grid Table 5 Dark Accent 2", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo293 = new() { Name = "Grid Table 6 Colorful Accent 2", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo294 = new() { Name = "Grid Table 7 Colorful Accent 2", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo295 = new() { Name = "Grid Table 1 Light Accent 3", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo296 = new() { Name = "Grid Table 2 Accent 3", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo297 = new() { Name = "Grid Table 3 Accent 3", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo298 = new() { Name = "Grid Table 4 Accent 3", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo299 = new() { Name = "Grid Table 5 Dark Accent 3", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo300 = new() { Name = "Grid Table 6 Colorful Accent 3", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo301 = new() { Name = "Grid Table 7 Colorful Accent 3", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo302 = new() { Name = "Grid Table 1 Light Accent 4", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo303 = new() { Name = "Grid Table 2 Accent 4", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo304 = new() { Name = "Grid Table 3 Accent 4", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo305 = new() { Name = "Grid Table 4 Accent 4", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo306 = new() { Name = "Grid Table 5 Dark Accent 4", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo307 = new() { Name = "Grid Table 6 Colorful Accent 4", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo308 = new() { Name = "Grid Table 7 Colorful Accent 4", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo309 = new() { Name = "Grid Table 1 Light Accent 5", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo310 = new() { Name = "Grid Table 2 Accent 5", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo311 = new() { Name = "Grid Table 3 Accent 5", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo312 = new() { Name = "Grid Table 4 Accent 5", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo313 = new() { Name = "Grid Table 5 Dark Accent 5", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo314 = new() { Name = "Grid Table 6 Colorful Accent 5", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo315 = new() { Name = "Grid Table 7 Colorful Accent 5", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo316 = new() { Name = "Grid Table 1 Light Accent 6", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo317 = new() { Name = "Grid Table 2 Accent 6", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo318 = new() { Name = "Grid Table 3 Accent 6", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo319 = new() { Name = "Grid Table 4 Accent 6", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo320 = new() { Name = "Grid Table 5 Dark Accent 6", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo321 = new() { Name = "Grid Table 6 Colorful Accent 6", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo322 = new() { Name = "Grid Table 7 Colorful Accent 6", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo323 = new() { Name = "List Table 1 Light", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo324 = new() { Name = "List Table 2", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo325 = new() { Name = "List Table 3", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo326 = new() { Name = "List Table 4", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo327 = new() { Name = "List Table 5 Dark", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo328 = new() { Name = "List Table 6 Colorful", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo329 = new() { Name = "List Table 7 Colorful", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo330 = new() { Name = "List Table 1 Light Accent 1", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo331 = new() { Name = "List Table 2 Accent 1", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo332 = new() { Name = "List Table 3 Accent 1", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo333 = new() { Name = "List Table 4 Accent 1", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo334 = new() { Name = "List Table 5 Dark Accent 1", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo335 = new() { Name = "List Table 6 Colorful Accent 1", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo336 = new() { Name = "List Table 7 Colorful Accent 1", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo337 = new() { Name = "List Table 1 Light Accent 2", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo338 = new() { Name = "List Table 2 Accent 2", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo339 = new() { Name = "List Table 3 Accent 2", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo340 = new() { Name = "List Table 4 Accent 2", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo341 = new() { Name = "List Table 5 Dark Accent 2", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo342 = new() { Name = "List Table 6 Colorful Accent 2", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo343 = new() { Name = "List Table 7 Colorful Accent 2", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo344 = new() { Name = "List Table 1 Light Accent 3", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo345 = new() { Name = "List Table 2 Accent 3", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo346 = new() { Name = "List Table 3 Accent 3", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo347 = new() { Name = "List Table 4 Accent 3", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo348 = new() { Name = "List Table 5 Dark Accent 3", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo349 = new() { Name = "List Table 6 Colorful Accent 3", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo350 = new() { Name = "List Table 7 Colorful Accent 3", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo351 = new() { Name = "List Table 1 Light Accent 4", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo352 = new() { Name = "List Table 2 Accent 4", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo353 = new() { Name = "List Table 3 Accent 4", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo354 = new() { Name = "List Table 4 Accent 4", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo355 = new() { Name = "List Table 5 Dark Accent 4", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo356 = new() { Name = "List Table 6 Colorful Accent 4", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo357 = new() { Name = "List Table 7 Colorful Accent 4", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo358 = new() { Name = "List Table 1 Light Accent 5", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo359 = new() { Name = "List Table 2 Accent 5", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo360 = new() { Name = "List Table 3 Accent 5", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo361 = new() { Name = "List Table 4 Accent 5", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo362 = new() { Name = "List Table 5 Dark Accent 5", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo363 = new() { Name = "List Table 6 Colorful Accent 5", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo364 = new() { Name = "List Table 7 Colorful Accent 5", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo365 = new() { Name = "List Table 1 Light Accent 6", UiPriority = 46 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo366 = new() { Name = "List Table 2 Accent 6", UiPriority = 47 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo367 = new() { Name = "List Table 3 Accent 6", UiPriority = 48 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo368 = new() { Name = "List Table 4 Accent 6", UiPriority = 49 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo369 = new() { Name = "List Table 5 Dark Accent 6", UiPriority = 50 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo370 = new() { Name = "List Table 6 Colorful Accent 6", UiPriority = 51 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo371 = new() { Name = "List Table 7 Colorful Accent 6", UiPriority = 52 };
+      LatentStyleExceptionInfo latentStyleExceptionInfo372 = new() { Name = "Mention", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo373 = new() { Name = "Smart Hyperlink", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo374 = new() { Name = "Hashtag", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo375 = new() { Name = "Unresolved Mention", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo376 = new() { Name = "Smart Link", SemiHidden = true, UnhideWhenUsed = true };
+      LatentStyleExceptionInfo latentStyleExceptionInfo377 = new() { Name = "Smart Link Error", SemiHidden = true, UnhideWhenUsed = true };
 
       latentStyles.Append(latentStyleExceptionInfo1);
       latentStyles.Append(latentStyleExceptionInfo2);
@@ -783,7 +783,7 @@ namespace MD2DocxCore {
     /// </summary>
     /// <param name="part">WordPress FooterPart</param>
     public static void Generate1FooterPart(FooterPart part) {
-      Footer footer1 = new Footer() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "w14 w15 w16se w16cid wp14" } };
+      Footer footer1 = new() { MCAttributes = new() { Ignorable = "w14 w15 w16se w16cid wp14" } };
       footer1.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
       footer1.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
       footer1.AddNamespaceDeclaration("cx1", "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex");
@@ -814,63 +814,63 @@ namespace MD2DocxCore {
       footer1.AddNamespaceDeclaration("wne", "http://schemas.microsoft.com/office/word/2006/wordml");
       footer1.AddNamespaceDeclaration("wps", "http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
 
-      SdtBlock sdtBlock1 = new SdtBlock();
+      SdtBlock sdtBlock1 = new();
 
-      SdtProperties sdtProperties1 = new SdtProperties();
-      SdtId sdtId1 = new SdtId() { Val = -1144034156 };
+      SdtProperties sdtProperties1 = new();
+      SdtId sdtId1 = new() { Val = -1144034156 };
 
-      SdtContentDocPartObject sdtContentDocPartObject1 = new SdtContentDocPartObject();
-      DocPartGallery docPartGallery1 = new DocPartGallery() { Val = "Page Numbers (Bottom of Page)" };
-      DocPartUnique docPartUnique1 = new DocPartUnique();
+      SdtContentDocPartObject sdtContentDocPartObject1 = new();
+      DocPartGallery docPartGallery1 = new() { Val = "Page Numbers (Bottom of Page)" };
+      DocPartUnique docPartUnique1 = new();
 
       sdtContentDocPartObject1.Append(docPartGallery1);
       sdtContentDocPartObject1.Append(docPartUnique1);
 
       sdtProperties1.Append(sdtId1);
       sdtProperties1.Append(sdtContentDocPartObject1);
-      SdtEndCharProperties sdtEndCharProperties1 = new SdtEndCharProperties();
+      SdtEndCharProperties sdtEndCharProperties1 = new();
 
-      SdtContentBlock sdtContentBlock1 = new SdtContentBlock();
+      SdtContentBlock sdtContentBlock1 = new();
 
-      Paragraph paragraph1 = new Paragraph() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "34D1FE1C", TextId = "7A33BCDB" };
+      Paragraph paragraph1 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "34D1FE1C", TextId = "7A33BCDB" };
 
-      ParagraphProperties paragraphProperties1 = new ParagraphProperties();
-      ParagraphStyleId paragraphStyleId1 = new ParagraphStyleId() { Val = "a5" };
-      Justification justification1 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties1 = new();
+      ParagraphStyleId paragraphStyleId1 = new() { Val = "a5" };
+      Justification justification1 = new() { Val = JustificationValues.Center };
 
       paragraphProperties1.Append(paragraphStyleId1);
       paragraphProperties1.Append(justification1);
 
-      Run run1 = new Run();
-      FieldChar fieldChar1 = new FieldChar() { FieldCharType = FieldCharValues.Begin };
+      Run run1 = new();
+      FieldChar fieldChar1 = new() { FieldCharType = FieldCharValues.Begin };
 
       run1.Append(fieldChar1);
 
-      Run run2 = new Run();
-      FieldCode fieldCode1 = new FieldCode();
+      Run run2 = new();
+      FieldCode fieldCode1 = new();
       fieldCode1.Text = "PAGE   \\* MERGEFORMAT";
 
       run2.Append(fieldCode1);
 
-      Run run3 = new Run();
-      FieldChar fieldChar2 = new FieldChar() { FieldCharType = FieldCharValues.Separate };
+      Run run3 = new();
+      FieldChar fieldChar2 = new() { FieldCharType = FieldCharValues.Separate };
 
       run3.Append(fieldChar2);
 
-      Run run4 = new Run();
+      Run run4 = new();
 
-      RunProperties runProperties1 = new RunProperties();
-      Languages languages1 = new Languages() { Val = "zh-CN" };
+      RunProperties runProperties1 = new();
+      Languages languages1 = new() { Val = "zh-CN" };
 
       runProperties1.Append(languages1);
-      Text text1 = new Text();
+      Text text1 = new();
       text1.Text = "0";
 
       run4.Append(runProperties1);
       run4.Append(text1);
 
-      Run run5 = new Run();
-      FieldChar fieldChar3 = new FieldChar() { FieldCharType = FieldCharValues.End };
+      Run run5 = new();
+      FieldChar fieldChar3 = new() { FieldCharType = FieldCharValues.End };
 
       run5.Append(fieldChar3);
 
@@ -881,8 +881,8 @@ namespace MD2DocxCore {
       paragraph1.Append(run4);
       paragraph1.Append(run5);
 
-      BookmarkStart bookmarkStart1 = new BookmarkStart() { Name = "_GoBack", DisplacedByCustomXml = DisplacedByCustomXmlValues.Previous, Id = "0" };
-      BookmarkEnd bookmarkEnd1 = new BookmarkEnd() { DisplacedByCustomXml = DisplacedByCustomXmlValues.Previous, Id = "0" };
+      BookmarkStart bookmarkStart1 = new() { Name = "_GoBack", DisplacedByCustomXml = DisplacedByCustomXmlValues.Previous, Id = "0" };
+      BookmarkEnd bookmarkEnd1 = new() { DisplacedByCustomXml = DisplacedByCustomXmlValues.Previous, Id = "0" };
 
       sdtContentBlock1.Append(bookmarkStart1);
       sdtContentBlock1.Append(bookmarkEnd1);
@@ -892,10 +892,10 @@ namespace MD2DocxCore {
       sdtBlock1.Append(sdtEndCharProperties1);
       sdtBlock1.Append(sdtContentBlock1);
 
-      Paragraph paragraph2 = new Paragraph() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "2BB488F1", TextId = "77777777" };
+      Paragraph paragraph2 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "2BB488F1", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties2 = new ParagraphProperties();
-      ParagraphStyleId paragraphStyleId2 = new ParagraphStyleId() { Val = "a5" };
+      ParagraphProperties paragraphProperties2 = new();
+      ParagraphStyleId paragraphStyleId2 = new() { Val = "a5" };
 
       paragraphProperties2.Append(paragraphStyleId2);
 
@@ -912,7 +912,7 @@ namespace MD2DocxCore {
     /// </summary>
     /// <param name="part">WordPress FooterPart</param>
     public static void GenerateIFooterPart(FooterPart part) {
-      Footer footer1 = new Footer() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "w14 w15 w16se w16cid wp14" } };
+      Footer footer1 = new() { MCAttributes = new() { Ignorable = "w14 w15 w16se w16cid wp14" } };
       footer1.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
       footer1.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
       footer1.AddNamespaceDeclaration("cx1", "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex");
@@ -943,63 +943,63 @@ namespace MD2DocxCore {
       footer1.AddNamespaceDeclaration("wne", "http://schemas.microsoft.com/office/word/2006/wordml");
       footer1.AddNamespaceDeclaration("wps", "http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
 
-      SdtBlock sdtBlock1 = new SdtBlock();
+      SdtBlock sdtBlock1 = new();
 
-      SdtProperties sdtProperties1 = new SdtProperties();
-      SdtId sdtId1 = new SdtId() { Val = 1445193178 };
+      SdtProperties sdtProperties1 = new();
+      SdtId sdtId1 = new() { Val = 1445193178 };
 
-      SdtContentDocPartObject sdtContentDocPartObject1 = new SdtContentDocPartObject();
-      DocPartGallery docPartGallery1 = new DocPartGallery() { Val = "Page Numbers (Bottom of Page)" };
-      DocPartUnique docPartUnique1 = new DocPartUnique();
+      SdtContentDocPartObject sdtContentDocPartObject1 = new();
+      DocPartGallery docPartGallery1 = new() { Val = "Page Numbers (Bottom of Page)" };
+      DocPartUnique docPartUnique1 = new();
 
       sdtContentDocPartObject1.Append(docPartGallery1);
       sdtContentDocPartObject1.Append(docPartUnique1);
 
       sdtProperties1.Append(sdtId1);
       sdtProperties1.Append(sdtContentDocPartObject1);
-      SdtEndCharProperties sdtEndCharProperties1 = new SdtEndCharProperties();
+      SdtEndCharProperties sdtEndCharProperties1 = new();
 
-      SdtContentBlock sdtContentBlock1 = new SdtContentBlock();
+      SdtContentBlock sdtContentBlock1 = new();
 
-      Paragraph paragraph1 = new Paragraph() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "280F2866", TextId = "77777777" };
+      Paragraph paragraph1 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "280F2866", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties1 = new ParagraphProperties();
-      ParagraphStyleId paragraphStyleId1 = new ParagraphStyleId() { Val = "a5" };
-      Justification justification1 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties1 = new();
+      ParagraphStyleId paragraphStyleId1 = new() { Val = "a5" };
+      Justification justification1 = new() { Val = JustificationValues.Center };
 
       paragraphProperties1.Append(paragraphStyleId1);
       paragraphProperties1.Append(justification1);
 
-      Run run1 = new Run();
-      FieldChar fieldChar1 = new FieldChar() { FieldCharType = FieldCharValues.Begin };
+      Run run1 = new();
+      FieldChar fieldChar1 = new() { FieldCharType = FieldCharValues.Begin };
 
       run1.Append(fieldChar1);
 
-      Run run2 = new Run();
-      FieldCode fieldCode1 = new FieldCode();
+      Run run2 = new();
+      FieldCode fieldCode1 = new();
       fieldCode1.Text = "PAGE   \\* MERGEFORMAT";
 
       run2.Append(fieldCode1);
 
-      Run run3 = new Run();
-      FieldChar fieldChar2 = new FieldChar() { FieldCharType = FieldCharValues.Separate };
+      Run run3 = new();
+      FieldChar fieldChar2 = new() { FieldCharType = FieldCharValues.Separate };
 
       run3.Append(fieldChar2);
 
-      Run run4 = new Run();
+      Run run4 = new();
 
-      RunProperties runProperties1 = new RunProperties();
-      Languages languages1 = new Languages() { Val = "zh-CN" };
+      RunProperties runProperties1 = new();
+      Languages languages1 = new() { Val = "zh-CN" };
 
       runProperties1.Append(languages1);
-      Text text1 = new Text();
+      Text text1 = new();
       text1.Text = "2";
 
       run4.Append(runProperties1);
       run4.Append(text1);
 
-      Run run5 = new Run();
-      FieldChar fieldChar3 = new FieldChar() { FieldCharType = FieldCharValues.End };
+      Run run5 = new();
+      FieldChar fieldChar3 = new() { FieldCharType = FieldCharValues.End };
 
       run5.Append(fieldChar3);
 
@@ -1016,10 +1016,10 @@ namespace MD2DocxCore {
       sdtBlock1.Append(sdtEndCharProperties1);
       sdtBlock1.Append(sdtContentBlock1);
 
-      Paragraph paragraph2 = new Paragraph() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "688DAA4B", TextId = "77777777" };
+      Paragraph paragraph2 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "688DAA4B", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties2 = new ParagraphProperties();
-      ParagraphStyleId paragraphStyleId2 = new ParagraphStyleId() { Val = "a5" };
+      ParagraphProperties paragraphProperties2 = new();
+      ParagraphStyleId paragraphStyleId2 = new() { Val = "a5" };
 
       paragraphProperties2.Append(paragraphStyleId2);
 
@@ -1032,13 +1032,13 @@ namespace MD2DocxCore {
     }
 
     public static void GenerateCover(ref Body docBody, Dictionary<string, string> info, bool hasHeader) {
-      Paragraph paragraph1 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "71725C42", TextId = "77777777" };
+      Paragraph paragraph1 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "71725C42", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties1 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties1 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties1 = new ParagraphMarkRunProperties();
-      FontSize fontSize1 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript1 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties1 = new();
+      FontSize fontSize1 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript1 = new() { Val = "36" };
 
       paragraphMarkRunProperties1.Append(fontSize1);
       paragraphMarkRunProperties1.Append(fontSizeComplexScript1);
@@ -1047,14 +1047,14 @@ namespace MD2DocxCore {
 
       paragraph1.Append(paragraphProperties1);
 
-      Paragraph paragraph2 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4B4A54F9", TextId = "77777777" };
+      Paragraph paragraph2 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4B4A54F9", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties2 = new ParagraphProperties();
-      Justification justification1 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties2 = new();
+      Justification justification1 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties2 = new ParagraphMarkRunProperties();
-      Bold bold1 = new Bold();
-      FontSize fontSize2 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties2 = new();
+      Bold bold1 = new();
+      FontSize fontSize2 = new() { Val = "24" };
 
       paragraphMarkRunProperties2.Append(bold1);
       paragraphMarkRunProperties2.Append(fontSize2);
@@ -1062,80 +1062,80 @@ namespace MD2DocxCore {
       paragraphProperties2.Append(justification1);
       paragraphProperties2.Append(paragraphMarkRunProperties2);
 
-      Run run1 = new Run();
+      Run run1 = new();
 
-      RunProperties runProperties1 = new RunProperties();
-      RunFonts runFonts1 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-      Bold bold2 = new Bold();
-      NoProof noProof1 = new NoProof();
-      FontSize fontSize3 = new FontSize() { Val = "24" };
+      RunProperties runProperties1 = new();
+      RunFonts runFonts1 = new() { Hint = FontTypeHintValues.EastAsia };
+      Bold bold2 = new();
+      NoProof noProof1 = new();
+      FontSize fontSize3 = new() { Val = "24" };
 
       runProperties1.Append(runFonts1);
       runProperties1.Append(bold2);
       runProperties1.Append(noProof1);
       runProperties1.Append(fontSize3);
 
-      Drawing drawing1 = new Drawing();
+      Drawing drawing1 = new();
 
-      Wp.Inline inline1 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, AnchorId = "5D1F2E59", EditId = "1041EDBE" };
-      Wp.Extent extent1 = new Wp.Extent() { Cx = 4059555L, Cy = 1068070L };
-      Wp.EffectExtent effectExtent1 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 9525L, BottomEdge = 13970L };
-      Wp.DocProperties docProperties1 = new Wp.DocProperties() { Id = (UInt32Value)1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
+      Wp.Inline inline1 = new() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, AnchorId = "5D1F2E59", EditId = "1041EDBE" };
+      Wp.Extent extent1 = new() { Cx = 4059555L, Cy = 1068070L };
+      Wp.EffectExtent effectExtent1 = new() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 9525L, BottomEdge = 13970L };
+      Wp.DocProperties docProperties1 = new() { Id = (UInt32Value)1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
 
-      Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Wp.NonVisualGraphicFrameDrawingProperties();
+      Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new();
 
-      A.GraphicFrameLocks graphicFrameLocks1 = new A.GraphicFrameLocks() { NoChangeAspect = true };
+      A.GraphicFrameLocks graphicFrameLocks1 = new() { NoChangeAspect = true };
       graphicFrameLocks1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
       nonVisualGraphicFrameDrawingProperties1.Append(graphicFrameLocks1);
 
-      A.Graphic graphic1 = new A.Graphic();
+      A.Graphic graphic1 = new();
       graphic1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
-      A.GraphicData graphicData1 = new A.GraphicData() { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" };
+      A.GraphicData graphicData1 = new() { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" };
 
-      Pic.Picture picture1 = new Pic.Picture();
+      Pic.Picture picture1 = new();
       picture1.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
-      Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new Pic.NonVisualPictureProperties();
-      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Pic.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
+      Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new();
+      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = (UInt32Value)1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
 
-      Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new Pic.NonVisualPictureDrawingProperties();
-      A.PictureLocks pictureLocks1 = new A.PictureLocks() { NoChangeAspect = true };
+      Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new();
+      A.PictureLocks pictureLocks1 = new() { NoChangeAspect = true };
 
       nonVisualPictureDrawingProperties1.Append(pictureLocks1);
 
       nonVisualPictureProperties1.Append(nonVisualDrawingProperties1);
       nonVisualPictureProperties1.Append(nonVisualPictureDrawingProperties1);
 
-      Pic.BlipFill blipFill1 = new Pic.BlipFill();
-      A.Blip blip1 = new A.Blip() { Embed = "rId2" };
+      Pic.BlipFill blipFill1 = new();
+      A.Blip blip1 = new() { Embed = "rId2" };
 
-      A.Stretch stretch1 = new A.Stretch();
-      A.FillRectangle fillRectangle1 = new A.FillRectangle();
+      A.Stretch stretch1 = new();
+      A.FillRectangle fillRectangle1 = new();
 
       stretch1.Append(fillRectangle1);
 
       blipFill1.Append(blip1);
       blipFill1.Append(stretch1);
 
-      Pic.ShapeProperties shapeProperties1 = new Pic.ShapeProperties();
+      Pic.ShapeProperties shapeProperties1 = new();
 
-      A.Transform2D transform2D1 = new A.Transform2D();
-      A.Offset offset1 = new A.Offset() { X = 0L, Y = 0L };
-      A.Extents extents1 = new A.Extents() { Cx = 4059555L, Cy = 1068070L };
+      A.Transform2D transform2D1 = new();
+      A.Offset offset1 = new() { X = 0L, Y = 0L };
+      A.Extents extents1 = new() { Cx = 4059555L, Cy = 1068070L };
 
       transform2D1.Append(offset1);
       transform2D1.Append(extents1);
 
-      A.PresetGeometry presetGeometry1 = new A.PresetGeometry() { Preset = A.ShapeTypeValues.Rectangle };
-      A.AdjustValueList adjustValueList1 = new A.AdjustValueList();
+      A.PresetGeometry presetGeometry1 = new() { Preset = A.ShapeTypeValues.Rectangle };
+      A.AdjustValueList adjustValueList1 = new();
 
       presetGeometry1.Append(adjustValueList1);
-      A.NoFill noFill1 = new A.NoFill();
+      A.NoFill noFill1 = new();
 
-      A.Outline outline1 = new A.Outline() { Width = 9525 };
-      A.NoFill noFill2 = new A.NoFill();
+      A.Outline outline1 = new() { Width = 9525 };
+      A.NoFill noFill2 = new();
 
       outline1.Append(noFill2);
 
@@ -1166,12 +1166,12 @@ namespace MD2DocxCore {
       paragraph2.Append(paragraphProperties2);
       paragraph2.Append(run1);
 
-      Paragraph paragraph3 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "7DAABE2D", TextId = "77777777" };
+      Paragraph paragraph3 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "7DAABE2D", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties3 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties3 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties3 = new ParagraphMarkRunProperties();
-      FontSize fontSize4 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties3 = new();
+      FontSize fontSize4 = new() { Val = "24" };
 
       paragraphMarkRunProperties3.Append(fontSize4);
 
@@ -1179,12 +1179,12 @@ namespace MD2DocxCore {
 
       paragraph3.Append(paragraphProperties3);
 
-      Paragraph paragraph4 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "1A4ECFDE", TextId = "77777777" };
+      Paragraph paragraph4 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "1A4ECFDE", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties4 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties4 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties4 = new ParagraphMarkRunProperties();
-      FontSize fontSize5 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties4 = new();
+      FontSize fontSize5 = new() { Val = "24" };
 
       paragraphMarkRunProperties4.Append(fontSize5);
 
@@ -1192,12 +1192,12 @@ namespace MD2DocxCore {
 
       paragraph4.Append(paragraphProperties4);
 
-      Paragraph paragraph5 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "5C893384", TextId = "77777777" };
+      Paragraph paragraph5 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "5C893384", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties5 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties5 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties5 = new ParagraphMarkRunProperties();
-      FontSize fontSize6 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties5 = new();
+      FontSize fontSize6 = new() { Val = "24" };
 
       paragraphMarkRunProperties5.Append(fontSize6);
 
@@ -1205,16 +1205,16 @@ namespace MD2DocxCore {
 
       paragraph5.Append(paragraphProperties5);
 
-      Paragraph paragraph6 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "168A2DD1", TextId = "77777777" };
+      Paragraph paragraph6 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "168A2DD1", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties6 = new ParagraphProperties();
-      Justification justification2 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties6 = new();
+      Justification justification2 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties6 = new ParagraphMarkRunProperties();
-      RunFonts runFonts2 = new RunFonts() { Ascii = "黑体", HighAnsi = "华文楷体", EastAsia = "黑体" };
-      Kern kern1 = new Kern() { Val = (UInt32Value)0U };
-      FontSize fontSize7 = new FontSize() { Val = "90" };
-      FontSizeComplexScript fontSizeComplexScript2 = new FontSizeComplexScript() { Val = "90" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties6 = new();
+      RunFonts runFonts2 = new() { Ascii = "黑体", HighAnsi = "华文楷体", EastAsia = "黑体" };
+      Kern kern1 = new() { Val = (UInt32Value)0U };
+      FontSize fontSize7 = new() { Val = "90" };
+      FontSizeComplexScript fontSizeComplexScript2 = new() { Val = "90" };
 
       paragraphMarkRunProperties6.Append(runFonts2);
       paragraphMarkRunProperties6.Append(kern1);
@@ -1224,19 +1224,19 @@ namespace MD2DocxCore {
       paragraphProperties6.Append(justification2);
       paragraphProperties6.Append(paragraphMarkRunProperties6);
 
-      Run run2 = new Run();
+      Run run2 = new();
 
-      RunProperties runProperties2 = new RunProperties();
-      RunFonts runFonts3 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", HighAnsi = "华文楷体", EastAsia = "黑体" };
-      Kern kern2 = new Kern() { Val = (UInt32Value)0U };
-      FontSize fontSize8 = new FontSize() { Val = "90" };
-      FontSizeComplexScript fontSizeComplexScript3 = new FontSizeComplexScript() { Val = "90" };
+      RunProperties runProperties2 = new();
+      RunFonts runFonts3 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", HighAnsi = "华文楷体", EastAsia = "黑体" };
+      Kern kern2 = new() { Val = (UInt32Value)0U };
+      FontSize fontSize8 = new() { Val = "90" };
+      FontSizeComplexScript fontSizeComplexScript3 = new() { Val = "90" };
 
       runProperties2.Append(runFonts3);
       runProperties2.Append(kern2);
       runProperties2.Append(fontSize8);
       runProperties2.Append(fontSizeComplexScript3);
-      Text text1 = new Text {
+      Text text1 = new() {
         Text = info["filename"]
       };
 
@@ -1246,12 +1246,12 @@ namespace MD2DocxCore {
       paragraph6.Append(paragraphProperties6);
       paragraph6.Append(run2);
 
-      Paragraph paragraph8 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4B4F29EF", TextId = "77777777" };
+      Paragraph paragraph8 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4B4F29EF", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties8 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties8 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties8 = new ParagraphMarkRunProperties();
-      FontSize fontSize12 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties8 = new();
+      FontSize fontSize12 = new() { Val = "24" };
 
       paragraphMarkRunProperties8.Append(fontSize12);
 
@@ -1259,12 +1259,12 @@ namespace MD2DocxCore {
 
       paragraph8.Append(paragraphProperties8);
 
-      Paragraph paragraph9 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "37089D27", TextId = "77777777" };
+      Paragraph paragraph9 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "37089D27", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties9 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties9 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties9 = new ParagraphMarkRunProperties();
-      FontSize fontSize13 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties9 = new();
+      FontSize fontSize13 = new() { Val = "24" };
 
       paragraphMarkRunProperties9.Append(fontSize13);
 
@@ -1272,12 +1272,12 @@ namespace MD2DocxCore {
 
       paragraph9.Append(paragraphProperties9);
 
-      Paragraph paragraph10 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "6081A726", TextId = "77777777" };
+      Paragraph paragraph10 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "6081A726", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties10 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties10 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties10 = new ParagraphMarkRunProperties();
-      FontSize fontSize14 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties10 = new();
+      FontSize fontSize14 = new() { Val = "24" };
 
       paragraphMarkRunProperties10.Append(fontSize14);
 
@@ -1285,12 +1285,12 @@ namespace MD2DocxCore {
 
       paragraph10.Append(paragraphProperties10);
 
-      Paragraph paragraph11 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "68F64FAB", TextId = "77777777" };
+      Paragraph paragraph11 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "68F64FAB", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties11 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties11 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties11 = new ParagraphMarkRunProperties();
-      FontSize fontSize15 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties11 = new();
+      FontSize fontSize15 = new() { Val = "24" };
 
       paragraphMarkRunProperties11.Append(fontSize15);
 
@@ -1298,12 +1298,12 @@ namespace MD2DocxCore {
 
       paragraph11.Append(paragraphProperties11);
 
-      Paragraph paragraph12 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4C5B3E6B", TextId = "77777777" };
+      Paragraph paragraph12 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4C5B3E6B", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties12 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties12 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties12 = new ParagraphMarkRunProperties();
-      FontSize fontSize16 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties12 = new();
+      FontSize fontSize16 = new() { Val = "24" };
 
       paragraphMarkRunProperties12.Append(fontSize16);
 
@@ -1311,56 +1311,56 @@ namespace MD2DocxCore {
 
       paragraph12.Append(paragraphProperties12);
 
-      Table table1 = new Table();
+      Table table1 = new();
 
-      TableProperties tableProperties1 = new TableProperties();
-      TableWidth tableWidth1 = new TableWidth() { Width = "6700", Type = TableWidthUnitValues.Dxa };
-      TableJustification tableJustification1 = new TableJustification() { Val = TableRowAlignmentValues.Center };
-      TableLayout tableLayout1 = new TableLayout() { Type = TableLayoutValues.Fixed };
-      TableLook tableLook1 = new TableLook() { Val = "04A0", FirstRow = true, LastRow = false, FirstColumn = true, LastColumn = false, NoHorizontalBand = false, NoVerticalBand = true };
+      TableProperties tableProperties1 = new();
+      TableWidth tableWidth1 = new() { Width = "6700", Type = TableWidthUnitValues.Dxa };
+      TableJustification tableJustification1 = new() { Val = TableRowAlignmentValues.Center };
+      TableLayout tableLayout1 = new() { Type = TableLayoutValues.Fixed };
+      TableLook tableLook1 = new() { Val = "04A0", FirstRow = true, LastRow = false, FirstColumn = true, LastColumn = false, NoHorizontalBand = false, NoVerticalBand = true };
 
       tableProperties1.Append(tableWidth1);
       tableProperties1.Append(tableJustification1);
       tableProperties1.Append(tableLayout1);
       tableProperties1.Append(tableLook1);
 
-      TableGrid tableGrid1 = new TableGrid();
-      GridColumn gridColumn1 = new GridColumn() { Width = "2096" };
-      GridColumn gridColumn2 = new GridColumn() { Width = "4604" };
+      TableGrid tableGrid1 = new();
+      GridColumn gridColumn1 = new() { Width = "2096" };
+      GridColumn gridColumn2 = new() { Width = "4604" };
 
       tableGrid1.Append(gridColumn1);
       tableGrid1.Append(gridColumn2);
 
-      TableRow tableRow1 = new TableRow() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "264C4BA7", TextId = "77777777" };
+      TableRow tableRow1 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "264C4BA7", TextId = "77777777" };
 
-      TableRowProperties tableRowProperties1 = new TableRowProperties();
-      TableRowHeight tableRowHeight1 = new TableRowHeight() { Val = (UInt32Value)744U };
-      TableJustification tableJustification2 = new TableJustification() { Val = TableRowAlignmentValues.Center };
+      TableRowProperties tableRowProperties1 = new();
+      TableRowHeight tableRowHeight1 = new() { Val = (UInt32Value)744U };
+      TableJustification tableJustification2 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties1.Append(tableRowHeight1);
       tableRowProperties1.Append(tableJustification2);
 
-      TableCell tableCell1 = new TableCell();
+      TableCell tableCell1 = new();
 
-      TableCellProperties tableCellProperties1 = new TableCellProperties();
-      TableCellWidth tableCellWidth1 = new TableCellWidth() { Width = "2096", Type = TableWidthUnitValues.Dxa };
-      TableCellVerticalAlignment tableCellVerticalAlignment1 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellProperties tableCellProperties1 = new();
+      TableCellWidth tableCellWidth1 = new() { Width = "2096", Type = TableWidthUnitValues.Dxa };
+      TableCellVerticalAlignment tableCellVerticalAlignment1 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties1.Append(tableCellWidth1);
       tableCellProperties1.Append(tableCellVerticalAlignment1);
 
-      Paragraph paragraph13 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "63766CE7", TextId = "19191671" };
+      Paragraph paragraph13 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "63766CE7", TextId = "19191671" };
 
-      ParagraphProperties paragraphProperties13 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent1 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid1 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines1 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification4 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties13 = new();
+      AdjustRightIndent adjustRightIndent1 = new() { Val = false };
+      SnapToGrid snapToGrid1 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines1 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification4 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties13 = new ParagraphMarkRunProperties();
-      RunFonts runFonts6 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize17 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript6 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties13 = new();
+      RunFonts runFonts6 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize17 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript6 = new() { Val = "36" };
 
       paragraphMarkRunProperties13.Append(runFonts6);
       paragraphMarkRunProperties13.Append(fontSize17);
@@ -1371,19 +1371,19 @@ namespace MD2DocxCore {
       paragraphProperties13.Append(spacingBetweenLines1);
       paragraphProperties13.Append(justification4);
       paragraphProperties13.Append(paragraphMarkRunProperties13);
-      ProofError proofError1 = new ProofError() { Type = ProofingErrorValues.GrammarStart };
+      ProofError proofError1 = new() { Type = ProofingErrorValues.GrammarStart };
 
-      Run run5 = new Run();
+      Run run5 = new();
 
-      RunProperties runProperties5 = new RunProperties();
-      RunFonts runFonts7 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize18 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript7 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties5 = new();
+      RunFonts runFonts7 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize18 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript7 = new() { Val = "36" };
 
       runProperties5.Append(runFonts7);
       runProperties5.Append(fontSize18);
       runProperties5.Append(fontSizeComplexScript7);
-      Text text4 = new Text();
+      Text text4 = new();
       text4.Text = "学　　院：";
 
       run5.Append(runProperties5);
@@ -1396,33 +1396,33 @@ namespace MD2DocxCore {
       tableCell1.Append(tableCellProperties1);
       tableCell1.Append(paragraph13);
 
-      TableCell tableCell2 = new TableCell();
+      TableCell tableCell2 = new();
 
-      TableCellProperties tableCellProperties2 = new TableCellProperties();
-      TableCellWidth tableCellWidth2 = new TableCellWidth() { Width = "4604", Type = TableWidthUnitValues.Dxa };
+      TableCellProperties tableCellProperties2 = new();
+      TableCellWidth tableCellWidth2 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
-      TableCellBorders tableCellBorders1 = new TableCellBorders();
-      BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TableCellBorders tableCellBorders1 = new();
+      BottomBorder bottomBorder1 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
 
       tableCellBorders1.Append(bottomBorder1);
-      TableCellVerticalAlignment tableCellVerticalAlignment2 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellVerticalAlignment tableCellVerticalAlignment2 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties2.Append(tableCellWidth2);
       tableCellProperties2.Append(tableCellBorders1);
       tableCellProperties2.Append(tableCellVerticalAlignment2);
 
-      Paragraph paragraph14 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "513CD88C", TextId = "4DAB3C6B" };
+      Paragraph paragraph14 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "513CD88C", TextId = "4DAB3C6B" };
 
-      ParagraphProperties paragraphProperties14 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent2 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid2 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines2 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification5 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties14 = new();
+      AdjustRightIndent adjustRightIndent2 = new() { Val = false };
+      SnapToGrid snapToGrid2 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines2 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification5 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties14 = new ParagraphMarkRunProperties();
-      RunFonts runFonts10 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize21 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript10 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties14 = new();
+      RunFonts runFonts10 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize21 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript10 = new() { Val = "36" };
 
       paragraphMarkRunProperties14.Append(runFonts10);
       paragraphMarkRunProperties14.Append(fontSize21);
@@ -1434,17 +1434,17 @@ namespace MD2DocxCore {
       paragraphProperties14.Append(justification5);
       paragraphProperties14.Append(paragraphMarkRunProperties14);
 
-      Run run8 = new Run();
+      Run run8 = new();
 
-      RunProperties runProperties8 = new RunProperties();
-      RunFonts runFonts11 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize22 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript11 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties8 = new();
+      RunFonts runFonts11 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize22 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript11 = new() { Val = "36" };
 
       runProperties8.Append(runFonts11);
       runProperties8.Append(fontSize22);
       runProperties8.Append(fontSizeComplexScript11);
-      Text text7 = new Text {
+      Text text7 = new() {
         Text = info["department"]
       };
 
@@ -1461,36 +1461,36 @@ namespace MD2DocxCore {
       tableRow1.Append(tableCell1);
       tableRow1.Append(tableCell2);
 
-      TableRow tableRow2 = new TableRow() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "1EF33043", TextId = "77777777" };
+      TableRow tableRow2 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "1EF33043", TextId = "77777777" };
 
-      TableRowProperties tableRowProperties2 = new TableRowProperties();
-      TableRowHeight tableRowHeight2 = new TableRowHeight() { Val = (UInt32Value)744U };
-      TableJustification tableJustification3 = new TableJustification() { Val = TableRowAlignmentValues.Center };
+      TableRowProperties tableRowProperties2 = new();
+      TableRowHeight tableRowHeight2 = new() { Val = (UInt32Value)744U };
+      TableJustification tableJustification3 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties2.Append(tableRowHeight2);
       tableRowProperties2.Append(tableJustification3);
 
-      TableCell tableCell3 = new TableCell();
+      TableCell tableCell3 = new();
 
-      TableCellProperties tableCellProperties3 = new TableCellProperties();
-      TableCellWidth tableCellWidth3 = new TableCellWidth() { Width = "2096", Type = TableWidthUnitValues.Dxa };
-      TableCellVerticalAlignment tableCellVerticalAlignment3 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellProperties tableCellProperties3 = new();
+      TableCellWidth tableCellWidth3 = new() { Width = "2096", Type = TableWidthUnitValues.Dxa };
+      TableCellVerticalAlignment tableCellVerticalAlignment3 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties3.Append(tableCellWidth3);
       tableCellProperties3.Append(tableCellVerticalAlignment3);
 
-      Paragraph paragraph15 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "57FF0282", TextId = "77777777" };
+      Paragraph paragraph15 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "57FF0282", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties15 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent3 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid3 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines3 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification6 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties15 = new();
+      AdjustRightIndent adjustRightIndent3 = new() { Val = false };
+      SnapToGrid snapToGrid3 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines3 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification6 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties15 = new ParagraphMarkRunProperties();
-      RunFonts runFonts12 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize23 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript12 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties15 = new();
+      RunFonts runFonts12 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize23 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript12 = new() { Val = "36" };
 
       paragraphMarkRunProperties15.Append(runFonts12);
       paragraphMarkRunProperties15.Append(fontSize23);
@@ -1502,17 +1502,17 @@ namespace MD2DocxCore {
       paragraphProperties15.Append(justification6);
       paragraphProperties15.Append(paragraphMarkRunProperties15);
 
-      Run run9 = new Run();
+      Run run9 = new();
 
-      RunProperties runProperties9 = new RunProperties();
-      RunFonts runFonts13 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize24 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript13 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties9 = new();
+      RunFonts runFonts13 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize24 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript13 = new() { Val = "36" };
 
       runProperties9.Append(runFonts13);
       runProperties9.Append(fontSize24);
       runProperties9.Append(fontSizeComplexScript13);
-      Text text8 = new Text {
+      Text text8 = new() {
         Text = "专业班级："
       };
 
@@ -1525,35 +1525,35 @@ namespace MD2DocxCore {
       tableCell3.Append(tableCellProperties3);
       tableCell3.Append(paragraph15);
 
-      TableCell tableCell4 = new TableCell();
+      TableCell tableCell4 = new();
 
-      TableCellProperties tableCellProperties4 = new TableCellProperties();
-      TableCellWidth tableCellWidth4 = new TableCellWidth() { Width = "4604", Type = TableWidthUnitValues.Dxa };
+      TableCellProperties tableCellProperties4 = new();
+      TableCellWidth tableCellWidth4 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
-      TableCellBorders tableCellBorders2 = new TableCellBorders();
-      TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder2 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TableCellBorders tableCellBorders2 = new();
+      TopBorder topBorder1 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      BottomBorder bottomBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
 
       tableCellBorders2.Append(topBorder1);
       tableCellBorders2.Append(bottomBorder2);
-      TableCellVerticalAlignment tableCellVerticalAlignment4 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellVerticalAlignment tableCellVerticalAlignment4 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties4.Append(tableCellWidth4);
       tableCellProperties4.Append(tableCellBorders2);
       tableCellProperties4.Append(tableCellVerticalAlignment4);
 
-      Paragraph paragraph16 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "6D1021F2", TextId = "5D0878E9" };
+      Paragraph paragraph16 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "6D1021F2", TextId = "5D0878E9" };
 
-      ParagraphProperties paragraphProperties16 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent4 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid4 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines4 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification7 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties16 = new();
+      AdjustRightIndent adjustRightIndent4 = new() { Val = false };
+      SnapToGrid snapToGrid4 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines4 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification7 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties16 = new ParagraphMarkRunProperties();
-      RunFonts runFonts14 = new RunFonts() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize25 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript14 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties16 = new();
+      RunFonts runFonts14 = new() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize25 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript14 = new() { Val = "36" };
 
       paragraphMarkRunProperties16.Append(runFonts14);
       paragraphMarkRunProperties16.Append(fontSize25);
@@ -1565,17 +1565,17 @@ namespace MD2DocxCore {
       paragraphProperties16.Append(justification7);
       paragraphProperties16.Append(paragraphMarkRunProperties16);
 
-      Run run10 = new Run();
+      Run run10 = new();
 
-      RunProperties runProperties10 = new RunProperties();
-      RunFonts runFonts15 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize26 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript15 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties10 = new();
+      RunFonts runFonts15 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize26 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript15 = new() { Val = "36" };
 
       runProperties10.Append(runFonts15);
       runProperties10.Append(fontSize26);
       runProperties10.Append(fontSizeComplexScript15);
-      Text text9 = new Text {
+      Text text9 = new() {
         Text = info["class"]
       };
 
@@ -1592,36 +1592,36 @@ namespace MD2DocxCore {
       tableRow2.Append(tableCell3);
       tableRow2.Append(tableCell4);
 
-      TableRow tableRow3 = new TableRow() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "06014780", TextId = "77777777" };
+      TableRow tableRow3 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "06014780", TextId = "77777777" };
 
-      TableRowProperties tableRowProperties3 = new TableRowProperties();
-      TableRowHeight tableRowHeight3 = new TableRowHeight() { Val = (UInt32Value)744U };
-      TableJustification tableJustification4 = new TableJustification() { Val = TableRowAlignmentValues.Center };
+      TableRowProperties tableRowProperties3 = new();
+      TableRowHeight tableRowHeight3 = new() { Val = (UInt32Value)744U };
+      TableJustification tableJustification4 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties3.Append(tableRowHeight3);
       tableRowProperties3.Append(tableJustification4);
 
-      TableCell tableCell5 = new TableCell();
+      TableCell tableCell5 = new();
 
-      TableCellProperties tableCellProperties5 = new TableCellProperties();
-      TableCellWidth tableCellWidth5 = new TableCellWidth() { Width = "2096", Type = TableWidthUnitValues.Dxa };
-      TableCellVerticalAlignment tableCellVerticalAlignment5 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellProperties tableCellProperties5 = new();
+      TableCellWidth tableCellWidth5 = new() { Width = "2096", Type = TableWidthUnitValues.Dxa };
+      TableCellVerticalAlignment tableCellVerticalAlignment5 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties5.Append(tableCellWidth5);
       tableCellProperties5.Append(tableCellVerticalAlignment5);
 
-      Paragraph paragraph17 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "728F2AD1", TextId = "77777777" };
+      Paragraph paragraph17 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "728F2AD1", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties17 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent5 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid5 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines5 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification8 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties17 = new();
+      AdjustRightIndent adjustRightIndent5 = new() { Val = false };
+      SnapToGrid snapToGrid5 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines5 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification8 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties17 = new ParagraphMarkRunProperties();
-      RunFonts runFonts16 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize27 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript16 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties17 = new();
+      RunFonts runFonts16 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize27 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript16 = new() { Val = "36" };
 
       paragraphMarkRunProperties17.Append(runFonts16);
       paragraphMarkRunProperties17.Append(fontSize27);
@@ -1633,17 +1633,17 @@ namespace MD2DocxCore {
       paragraphProperties17.Append(justification8);
       paragraphProperties17.Append(paragraphMarkRunProperties17);
 
-      Run run11 = new Run();
+      Run run11 = new();
 
-      RunProperties runProperties11 = new RunProperties();
-      RunFonts runFonts17 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize28 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript17 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties11 = new();
+      RunFonts runFonts17 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize28 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript17 = new() { Val = "36" };
 
       runProperties11.Append(runFonts17);
       runProperties11.Append(fontSize28);
       runProperties11.Append(fontSizeComplexScript17);
-      Text text10 = new Text();
+      Text text10 = new();
       text10.Text = "指导教师：";
 
       run11.Append(runProperties11);
@@ -1655,35 +1655,35 @@ namespace MD2DocxCore {
       tableCell5.Append(tableCellProperties5);
       tableCell5.Append(paragraph17);
 
-      TableCell tableCell6 = new TableCell();
+      TableCell tableCell6 = new();
 
-      TableCellProperties tableCellProperties6 = new TableCellProperties();
-      TableCellWidth tableCellWidth6 = new TableCellWidth() { Width = "4604", Type = TableWidthUnitValues.Dxa };
+      TableCellProperties tableCellProperties6 = new();
+      TableCellWidth tableCellWidth6 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
-      TableCellBorders tableCellBorders3 = new TableCellBorders();
-      TopBorder topBorder2 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder3 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TableCellBorders tableCellBorders3 = new();
+      TopBorder topBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      BottomBorder bottomBorder3 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
 
       tableCellBorders3.Append(topBorder2);
       tableCellBorders3.Append(bottomBorder3);
-      TableCellVerticalAlignment tableCellVerticalAlignment6 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellVerticalAlignment tableCellVerticalAlignment6 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties6.Append(tableCellWidth6);
       tableCellProperties6.Append(tableCellBorders3);
       tableCellProperties6.Append(tableCellVerticalAlignment6);
 
-      Paragraph paragraph18 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "796A81C4", TextId = "4F2B62A8" };
+      Paragraph paragraph18 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "796A81C4", TextId = "4F2B62A8" };
 
-      ParagraphProperties paragraphProperties18 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent6 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid6 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines6 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification9 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties18 = new();
+      AdjustRightIndent adjustRightIndent6 = new() { Val = false };
+      SnapToGrid snapToGrid6 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines6 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification9 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties18 = new ParagraphMarkRunProperties();
-      RunFonts runFonts18 = new RunFonts() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize29 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript18 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties18 = new();
+      RunFonts runFonts18 = new() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize29 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript18 = new() { Val = "36" };
 
       paragraphMarkRunProperties18.Append(runFonts18);
       paragraphMarkRunProperties18.Append(fontSize29);
@@ -1695,17 +1695,17 @@ namespace MD2DocxCore {
       paragraphProperties18.Append(justification9);
       paragraphProperties18.Append(paragraphMarkRunProperties18);
 
-      Run run12 = new Run();
+      Run run12 = new();
 
-      RunProperties runProperties12 = new RunProperties();
-      RunFonts runFonts19 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize30 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript19 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties12 = new();
+      RunFonts runFonts19 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize30 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript19 = new() { Val = "36" };
 
       runProperties12.Append(runFonts19);
       runProperties12.Append(fontSize30);
       runProperties12.Append(fontSizeComplexScript19);
-      Text text11 = new Text {
+      Text text11 = new() {
         Text = info["teacher"]
       };
 
@@ -1722,36 +1722,36 @@ namespace MD2DocxCore {
       tableRow3.Append(tableCell5);
       tableRow3.Append(tableCell6);
 
-      TableRow tableRow4 = new TableRow() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "6B8171AE", TextId = "77777777" };
+      TableRow tableRow4 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "6B8171AE", TextId = "77777777" };
 
-      TableRowProperties tableRowProperties4 = new TableRowProperties();
-      TableRowHeight tableRowHeight4 = new TableRowHeight() { Val = (UInt32Value)744U };
-      TableJustification tableJustification5 = new TableJustification() { Val = TableRowAlignmentValues.Center };
+      TableRowProperties tableRowProperties4 = new();
+      TableRowHeight tableRowHeight4 = new() { Val = (UInt32Value)744U };
+      TableJustification tableJustification5 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties4.Append(tableRowHeight4);
       tableRowProperties4.Append(tableJustification5);
 
-      TableCell tableCell7 = new TableCell();
+      TableCell tableCell7 = new();
 
-      TableCellProperties tableCellProperties7 = new TableCellProperties();
-      TableCellWidth tableCellWidth7 = new TableCellWidth() { Width = "2096", Type = TableWidthUnitValues.Dxa };
-      TableCellVerticalAlignment tableCellVerticalAlignment7 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellProperties tableCellProperties7 = new();
+      TableCellWidth tableCellWidth7 = new() { Width = "2096", Type = TableWidthUnitValues.Dxa };
+      TableCellVerticalAlignment tableCellVerticalAlignment7 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties7.Append(tableCellWidth7);
       tableCellProperties7.Append(tableCellVerticalAlignment7);
 
-      Paragraph paragraph19 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "7A20A062", TextId = "5D222DE0" };
+      Paragraph paragraph19 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "7A20A062", TextId = "5D222DE0" };
 
-      ParagraphProperties paragraphProperties19 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent7 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid7 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines7 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification10 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties19 = new();
+      AdjustRightIndent adjustRightIndent7 = new() { Val = false };
+      SnapToGrid snapToGrid7 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines7 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification10 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties19 = new ParagraphMarkRunProperties();
-      RunFonts runFonts20 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize31 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript20 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties19 = new();
+      RunFonts runFonts20 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize31 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript20 = new() { Val = "36" };
 
       paragraphMarkRunProperties19.Append(runFonts20);
       paragraphMarkRunProperties19.Append(fontSize31);
@@ -1762,52 +1762,52 @@ namespace MD2DocxCore {
       paragraphProperties19.Append(spacingBetweenLines7);
       paragraphProperties19.Append(justification10);
       paragraphProperties19.Append(paragraphMarkRunProperties19);
-      ProofError proofError3 = new ProofError() { Type = ProofingErrorValues.GrammarStart };
+      ProofError proofError3 = new() { Type = ProofingErrorValues.GrammarStart };
 
-      Run run13 = new Run();
+      Run run13 = new();
 
-      RunProperties runProperties13 = new RunProperties();
-      RunFonts runFonts21 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize32 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript21 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties13 = new();
+      RunFonts runFonts21 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize32 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript21 = new() { Val = "36" };
 
       runProperties13.Append(runFonts21);
       runProperties13.Append(fontSize32);
       runProperties13.Append(fontSizeComplexScript21);
-      Text text12 = new Text();
+      Text text12 = new();
       text12.Text = "学";
 
       run13.Append(runProperties13);
       run13.Append(text12);
 
-      Run run14 = new Run() { RsidRunAddition = "00024893" };
+      Run run14 = new() { RsidRunAddition = "00024893" };
 
-      RunProperties runProperties14 = new RunProperties();
-      RunFonts runFonts22 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize33 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript22 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties14 = new();
+      RunFonts runFonts22 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize33 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript22 = new() { Val = "36" };
 
       runProperties14.Append(runFonts22);
       runProperties14.Append(fontSize33);
       runProperties14.Append(fontSizeComplexScript22);
-      Text text13 = new Text() { Space = SpaceProcessingModeValues.Preserve };
+      Text text13 = new() { Space = SpaceProcessingModeValues.Preserve };
       text13.Text = "　　";
 
       run14.Append(runProperties14);
       run14.Append(text13);
-      ProofError proofError4 = new ProofError() { Type = ProofingErrorValues.GrammarEnd };
+      ProofError proofError4 = new() { Type = ProofingErrorValues.GrammarEnd };
 
-      Run run15 = new Run();
+      Run run15 = new();
 
-      RunProperties runProperties15 = new RunProperties();
-      RunFonts runFonts23 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize34 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript23 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties15 = new();
+      RunFonts runFonts23 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize34 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript23 = new() { Val = "36" };
 
       runProperties15.Append(runFonts23);
       runProperties15.Append(fontSize34);
       runProperties15.Append(fontSizeComplexScript23);
-      Text text14 = new Text();
+      Text text14 = new();
       text14.Text = "号：";
 
       run15.Append(runProperties15);
@@ -1823,35 +1823,35 @@ namespace MD2DocxCore {
       tableCell7.Append(tableCellProperties7);
       tableCell7.Append(paragraph19);
 
-      TableCell tableCell8 = new TableCell();
+      TableCell tableCell8 = new();
 
-      TableCellProperties tableCellProperties8 = new TableCellProperties();
-      TableCellWidth tableCellWidth8 = new TableCellWidth() { Width = "4604", Type = TableWidthUnitValues.Dxa };
+      TableCellProperties tableCellProperties8 = new();
+      TableCellWidth tableCellWidth8 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
-      TableCellBorders tableCellBorders4 = new TableCellBorders();
-      TopBorder topBorder3 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder4 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TableCellBorders tableCellBorders4 = new();
+      TopBorder topBorder3 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      BottomBorder bottomBorder4 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
 
       tableCellBorders4.Append(topBorder3);
       tableCellBorders4.Append(bottomBorder4);
-      TableCellVerticalAlignment tableCellVerticalAlignment8 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellVerticalAlignment tableCellVerticalAlignment8 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties8.Append(tableCellWidth8);
       tableCellProperties8.Append(tableCellBorders4);
       tableCellProperties8.Append(tableCellVerticalAlignment8);
 
-      Paragraph paragraph20 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "50B5DA38", TextId = "356A33C2" };
+      Paragraph paragraph20 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "50B5DA38", TextId = "356A33C2" };
 
-      ParagraphProperties paragraphProperties20 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent8 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid8 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines8 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification11 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties20 = new();
+      AdjustRightIndent adjustRightIndent8 = new() { Val = false };
+      SnapToGrid snapToGrid8 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines8 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification11 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties20 = new ParagraphMarkRunProperties();
-      RunFonts runFonts24 = new RunFonts() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize35 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript24 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties20 = new();
+      RunFonts runFonts24 = new() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize35 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript24 = new() { Val = "36" };
 
       paragraphMarkRunProperties20.Append(runFonts24);
       paragraphMarkRunProperties20.Append(fontSize35);
@@ -1863,17 +1863,17 @@ namespace MD2DocxCore {
       paragraphProperties20.Append(justification11);
       paragraphProperties20.Append(paragraphMarkRunProperties20);
 
-      Run run16 = new Run();
+      Run run16 = new();
 
-      RunProperties runProperties16 = new RunProperties();
-      RunFonts runFonts25 = new RunFonts() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize36 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript25 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties16 = new();
+      RunFonts runFonts25 = new() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize36 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript25 = new() { Val = "36" };
 
       runProperties16.Append(runFonts25);
       runProperties16.Append(fontSize36);
       runProperties16.Append(fontSizeComplexScript25);
-      Text text15 = new Text {
+      Text text15 = new() {
         Text = info["id"]
       };
 
@@ -1890,40 +1890,40 @@ namespace MD2DocxCore {
       tableRow4.Append(tableCell7);
       tableRow4.Append(tableCell8);
 
-      TableRow tableRow5 = new TableRow() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "7C122850", TextId = "77777777" };
+      TableRow tableRow5 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "7C122850", TextId = "77777777" };
 
-      TableRowProperties tableRowProperties5 = new TableRowProperties();
-      TableRowHeight tableRowHeight5 = new TableRowHeight() { Val = (UInt32Value)744U };
-      TableJustification tableJustification6 = new TableJustification() { Val = TableRowAlignmentValues.Center };
+      TableRowProperties tableRowProperties5 = new();
+      TableRowHeight tableRowHeight5 = new() { Val = (UInt32Value)744U };
+      TableJustification tableJustification6 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties5.Append(tableRowHeight5);
       tableRowProperties5.Append(tableJustification6);
 
-      TableCell tableCell9 = new TableCell();
+      TableCell tableCell9 = new();
 
-      TableCellProperties tableCellProperties9 = new TableCellProperties();
-      TableCellWidth tableCellWidth9 = new TableCellWidth() { Width = "2096", Type = TableWidthUnitValues.Dxa };
-      TableCellVerticalAlignment tableCellVerticalAlignment9 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellProperties tableCellProperties9 = new();
+      TableCellWidth tableCellWidth9 = new() { Width = "2096", Type = TableWidthUnitValues.Dxa };
+      TableCellVerticalAlignment tableCellVerticalAlignment9 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties9.Append(tableCellWidth9);
       tableCellProperties9.Append(tableCellVerticalAlignment9);
 
-      Paragraph paragraph21 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "5FF30A28", TextId = "77777777" };
+      Paragraph paragraph21 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "5FF30A28", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties21 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent9 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid9 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines9 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification12 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties21 = new();
+      AdjustRightIndent adjustRightIndent9 = new() { Val = false };
+      SnapToGrid snapToGrid9 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines9 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification12 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties21 = new ParagraphMarkRunProperties();
-      RunFonts runFonts27 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize38 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript27 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties21 = new();
+      RunFonts runFonts27 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize38 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript27 = new() { Val = "36" };
 
       paragraphMarkRunProperties21.Append(runFonts27);
       paragraphMarkRunProperties21.Append(fontSize38);
-
+      paragraphMarkRunProperties21.Append(fontSizeComplexScript27);
 
       paragraphProperties21.Append(adjustRightIndent9);
       paragraphProperties21.Append(snapToGrid9);
@@ -1931,17 +1931,17 @@ namespace MD2DocxCore {
       paragraphProperties21.Append(justification12);
       paragraphProperties21.Append(paragraphMarkRunProperties21);
 
-      Run run18 = new Run();
+      Run run18 = new();
 
-      RunProperties runProperties18 = new RunProperties();
-      RunFonts runFonts28 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize39 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript28 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties18 = new();
+      RunFonts runFonts28 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize39 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript28 = new() { Val = "36" };
 
       runProperties18.Append(runFonts28);
       runProperties18.Append(fontSize39);
       runProperties18.Append(fontSizeComplexScript28);
-      Text text17 = new Text();
+      Text text17 = new();
       text17.Text = "学生姓名：";
 
       run18.Append(runProperties18);
@@ -1953,35 +1953,35 @@ namespace MD2DocxCore {
       tableCell9.Append(tableCellProperties9);
       tableCell9.Append(paragraph21);
 
-      TableCell tableCell10 = new TableCell();
+      TableCell tableCell10 = new();
 
-      TableCellProperties tableCellProperties10 = new TableCellProperties();
-      TableCellWidth tableCellWidth10 = new TableCellWidth() { Width = "4604", Type = TableWidthUnitValues.Dxa };
+      TableCellProperties tableCellProperties10 = new();
+      TableCellWidth tableCellWidth10 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
-      TableCellBorders tableCellBorders5 = new TableCellBorders();
-      TopBorder topBorder4 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder5 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TableCellBorders tableCellBorders5 = new();
+      TopBorder topBorder4 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      BottomBorder bottomBorder5 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
 
       tableCellBorders5.Append(topBorder4);
       tableCellBorders5.Append(bottomBorder5);
-      TableCellVerticalAlignment tableCellVerticalAlignment10 = new TableCellVerticalAlignment() { Val = TableVerticalAlignmentValues.Center };
+      TableCellVerticalAlignment tableCellVerticalAlignment10 = new() { Val = TableVerticalAlignmentValues.Center };
 
       tableCellProperties10.Append(tableCellWidth10);
       tableCellProperties10.Append(tableCellBorders5);
       tableCellProperties10.Append(tableCellVerticalAlignment10);
 
-      Paragraph paragraph22 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "09D99ABE", TextId = "40077ABC" };
+      Paragraph paragraph22 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "09D99ABE", TextId = "40077ABC" };
 
-      ParagraphProperties paragraphProperties22 = new ParagraphProperties();
-      AdjustRightIndent adjustRightIndent10 = new AdjustRightIndent() { Val = false };
-      SnapToGrid snapToGrid10 = new SnapToGrid() { Val = false };
-      SpacingBetweenLines spacingBetweenLines10 = new SpacingBetweenLines() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
-      Justification justification13 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties22 = new();
+      AdjustRightIndent adjustRightIndent10 = new() { Val = false };
+      SnapToGrid snapToGrid10 = new() { Val = false };
+      SpacingBetweenLines spacingBetweenLines10 = new() { Line = "400", LineRule = LineSpacingRuleValues.AtLeast };
+      Justification justification13 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties22 = new ParagraphMarkRunProperties();
-      RunFonts runFonts29 = new RunFonts() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize40 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript29 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties22 = new();
+      RunFonts runFonts29 = new() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize40 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript29 = new() { Val = "36" };
 
       paragraphMarkRunProperties22.Append(runFonts29);
       paragraphMarkRunProperties22.Append(fontSize40);
@@ -1993,17 +1993,17 @@ namespace MD2DocxCore {
       paragraphProperties22.Append(justification13);
       paragraphProperties22.Append(paragraphMarkRunProperties22);
 
-      Run run19 = new Run();
+      Run run19 = new();
 
-      RunProperties runProperties19 = new RunProperties();
-      RunFonts runFonts30 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      FontSize fontSize41 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript30 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties19 = new();
+      RunFonts runFonts30 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      FontSize fontSize41 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript30 = new() { Val = "36" };
 
       runProperties19.Append(runFonts30);
       runProperties19.Append(fontSize41);
       runProperties19.Append(fontSizeComplexScript30);
-      Text text18 = new Text {
+      Text text18 = new() {
         Text = info["name"]
       };
 
@@ -2028,12 +2028,12 @@ namespace MD2DocxCore {
       table1.Append(tableRow4);
       table1.Append(tableRow5);
 
-      Paragraph paragraph23 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "5FA1753B", TextId = "77777777" };
+      Paragraph paragraph23 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "5FA1753B", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties23 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties23 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties23 = new ParagraphMarkRunProperties();
-      FontSize fontSize42 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties23 = new();
+      FontSize fontSize42 = new() { Val = "24" };
 
       paragraphMarkRunProperties23.Append(fontSize42);
 
@@ -2041,12 +2041,12 @@ namespace MD2DocxCore {
 
       paragraph23.Append(paragraphProperties23);
 
-      Paragraph paragraph24 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "501B2F20", TextId = "77777777" };
+      Paragraph paragraph24 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "501B2F20", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties24 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties24 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties24 = new ParagraphMarkRunProperties();
-      FontSize fontSize43 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties24 = new();
+      FontSize fontSize43 = new() { Val = "24" };
 
       paragraphMarkRunProperties24.Append(fontSize43);
 
@@ -2054,12 +2054,12 @@ namespace MD2DocxCore {
 
       paragraph24.Append(paragraphProperties24);
 
-      Paragraph paragraph25 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "3DEBBE89", TextId = "77777777" };
+      Paragraph paragraph25 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "3DEBBE89", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties25 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties25 = new();
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties25 = new ParagraphMarkRunProperties();
-      FontSize fontSize44 = new FontSize() { Val = "24" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties25 = new();
+      FontSize fontSize44 = new() { Val = "24" };
 
       paragraphMarkRunProperties25.Append(fontSize44);
 
@@ -2067,15 +2067,15 @@ namespace MD2DocxCore {
 
       paragraph25.Append(paragraphProperties25);
 
-      Paragraph paragraph26 = new Paragraph() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "17F9546E", TextId = "77777777" };
+      Paragraph paragraph26 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "17F9546E", TextId = "77777777" };
 
-      ParagraphProperties paragraphProperties26 = new ParagraphProperties();
-      Justification justification14 = new Justification() { Val = JustificationValues.Center };
+      ParagraphProperties paragraphProperties26 = new();
+      Justification justification14 = new() { Val = JustificationValues.Center };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties26 = new ParagraphMarkRunProperties();
-      RunFonts runFonts31 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize45 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript31 = new FontSizeComplexScript() { Val = "36" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties26 = new();
+      RunFonts runFonts31 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize45 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript31 = new() { Val = "36" };
 
       paragraphMarkRunProperties26.Append(runFonts31);
       paragraphMarkRunProperties26.Append(fontSize45);
@@ -2086,19 +2086,19 @@ namespace MD2DocxCore {
 
       paragraph26.Append(paragraphProperties26);
 
-      Paragraph paragraph27 = new Paragraph() { RsidParagraphMarkRevision = "0028483A", RsidParagraphAddition = "00415374", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "589A44F4", TextId = "46EA8F00" };
+      Paragraph paragraph27 = new() { RsidParagraphMarkRevision = "0028483A", RsidParagraphAddition = "00415374", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "589A44F4", TextId = "46EA8F00" };
 
-      ParagraphProperties paragraphProperties27 = new ParagraphProperties();
-      Justification justification15 = new Justification() { Val = JustificationValues.Center };
-      SectionProperties sectionProperties1 = new SectionProperties();
+      ParagraphProperties paragraphProperties27 = new();
+      Justification justification15 = new() { Val = JustificationValues.Center };
+      SectionProperties sectionProperties1 = new();
       if (hasHeader) {
-        HeaderReference headerReference1 = new HeaderReference() { Type = HeaderFooterValues.Default, Id = "rId3" };
+        HeaderReference headerReference1 = new() { Type = HeaderFooterValues.Default, Id = "rId3" };
         sectionProperties1.Append(headerReference1);
       }
-      PageSize pageSize1 = new PageSize() { Width = 11906U, Height = 16838U };
-      PageMargin pageMargin1 = new PageMargin() { Top = 1418, Right = 1134U, Bottom = 1418, Left = 1701U, Header = 851U, Footer = 992U, Gutter = 0U };
-      Columns columns1 = new Columns() { Space = "425" };
-      DocGrid docGrid1 = new DocGrid() { Type = DocGridValues.Lines, LinePitch = 312 };
+      PageSize pageSize1 = new() { Width = 11906U, Height = 16838U };
+      PageMargin pageMargin1 = new() { Top = 1418, Right = 1134U, Bottom = 1418, Left = 1701U, Header = 851U, Footer = 992U, Gutter = 0U };
+      Columns columns1 = new() { Space = "425" };
+      DocGrid docGrid1 = new() { Type = DocGridValues.Lines, LinePitch = 312 };
       sectionProperties1.Append(pageSize1);
       sectionProperties1.Append(pageMargin1);
       sectionProperties1.Append(columns1);
@@ -2107,17 +2107,17 @@ namespace MD2DocxCore {
       paragraphProperties27.Append(sectionProperties1);
       paragraphProperties27.Append(justification15);
 
-      Run run20 = new Run();
+      Run run20 = new();
 
-      RunProperties runProperties20 = new RunProperties();
-      RunFonts runFonts32 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize46 = new FontSize() { Val = "36" };
-      FontSizeComplexScript fontSizeComplexScript32 = new FontSizeComplexScript() { Val = "36" };
+      RunProperties runProperties20 = new();
+      RunFonts runFonts32 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize46 = new() { Val = "36" };
+      FontSizeComplexScript fontSizeComplexScript32 = new() { Val = "36" };
 
       runProperties20.Append(runFonts32);
       runProperties20.Append(fontSize46);
       runProperties20.Append(fontSizeComplexScript32);
-      Text text19 = new Text {
+      Text text19 = new() {
         Text = DateTime.Now.ToString("yyyy年MM月")
       };
 
@@ -2147,33 +2147,33 @@ namespace MD2DocxCore {
     }
 
     public static void GenerateTOC(ref Body docBody, bool hasHeader, bool hasFooter) {
-      Paragraph para = new Paragraph {
-        ParagraphProperties = new ParagraphProperties {
-          ParagraphStyleId = new ParagraphStyleId { Val = "Abstract Title" },
-          PageBreakBefore = new PageBreakBefore()
+      Paragraph para = new() {
+        ParagraphProperties = new() {
+          ParagraphStyleId = new() { Val = "Abstract Title" },
+          PageBreakBefore = new()
         }
       };
-      Run run = new Run {
-        RunProperties = new RunProperties()
+      Run run = new() {
+        RunProperties = new()
       };
-      Text txt = new Text { Text = "目录" };
+      Text txt = new() { Text = "目录" };
       run.Append(txt);
       para.Append(run);
       docBody.Append(para);
 
-      SdtBlock sdtBlock1 = new SdtBlock();
+      SdtBlock sdtBlock1 = new();
 
-      SdtProperties sdtProperties1 = new SdtProperties();
+      SdtProperties sdtProperties1 = new();
 
-      RunProperties runProperties1 = new RunProperties();
-      Languages languages1 = new Languages() { Val = "zh-CN" };
+      RunProperties runProperties1 = new();
+      Languages languages1 = new() { Val = "zh-CN" };
 
       runProperties1.Append(languages1);
-      SdtId sdtId1 = new SdtId() { Val = 504253948 };
+      SdtId sdtId1 = new() { Val = 504253948 };
 
-      SdtContentDocPartObject sdtContentDocPartObject1 = new SdtContentDocPartObject();
-      DocPartGallery docPartGallery1 = new DocPartGallery() { Val = "Table of Contents" };
-      DocPartUnique docPartUnique1 = new DocPartUnique();
+      SdtContentDocPartObject sdtContentDocPartObject1 = new();
+      DocPartGallery docPartGallery1 = new() { Val = "Table of Contents" };
+      DocPartUnique docPartUnique1 = new();
 
       sdtContentDocPartObject1.Append(docPartGallery1);
       sdtContentDocPartObject1.Append(docPartUnique1);
@@ -2182,16 +2182,16 @@ namespace MD2DocxCore {
       sdtProperties1.Append(sdtId1);
       sdtProperties1.Append(sdtContentDocPartObject1);
 
-      SdtEndCharProperties sdtEndCharProperties1 = new SdtEndCharProperties();
+      SdtEndCharProperties sdtEndCharProperties1 = new();
 
-      RunProperties runProperties2 = new RunProperties();
-      RunFonts runFonts1 = new RunFonts() { Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "宋体", ComplexScript = "Times New Roman" };
-      Bold bold1 = new Bold();
-      BoldComplexScript boldComplexScript1 = new BoldComplexScript();
-      Color color1 = new Color() { Val = "auto" };
-      Kern kern1 = new Kern() { Val = (UInt32Value)2U };
-      FontSize fontSize1 = new FontSize() { Val = "24" };
-      FontSizeComplexScript fontSizeComplexScript1 = new FontSizeComplexScript() { Val = "24" };
+      RunProperties runProperties2 = new();
+      RunFonts runFonts1 = new() { Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "宋体", ComplexScript = "Times New Roman" };
+      Bold bold1 = new();
+      BoldComplexScript boldComplexScript1 = new();
+      Color color1 = new() { Val = "auto" };
+      Kern kern1 = new() { Val = (UInt32Value)2U };
+      FontSize fontSize1 = new() { Val = "24" };
+      FontSizeComplexScript fontSizeComplexScript1 = new() { Val = "24" };
 
       runProperties2.Append(runFonts1);
       runProperties2.Append(bold1);
@@ -2203,28 +2203,28 @@ namespace MD2DocxCore {
 
       sdtEndCharProperties1.Append(runProperties2);
 
-      SdtContentBlock sdtContentBlock1 = new SdtContentBlock();
+      SdtContentBlock sdtContentBlock1 = new();
 
-      Paragraph paragraph3 = new Paragraph() { RsidParagraphAddition = "003863DC", RsidRunAdditionDefault = "003863DC", ParagraphId = "233F4095", TextId = "52301D4D" };
+      Paragraph paragraph3 = new() { RsidParagraphAddition = "003863DC", RsidRunAdditionDefault = "003863DC", ParagraphId = "233F4095", TextId = "52301D4D" };
 
-      SimpleField simpleField1 = new SimpleField() { Instruction = " TOC \\o \"1-3\" \\h \\z \\u " };
+      SimpleField simpleField1 = new() { Instruction = " TOC \\o \"1-3\" \\h \\z \\u " };
 
-      Run run4 = new Run();
+      Run run4 = new();
 
-      RunProperties runProperties5 = new RunProperties {
-        FontSize = new FontSize { Val = "24" },
-        FontSizeComplexScript = new FontSizeComplexScript { Val = "24" }
+      RunProperties runProperties5 = new() {
+        FontSize = new() { Val = "24" },
+        FontSizeComplexScript = new() { Val = "24" }
       };
-      RunFonts runFonts2 = new RunFonts() { Hint = FontTypeHintValues.EastAsia };
-      Bold bold2 = new Bold();
-      BoldComplexScript boldComplexScript2 = new BoldComplexScript();
-      NoProof noProof1 = new NoProof();
+      RunFonts runFonts2 = new() { Hint = FontTypeHintValues.EastAsia };
+      Bold bold2 = new();
+      BoldComplexScript boldComplexScript2 = new();
+      NoProof noProof1 = new();
 
       runProperties5.Append(runFonts2);
       runProperties5.Append(bold2);
       runProperties5.Append(boldComplexScript2);
       runProperties5.Append(noProof1);
-      Text text3 = new Text {
+      Text text3 = new() {
         Text = "请手动点击<更新目录>按钮更新目录"
       };
 
@@ -2243,24 +2243,24 @@ namespace MD2DocxCore {
 
       docBody.Append(sdtBlock1);
 
-      para = new Paragraph();
+      para = new();
 
-      ParagraphProperties paragraphProperties = new ParagraphProperties();
+      ParagraphProperties paragraphProperties = new();
 
-      SectionProperties sectionProperties = new SectionProperties() { RsidR = "00160BE2", RsidSect = "00826B60" };
+      SectionProperties sectionProperties = new() { RsidR = "00160BE2", RsidSect = "00826B60" };
       if (hasHeader) {
-        HeaderReference headerReference1 = new HeaderReference() { Type = HeaderFooterValues.Default, Id = "rId3" };
+        HeaderReference headerReference1 = new() { Type = HeaderFooterValues.Default, Id = "rId3" };
         sectionProperties.Append(headerReference1);
       }
       if (hasFooter) {
-        FooterReference footerReference4 = new FooterReference() { Type = HeaderFooterValues.Default, Id = "rId5" };
+        FooterReference footerReference4 = new() { Type = HeaderFooterValues.Default, Id = "rId5" };
         sectionProperties.Append(footerReference4);
       }
-      PageSize pageSize2 = new PageSize() { Width = 11906U, Height = 16838U };
-      PageMargin pageMargin2 = new PageMargin() { Top = 1440, Right = 1800U, Bottom = 1440, Left = 1800U, Header = 851U, Footer = 992U, Gutter = 0U };
-      PageNumberType pageNumberType1 = new PageNumberType() { Format = NumberFormatValues.UpperRoman, Start = 1 };
-      Columns columns2 = new Columns() { Space = "425" };
-      DocGrid docGrid2 = new DocGrid() { Type = DocGridValues.Lines, LinePitch = 312 };
+      PageSize pageSize2 = new() { Width = 11906U, Height = 16838U };
+      PageMargin pageMargin2 = new() { Top = 1440, Right = 1800U, Bottom = 1440, Left = 1800U, Header = 851U, Footer = 992U, Gutter = 0U };
+      PageNumberType pageNumberType1 = new() { Format = NumberFormatValues.UpperRoman, Start = 1 };
+      Columns columns2 = new() { Space = "425" };
+      DocGrid docGrid2 = new() { Type = DocGridValues.Lines, LinePitch = 312 };
       sectionProperties.Append(pageSize2);
       sectionProperties.Append(pageMargin2);
       sectionProperties.Append(pageNumberType1);
@@ -2269,21 +2269,21 @@ namespace MD2DocxCore {
 
       paragraphProperties.Append(sectionProperties);
 
-      Run run14 = new Run();
+      Run run14 = new();
       para.Append(paragraphProperties);
       para.Append(run14);
       docBody.Append(para);
     }
 
     public static void GenerateFontTablePartContent(FontTablePart fontTablePart1) {
-      Fonts fonts1 = new Fonts() { MCAttributes = new MarkupCompatibilityAttributes() };
+      Fonts fonts1 = new() { MCAttributes = new() };
 
-      Font font1 = new Font() { Name = "Times New Roman" };
-      Panose1Number panose1Number1 = new Panose1Number() { Val = "02020603050405020304" };
-      FontCharSet fontCharSet1 = new FontCharSet() { Val = "00" };
-      FontFamily fontFamily1 = new FontFamily() { Val = FontFamilyValues.Roman };
-      Pitch pitch1 = new Pitch() { Val = FontPitchValues.Variable };
-      FontSignature fontSignature1 = new FontSignature() { UnicodeSignature0 = "E0002AFF", UnicodeSignature1 = "C0007843", UnicodeSignature2 = "00000009", UnicodeSignature3 = "00000000", CodePageSignature0 = "000001FF", CodePageSignature1 = "00000000" };
+      Font font1 = new() { Name = "Times New Roman" };
+      Panose1Number panose1Number1 = new() { Val = "02020603050405020304" };
+      FontCharSet fontCharSet1 = new() { Val = "00" };
+      FontFamily fontFamily1 = new() { Val = FontFamilyValues.Roman };
+      Pitch pitch1 = new() { Val = FontPitchValues.Variable };
+      FontSignature fontSignature1 = new() { UnicodeSignature0 = "E0002AFF", UnicodeSignature1 = "C0007843", UnicodeSignature2 = "00000009", UnicodeSignature3 = "00000000", CodePageSignature0 = "000001FF", CodePageSignature1 = "00000000" };
 
       font1.Append(panose1Number1);
       font1.Append(fontCharSet1);
@@ -2291,13 +2291,13 @@ namespace MD2DocxCore {
       font1.Append(pitch1);
       font1.Append(fontSignature1);
 
-      Font font2 = new Font() { Name = "宋体" };
-      AltName altName1 = new AltName() { Val = "SimSun" };
-      Panose1Number panose1Number2 = new Panose1Number() { Val = "02010600030101010101" };
-      FontCharSet fontCharSet2 = new FontCharSet() { Val = "86" };
-      FontFamily fontFamily2 = new FontFamily() { Val = FontFamilyValues.Auto };
-      Pitch pitch2 = new Pitch() { Val = FontPitchValues.Variable };
-      FontSignature fontSignature2 = new FontSignature() { UnicodeSignature0 = "00000003", UnicodeSignature1 = "288F0000", UnicodeSignature2 = "00000016", UnicodeSignature3 = "00000000", CodePageSignature0 = "00040001", CodePageSignature1 = "00000000" };
+      Font font2 = new() { Name = "宋体" };
+      AltName altName1 = new() { Val = "SimSun" };
+      Panose1Number panose1Number2 = new() { Val = "02010600030101010101" };
+      FontCharSet fontCharSet2 = new() { Val = "86" };
+      FontFamily fontFamily2 = new() { Val = FontFamilyValues.Auto };
+      Pitch pitch2 = new() { Val = FontPitchValues.Variable };
+      FontSignature fontSignature2 = new() { UnicodeSignature0 = "00000003", UnicodeSignature1 = "288F0000", UnicodeSignature2 = "00000016", UnicodeSignature3 = "00000000", CodePageSignature0 = "00040001", CodePageSignature1 = "00000000" };
 
       font2.Append(altName1);
       font2.Append(panose1Number2);
@@ -2306,12 +2306,12 @@ namespace MD2DocxCore {
       font2.Append(pitch2);
       font2.Append(fontSignature2);
 
-      Font font3 = new Font() { Name = "等线 Light" };
-      Panose1Number panose1Number3 = new Panose1Number() { Val = "02010600030101010101" };
-      FontCharSet fontCharSet3 = new FontCharSet() { Val = "86" };
-      FontFamily fontFamily3 = new FontFamily() { Val = FontFamilyValues.Auto };
-      Pitch pitch3 = new Pitch() { Val = FontPitchValues.Variable };
-      FontSignature fontSignature3 = new FontSignature() { UnicodeSignature0 = "A00002BF", UnicodeSignature1 = "38CF7CFA", UnicodeSignature2 = "00000016", UnicodeSignature3 = "00000000", CodePageSignature0 = "0004000F", CodePageSignature1 = "00000000" };
+      Font font3 = new() { Name = "等线 Light" };
+      Panose1Number panose1Number3 = new() { Val = "02010600030101010101" };
+      FontCharSet fontCharSet3 = new() { Val = "86" };
+      FontFamily fontFamily3 = new() { Val = FontFamilyValues.Auto };
+      Pitch pitch3 = new() { Val = FontPitchValues.Variable };
+      FontSignature fontSignature3 = new() { UnicodeSignature0 = "A00002BF", UnicodeSignature1 = "38CF7CFA", UnicodeSignature2 = "00000016", UnicodeSignature3 = "00000000", CodePageSignature0 = "0004000F", CodePageSignature1 = "00000000" };
 
       font3.Append(panose1Number3);
       font3.Append(fontCharSet3);
@@ -2319,13 +2319,13 @@ namespace MD2DocxCore {
       font3.Append(pitch3);
       font3.Append(fontSignature3);
 
-      Font font4 = new Font() { Name = "黑体" };
-      AltName altName2 = new AltName() { Val = "SimHei" };
-      Panose1Number panose1Number4 = new Panose1Number() { Val = "02010609060101010101" };
-      FontCharSet fontCharSet4 = new FontCharSet() { Val = "86" };
-      FontFamily fontFamily4 = new FontFamily() { Val = FontFamilyValues.Modern };
-      Pitch pitch4 = new Pitch() { Val = FontPitchValues.Fixed };
-      FontSignature fontSignature4 = new FontSignature() { UnicodeSignature0 = "800002BF", UnicodeSignature1 = "38CF7CFA", UnicodeSignature2 = "00000016", UnicodeSignature3 = "00000000", CodePageSignature0 = "00040001", CodePageSignature1 = "00000000" };
+      Font font4 = new() { Name = "黑体" };
+      AltName altName2 = new() { Val = "SimHei" };
+      Panose1Number panose1Number4 = new() { Val = "02010609060101010101" };
+      FontCharSet fontCharSet4 = new() { Val = "86" };
+      FontFamily fontFamily4 = new() { Val = FontFamilyValues.Modern };
+      Pitch pitch4 = new() { Val = FontPitchValues.Fixed };
+      FontSignature fontSignature4 = new() { UnicodeSignature0 = "800002BF", UnicodeSignature1 = "38CF7CFA", UnicodeSignature2 = "00000016", UnicodeSignature3 = "00000000", CodePageSignature0 = "00040001", CodePageSignature1 = "00000000" };
 
       font4.Append(altName2);
       font4.Append(panose1Number4);
@@ -2343,64 +2343,64 @@ namespace MD2DocxCore {
     }
 
     public static Run GenerateImageReference(int id, long width, long height) {
-      Run run1 = new Run();
+      Run run1 = new();
 
-      RunProperties runProperties1 = new RunProperties();
-      NoProof noProof1 = new NoProof();
+      RunProperties runProperties1 = new();
+      NoProof noProof1 = new();
 
       runProperties1.Append(noProof1);
 
-      Drawing drawing1 = new Drawing();
+      Drawing drawing1 = new();
 
-      Wp.Inline inline1 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U };
-      Wp.Extent extent1 = new Wp.Extent() { Cx = width, Cy = height };
-      Wp.EffectExtent effectExtent1 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
-      Wp.DocProperties docProperties1 = new Wp.DocProperties() { Id = 1U, Name = $"图片 {id}" };
+      Wp.Inline inline1 = new() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U };
+      Wp.Extent extent1 = new() { Cx = width, Cy = height };
+      Wp.EffectExtent effectExtent1 = new() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
+      Wp.DocProperties docProperties1 = new() { Id = 1U, Name = $"图片 {id}" };
 
-      Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Wp.NonVisualGraphicFrameDrawingProperties();
+      Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new();
 
-      A.GraphicFrameLocks graphicFrameLocks1 = new A.GraphicFrameLocks() { NoChangeAspect = true };
+      A.GraphicFrameLocks graphicFrameLocks1 = new() { NoChangeAspect = true };
       graphicFrameLocks1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
       nonVisualGraphicFrameDrawingProperties1.Append(graphicFrameLocks1);
 
-      A.Graphic graphic1 = new A.Graphic();
+      A.Graphic graphic1 = new();
       graphic1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
-      A.GraphicData graphicData1 = new A.GraphicData() { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" };
+      A.GraphicData graphicData1 = new() { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" };
 
-      Pic.Picture picture1 = new Pic.Picture();
+      Pic.Picture picture1 = new();
       picture1.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
-      Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new Pic.NonVisualPictureProperties();
-      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Pic.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
-      Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new Pic.NonVisualPictureDrawingProperties();
+      Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new();
+      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = (UInt32Value)1U, Name = "" };
+      Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new();
 
       nonVisualPictureProperties1.Append(nonVisualDrawingProperties1);
       nonVisualPictureProperties1.Append(nonVisualPictureDrawingProperties1);
 
-      Pic.BlipFill blipFill1 = new Pic.BlipFill();
-      A.Blip blip1 = new A.Blip() { Embed = $"image{id}" };
+      Pic.BlipFill blipFill1 = new();
+      A.Blip blip1 = new() { Embed = $"image{id}" };
 
-      A.Stretch stretch1 = new A.Stretch();
-      A.FillRectangle fillRectangle1 = new A.FillRectangle();
+      A.Stretch stretch1 = new();
+      A.FillRectangle fillRectangle1 = new();
 
       stretch1.Append(fillRectangle1);
 
       blipFill1.Append(blip1);
       blipFill1.Append(stretch1);
 
-      Pic.ShapeProperties shapeProperties1 = new Pic.ShapeProperties();
+      Pic.ShapeProperties shapeProperties1 = new();
 
-      A.Transform2D transform2D1 = new A.Transform2D();
-      A.Offset offset1 = new A.Offset() { X = 0L, Y = 0L };
-      A.Extents extents1 = new A.Extents() { Cx = width, Cy = height };
+      A.Transform2D transform2D1 = new();
+      A.Offset offset1 = new() { X = 0L, Y = 0L };
+      A.Extents extents1 = new() { Cx = width, Cy = height };
 
       transform2D1.Append(offset1);
       transform2D1.Append(extents1);
 
-      A.PresetGeometry presetGeometry1 = new A.PresetGeometry() { Preset = A.ShapeTypeValues.Rectangle };
-      A.AdjustValueList adjustValueList1 = new A.AdjustValueList();
+      A.PresetGeometry presetGeometry1 = new() { Preset = A.ShapeTypeValues.Rectangle };
+      A.AdjustValueList adjustValueList1 = new();
 
       presetGeometry1.Append(adjustValueList1);
 
@@ -2430,7 +2430,7 @@ namespace MD2DocxCore {
     }
 
     public static void GenerateHeaderPartContent(HeaderPart headerPart, string title) {
-      Header header = new Header() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "w14 w15 w16se w16cid wp14" } };
+      Header header = new() { MCAttributes = new() { Ignorable = "w14 w15 w16se w16cid wp14" } };
       header.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
       header.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
       header.AddNamespaceDeclaration("cx1", "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex");
@@ -2461,30 +2461,30 @@ namespace MD2DocxCore {
       header.AddNamespaceDeclaration("wne", "http://schemas.microsoft.com/office/word/2006/wordml");
       header.AddNamespaceDeclaration("wps", "http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
 
-      Paragraph paragraph1 = new Paragraph() { RsidParagraphMarkRevision = "000724D3", RsidParagraphAddition = "000724D3", RsidParagraphProperties = "000724D3", RsidRunAdditionDefault = "000724D3", ParagraphId = "1A187061", TextId = "33744066" };
+      Paragraph paragraph1 = new() { RsidParagraphMarkRevision = "000724D3", RsidParagraphAddition = "000724D3", RsidParagraphProperties = "000724D3", RsidRunAdditionDefault = "000724D3", ParagraphId = "1A187061", TextId = "33744066" };
 
-      ParagraphProperties paragraphProperties1 = new ParagraphProperties();
+      ParagraphProperties paragraphProperties1 = new();
 
-      ParagraphBorders paragraphBorders2 = new ParagraphBorders();
-      BottomBorder bottomBorder2 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)6U, Space = (UInt32Value)0U };
+      ParagraphBorders paragraphBorders2 = new();
+      BottomBorder bottomBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)6U, Space = (UInt32Value)0U };
 
       paragraphBorders2.Append(bottomBorder2);
 
-      Tabs tabs3 = new Tabs();
-      TabStop tabStop5 = new TabStop() { Val = TabStopValues.Left, Position = 1485 };
-      TabStop tabStop6 = new TabStop() { Val = TabStopValues.Center, Position = 4153 };
-      TabStop tabStop7 = new TabStop() { Val = TabStopValues.Right, Position = 8306 };
+      Tabs tabs3 = new();
+      TabStop tabStop5 = new() { Val = TabStopValues.Left, Position = 1485 };
+      TabStop tabStop6 = new() { Val = TabStopValues.Center, Position = 4153 };
+      TabStop tabStop7 = new() { Val = TabStopValues.Right, Position = 8306 };
 
       tabs3.Append(tabStop5);
       tabs3.Append(tabStop6);
       tabs3.Append(tabStop7);
-      SnapToGrid snapToGrid3 = new SnapToGrid() { Val = false };
-      Justification justification4 = new Justification() { Val = JustificationValues.Distribute };
+      SnapToGrid snapToGrid3 = new() { Val = false };
+      Justification justification4 = new() { Val = JustificationValues.Distribute };
 
-      ParagraphMarkRunProperties paragraphMarkRunProperties1 = new ParagraphMarkRunProperties();
-      RunFonts runFonts2 = new RunFonts() { Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize5 = new FontSize() { Val = "18" };
-      FontSizeComplexScript fontSizeComplexScript5 = new FontSizeComplexScript() { Val = "18" };
+      ParagraphMarkRunProperties paragraphMarkRunProperties1 = new();
+      RunFonts runFonts2 = new() { Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize5 = new() { Val = "18" };
+      FontSizeComplexScript fontSizeComplexScript5 = new() { Val = "18" };
 
       paragraphMarkRunProperties1.Append(runFonts2);
       paragraphMarkRunProperties1.Append(fontSize5);
@@ -2496,16 +2496,16 @@ namespace MD2DocxCore {
       paragraphProperties1.Append(justification4);
       paragraphProperties1.Append(paragraphMarkRunProperties1);
 
-      Run run1 = new Run();
+      Run run1 = new();
 
-      RunProperties runProperties1 = new RunProperties();
-      RunFonts runFonts3 = new RunFonts() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
-      Bold bold1 = new Bold();
-      BoldComplexScript boldComplexScript1 = new BoldComplexScript();
-      NoProof noProof1 = new NoProof();
-      Kern kern2 = new Kern() { Val = (UInt32Value)0U };
-      FontSize fontSize6 = new FontSize() { Val = "72" };
-      FontSizeComplexScript fontSizeComplexScript6 = new FontSizeComplexScript() { Val = "72" };
+      RunProperties runProperties1 = new();
+      RunFonts runFonts3 = new() { Ascii = "华文楷体", HighAnsi = "华文楷体", EastAsia = "华文楷体" };
+      Bold bold1 = new();
+      BoldComplexScript boldComplexScript1 = new();
+      NoProof noProof1 = new();
+      Kern kern2 = new() { Val = (UInt32Value)0U };
+      FontSize fontSize6 = new() { Val = "72" };
+      FontSizeComplexScript fontSizeComplexScript6 = new() { Val = "72" };
 
       runProperties1.Append(runFonts3);
       runProperties1.Append(bold1);
@@ -2515,48 +2515,48 @@ namespace MD2DocxCore {
       runProperties1.Append(fontSize6);
       runProperties1.Append(fontSizeComplexScript6);
 
-      Drawing drawing1 = new Drawing();
+      Drawing drawing1 = new();
 
-      Wp.Inline inline1 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "64BA7B75", EditId = "611F1D7B" };
-      Wp.Extent extent1 = new Wp.Extent() { Cx = 1095375L, Cy = 285750L };
-      Wp.EffectExtent effectExtent1 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 9525L, BottomEdge = 0L };
-      Wp.DocProperties docProperties1 = new Wp.DocProperties() { Id = (UInt32Value)141U, Name = "图片 141", Description = "毕业设计(论文)图标" };
+      Wp.Inline inline1 = new() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "64BA7B75", EditId = "611F1D7B" };
+      Wp.Extent extent1 = new() { Cx = 1095375L, Cy = 285750L };
+      Wp.EffectExtent effectExtent1 = new() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 9525L, BottomEdge = 0L };
+      Wp.DocProperties docProperties1 = new() { Id = (UInt32Value)141U, Name = "图片 141", Description = "毕业设计(论文)图标" };
 
-      Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Wp.NonVisualGraphicFrameDrawingProperties();
+      Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new();
 
-      A.GraphicFrameLocks graphicFrameLocks1 = new A.GraphicFrameLocks() { NoChangeAspect = true };
+      A.GraphicFrameLocks graphicFrameLocks1 = new() { NoChangeAspect = true };
       graphicFrameLocks1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
       nonVisualGraphicFrameDrawingProperties1.Append(graphicFrameLocks1);
 
-      A.Graphic graphic1 = new A.Graphic();
+      A.Graphic graphic1 = new();
       graphic1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
 
-      A.GraphicData graphicData1 = new A.GraphicData() { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" };
+      A.GraphicData graphicData1 = new() { Uri = "http://schemas.openxmlformats.org/drawingml/2006/picture" };
 
-      Pic.Picture picture1 = new Pic.Picture();
+      Pic.Picture picture1 = new();
       picture1.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
-      Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new Pic.NonVisualPictureProperties();
-      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Pic.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "Picture 10", Description = "毕业设计(论文)图标" };
+      Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new();
+      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = (UInt32Value)0U, Name = "Picture 10", Description = "毕业设计(论文)图标" };
 
-      Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new Pic.NonVisualPictureDrawingProperties();
-      A.PictureLocks pictureLocks1 = new A.PictureLocks() { NoChangeAspect = true, NoChangeArrowheads = true };
+      Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new();
+      A.PictureLocks pictureLocks1 = new() { NoChangeAspect = true, NoChangeArrowheads = true };
 
       nonVisualPictureDrawingProperties1.Append(pictureLocks1);
 
       nonVisualPictureProperties1.Append(nonVisualDrawingProperties1);
       nonVisualPictureProperties1.Append(nonVisualPictureDrawingProperties1);
 
-      Pic.BlipFill blipFill1 = new Pic.BlipFill();
+      Pic.BlipFill blipFill1 = new();
 
-      A.Blip blip1 = new A.Blip() { Embed = "rId4" };
+      A.Blip blip1 = new() { Embed = "rId4" };
 
-      A.BlipExtensionList blipExtensionList1 = new A.BlipExtensionList();
+      A.BlipExtensionList blipExtensionList1 = new();
 
-      A.BlipExtension blipExtension1 = new A.BlipExtension() { Uri = "{28A0092B-C50C-407E-A947-70E740481C1C}" };
+      A.BlipExtension blipExtension1 = new() { Uri = "{28A0092B-C50C-407E-A947-70E740481C1C}" };
 
-      A14.UseLocalDpi useLocalDpi1 = new A14.UseLocalDpi() { Val = false };
+      A14.UseLocalDpi useLocalDpi1 = new() { Val = false };
       useLocalDpi1.AddNamespaceDeclaration("a14", "http://schemas.microsoft.com/office/drawing/2010/main");
 
       blipExtension1.Append(useLocalDpi1);
@@ -2564,10 +2564,10 @@ namespace MD2DocxCore {
       blipExtensionList1.Append(blipExtension1);
 
       blip1.Append(blipExtensionList1);
-      A.SourceRectangle sourceRectangle1 = new A.SourceRectangle();
+      A.SourceRectangle sourceRectangle1 = new();
 
-      A.Stretch stretch1 = new A.Stretch();
-      A.FillRectangle fillRectangle1 = new A.FillRectangle();
+      A.Stretch stretch1 = new();
+      A.FillRectangle fillRectangle1 = new();
 
       stretch1.Append(fillRectangle1);
 
@@ -2575,23 +2575,23 @@ namespace MD2DocxCore {
       blipFill1.Append(sourceRectangle1);
       blipFill1.Append(stretch1);
 
-      Pic.ShapeProperties shapeProperties1 = new Pic.ShapeProperties() { BlackWhiteMode = A.BlackWhiteModeValues.Auto };
+      Pic.ShapeProperties shapeProperties1 = new() { BlackWhiteMode = A.BlackWhiteModeValues.Auto };
 
-      A.Transform2D transform2D1 = new A.Transform2D();
-      A.Offset offset1 = new A.Offset() { X = 0L, Y = 0L };
-      A.Extents extents1 = new A.Extents() { Cx = 1095375L, Cy = 285750L };
+      A.Transform2D transform2D1 = new();
+      A.Offset offset1 = new() { X = 0L, Y = 0L };
+      A.Extents extents1 = new() { Cx = 1095375L, Cy = 285750L };
 
       transform2D1.Append(offset1);
       transform2D1.Append(extents1);
 
-      A.PresetGeometry presetGeometry1 = new A.PresetGeometry() { Preset = A.ShapeTypeValues.Rectangle };
-      A.AdjustValueList adjustValueList1 = new A.AdjustValueList();
+      A.PresetGeometry presetGeometry1 = new() { Preset = A.ShapeTypeValues.Rectangle };
+      A.AdjustValueList adjustValueList1 = new();
 
       presetGeometry1.Append(adjustValueList1);
-      A.NoFill noFill1 = new A.NoFill();
+      A.NoFill noFill1 = new();
 
-      A.Outline outline4 = new A.Outline();
-      A.NoFill noFill2 = new A.NoFill();
+      A.Outline outline4 = new();
+      A.NoFill noFill2 = new();
 
       outline4.Append(noFill2);
 
@@ -2619,49 +2619,49 @@ namespace MD2DocxCore {
       run1.Append(runProperties1);
       run1.Append(drawing1);
 
-      Run run2 = new Run();
+      Run run2 = new();
 
-      RunProperties runProperties2 = new RunProperties();
-      RunFonts runFonts4 = new RunFonts() { Ascii = "黑体", HighAnsi = "Times", EastAsia = "黑体" };
-      FontSize fontSize7 = new FontSize() { Val = "18" };
-      FontSizeComplexScript fontSizeComplexScript7 = new FontSizeComplexScript() { Val = "18" };
+      RunProperties runProperties2 = new();
+      RunFonts runFonts4 = new() { Ascii = "黑体", HighAnsi = "Times", EastAsia = "黑体" };
+      FontSize fontSize7 = new() { Val = "18" };
+      FontSizeComplexScript fontSizeComplexScript7 = new() { Val = "18" };
 
       runProperties2.Append(runFonts4);
       runProperties2.Append(fontSize7);
       runProperties2.Append(fontSizeComplexScript7);
-      Text text1 = new Text() { Space = SpaceProcessingModeValues.Preserve };
+      Text text1 = new() { Space = SpaceProcessingModeValues.Preserve };
       text1.Text = "                         ";
 
       run2.Append(runProperties2);
       run2.Append(text1);
 
-      Run run3 = new Run() { RsidRunProperties = "00812D6B" };
+      Run run3 = new() { RsidRunProperties = "00812D6B" };
 
-      RunProperties runProperties3 = new RunProperties();
-      RunFonts runFonts5 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", HighAnsi = "Times", EastAsia = "黑体" };
-      FontSize fontSize8 = new FontSize() { Val = "18" };
-      FontSizeComplexScript fontSizeComplexScript8 = new FontSizeComplexScript() { Val = "18" };
+      RunProperties runProperties3 = new();
+      RunFonts runFonts5 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", HighAnsi = "Times", EastAsia = "黑体" };
+      FontSize fontSize8 = new() { Val = "18" };
+      FontSizeComplexScript fontSizeComplexScript8 = new() { Val = "18" };
 
       runProperties3.Append(runFonts5);
       runProperties3.Append(fontSize8);
       runProperties3.Append(fontSizeComplexScript8);
-      Text text2 = new Text();
+      Text text2 = new();
       text2.Text = title;
 
       run3.Append(runProperties3);
       run3.Append(text2);
 
-      Run run4 = new Run() { RsidRunProperties = "006039A8" };
+      Run run4 = new() { RsidRunProperties = "006039A8" };
 
-      RunProperties runProperties4 = new RunProperties();
-      RunFonts runFonts6 = new RunFonts() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
-      FontSize fontSize9 = new FontSize() { Val = "18" };
-      FontSizeComplexScript fontSizeComplexScript9 = new FontSizeComplexScript() { Val = "18" };
+      RunProperties runProperties4 = new();
+      RunFonts runFonts6 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", EastAsia = "黑体" };
+      FontSize fontSize9 = new() { Val = "18" };
+      FontSizeComplexScript fontSizeComplexScript9 = new() { Val = "18" };
 
       runProperties4.Append(runFonts6);
       runProperties4.Append(fontSize9);
       runProperties4.Append(fontSizeComplexScript9);
-      Text text3 = new Text() { Space = SpaceProcessingModeValues.Preserve };
+      Text text3 = new() { Space = SpaceProcessingModeValues.Preserve };
       text3.Text = " ";
 
       run4.Append(runProperties4);
