@@ -11,7 +11,7 @@ namespace MD2DocxCoreTests {
       this.output = output;
     }
 
-    [Theory]
+    [Theory (Skip = "Not implement yet")]
     [InlineData("Fail.jpg")]
     public void DiskFileNotFound(string name) {
       output.WriteLine(Directory.GetCurrentDirectory());
@@ -28,7 +28,7 @@ namespace MD2DocxCoreTests {
       Assert.Equal(expected, actual);
     }
 
-    [Theory]
+    [Theory(Skip = "Not implement yet")]
     [InlineData("Fail.jpg")]
     public void NetFileNotFound(string name) {
 
@@ -43,7 +43,7 @@ namespace MD2DocxCoreTests {
       Assert.Equal(expected, actual);
     }
 
-    [Theory]
+    [Theory(Skip = "Not implement yet")]
     [InlineData("yaml.jpg", "yaml.jpg")]
     public void FileInDisk(string name, string data) {
       DirectoryInfo sourceDir = new("../../../TestFiles/");
@@ -57,7 +57,7 @@ namespace MD2DocxCoreTests {
       Assert.Equal(expected, actual);
     }
 
-    [Theory]
+    [Theory(Skip = "Not implement yet")]
     [InlineData("https://raw.githubusercontent.com/CSUwangj/md2docx-csharp/master/docs/res/yaml.jpg", "yaml.jpg")]
     public void FileInNetwork(string url, string data) {
       DirectoryInfo sourceDir = new("../../../TestFiles/");
