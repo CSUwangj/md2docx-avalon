@@ -5,73 +5,154 @@ using Markdig.Syntax;
 using Markdig;
 using System;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Markdig.Syntax.Inlines;
 
 namespace MD2DocxCore {
   public class MD2Docx {
     public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles) {
-      var md = System.IO.File.ReadAllText(input);
-      var pipeline = new MarkdownPipelineBuilder()
-       .UseAdvancedExtensions()
-       .UseYamlFrontMatter()
-       .Build();
-      var markdownDocument = Markdown.Parse(md, pipeline);
+      try {
+        var md = System.IO.File.ReadAllText(input);
+        var pipeline = new MarkdownPipelineBuilder()
+         .UseAdvancedExtensions()
+         .UseYamlFrontMatter()
+         .Build();
+        var markdownDocument = Markdown.Parse(md, pipeline);
 
-      WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
-      MainDocumentPart mainPart = document.AddMainDocumentPart();
-      GenerateMainPart(mainPart, markdownDocument);
+        WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
+        MainDocumentPart mainPart = document.AddMainDocumentPart();
+        GenerateMainPart(mainPart, markdownDocument);
 
-      StyleDefinitionsPart styleDefinitionsPart = mainPart.AddNewPart<StyleDefinitionsPart>("Styles");
-      GenerateStyleDefinitions(styleDefinitionsPart, extraConfig.LatentStyle, styles);
+        StyleDefinitionsPart styleDefinitionsPart = mainPart.AddNewPart<StyleDefinitionsPart>("Styles");
+        GenerateStyleDefinitions(styleDefinitionsPart, extraConfig.LatentStyle, styles);
 
-      FontTablePart fontTablePart1 = mainPart.AddNewPart<FontTablePart>("FootTable");
-      GeneratedCode.GenerateFontTablePartContent(fontTablePart1);
+        FontTablePart fontTablePart1 = mainPart.AddNewPart<FontTablePart>("FootTable");
+        GeneratedCode.GenerateFontTablePartContent(fontTablePart1);
 
-      if (extraConfig.Header) {
-        HeaderPart headerPart = mainPart.AddNewPart<HeaderPart>("Header");
-        GeneratedCode.GenerateHeaderPartContent(headerPart, "//TODO");
-        GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "header-image"), HeaderImageData);
+        if (extraConfig.Header) {
+          HeaderPart headerPart = mainPart.AddNewPart<HeaderPart>("Header");
+          GeneratedCode.GenerateHeaderPartContent(headerPart, "//TODO");
+          GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "header-image"), HeaderImageData);
+        }
+
+        if (extraConfig.Footer) {
+          FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("frontFooter");
+          GeneratedCode.GenerateIFooterPart(frontFooter);
+          FooterPart bodyFooter = mainPart.AddNewPart<FooterPart>("bodyFooter");
+          GeneratedCode.Generate1FooterPart(bodyFooter);
+        }
+
+        SetPackageProperties(document);
+
+        // feed image data and type
+        // foreach (int index in imageType.Keys) {
+        //   ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"image/{imageType[index]}", $"image{index}");
+        //   imagePart.FeedData(new MemoryStream(imageDatas[index]));
+        // }
+        // handle hyperlink
+        // foreach (KeyValuePair<string, string> urlId in mdLinkId) {
+        //   mainPart.AddHyperlinkRelationship(new System.Uri(urlId.Key, System.UriKind.Absolute), true, urlId.Value);
+        // }
+        // handle failed image
+        // if (hasFailImage && !quiet) {
+        //   Console.WriteLine("Some image failed to insert, please check and insert it manually. Their index are(count from 1):");
+        //   foreach (int index in failImage) {
+        //     Console.Write($"{index} ");
+        //   }
+        //   Console.WriteLine("\nThis warning can also be closed by -q.");
+        // }
+        document.Close();
+      } catch (Exception e) {
+        // @TODO: exception handle
+        Console.WriteLine(e.Message);
       }
-
-      if (extraConfig.Footer) {
-        FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("frontFooter");
-        GeneratedCode.GenerateIFooterPart(frontFooter);
-        FooterPart bodyFooter = mainPart.AddNewPart<FooterPart>("bodyFooter");
-        GeneratedCode.Generate1FooterPart(bodyFooter);
-      }
-
-      SetPackageProperties(document);
-
-      // feed image data and type
-      // foreach (int index in imageType.Keys) {
-      //   ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"image/{imageType[index]}", $"image{index}");
-      //   imagePart.FeedData(new MemoryStream(imageDatas[index]));
-      // }
-      // handle hyperlink
-      // foreach (KeyValuePair<string, string> urlId in mdLinkId) {
-      //   mainPart.AddHyperlinkRelationship(new System.Uri(urlId.Key, System.UriKind.Absolute), true, urlId.Value);
-      // }
-      // handle failed image
-      // if (hasFailImage && !quiet) {
-      //   Console.WriteLine("Some image failed to insert, please check and insert it manually. Their index are(count from 1):");
-      //   foreach (int index in failImage) {
-      //     Console.Write($"{index} ");
-      //   }
-      //   Console.WriteLine("\nThis warning can also be closed by -q.");
-      // }
-      document.Close();
     }
 
     private static void GenerateImage(ImagePart imagePart, object headerImageData) {
       // TODO
     }
 
-    public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument) {
+    private static void ConvertBlock(Block block, ref Body docBody) {
+      switch (block) {
+        case ParagraphBlock paragraph:
+          Paragraph docParagraph = new() {
+            ParagraphProperties = new ParagraphProperties {
+              ParagraphStyleId = new ParagraphStyleId { Val = "正文" }
+            }
+          };
+          List<Paragraph> paragraphs = new();
+          ConvertInlines(new(), paragraph.Inline, ref docParagraph, ref paragraphs);
+          paragraphs.Add(docParagraph);
+          foreach (var para in paragraphs) {
+            docBody.Append(para);
+          }
+          break;
+      }
+    }
 
-      Document document1 = new() { MCAttributes = new MarkupCompatibilityAttributes() };
+    private static void ConvertInlines(RunProperties runProperties, ContainerInline inlines, ref Paragraph paragraph, ref List<Paragraph> paragraphs) {
+      foreach (var inline in inlines) {
+        switch (inline) {
+          case LiteralInline l:
+            Run run = new() {
+              //if not clone, will throw "Cannot insert the OpenXmlElement \"newChild\" because it is part of a tree. "
+              RunProperties = (RunProperties)runProperties.Clone(),
+            };
+            Text text = new() {
+              Text = l.ToString(),
+              Space = SpaceProcessingModeValues.Preserve
+            };
+            run.Append(text);
+            paragraph.Append(run);
+            break;
+          case EmphasisInline em:
+            string delimiter = new(em.DelimiterChar, em.DelimiterCount);
+            RunProperties newRunProperties = (RunProperties)runProperties.Clone();
+            switch (delimiter) {
+              case "**":
+              case "__":
+                newRunProperties.Bold = new();
+                newRunProperties.BoldComplexScript = new();
+                break;
+              case "_":
+              case "*":
+                newRunProperties.Italic = new();
+                newRunProperties.ItalicComplexScript = new();
+                break;
+              case "~~":
+                newRunProperties.Strike = new();
+                break;
+              case "^":
+                newRunProperties.VerticalTextAlignment = new() { Val = VerticalPositionValues.Superscript };
+                break;
+              case "~":
+                newRunProperties.VerticalTextAlignment = new() { Val = VerticalPositionValues.Subscript };
+                break;
+            }
+            ConvertInlines(newRunProperties, em, ref paragraph, ref paragraphs);
+            break;
+        }
+      }
+    }
+
+    public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument) {
+      Document document = new() { MCAttributes = new MarkupCompatibilityAttributes() };
       Body docBody = new();
-      document1.Append(docBody);
-      mainPart.Document = document1;
-      // TODO
+      SectionProperties sectionProperties = new();
+      PageSize pageSize = new() { Width = 11906U, Height = 16838U };
+      PageMargin pageMargin = new() { Top = 1418, Right = 1134U, Bottom = 1418, Left = 1701U, Header = 851U, Footer = 992U, Gutter = 0U };
+      Columns columns = new() { Space = "425" };
+      DocGrid docGrid = new() { Type = DocGridValues.Lines, LinePitch = 312 };
+      sectionProperties.Append(pageSize);
+      sectionProperties.Append(pageMargin);
+      sectionProperties.Append(columns);
+      sectionProperties.Append(docGrid);
+      docBody.Append(sectionProperties);
+      document.Append(docBody);
+      mainPart.Document = document;
+      // TODO Cover, TOC, etc.
+      foreach (var block in markdownDocument) {
+        ConvertBlock(block, ref docBody);
+      }
     }
 
     public static void GenerateStyleDefinitions(StyleDefinitionsPart styleDefinitions, bool latentStyle, IEnumerable<Style> styles) {
