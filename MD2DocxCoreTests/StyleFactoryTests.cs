@@ -270,7 +270,7 @@ namespace MD2DocxCoreTest {
           CnFont = "黑体",
           EnFont = "Times New Roman",
           FontSize = "21",
-          Justification = "左对齐",
+          Justification = "两端对齐",
           Outline = false,
           OutlineLevel = 1,
           Bold = false,
@@ -290,7 +290,7 @@ namespace MD2DocxCoreTest {
           },
           StyleParagraphProperties = new() {
             Justification = new() {
-              Val = JustificationValues.Left
+              Val = JustificationValues.Both
             },
             SpacingBetweenLines = new() {
               Line = "360", LineRule = LineSpacingRuleValues.Auto
