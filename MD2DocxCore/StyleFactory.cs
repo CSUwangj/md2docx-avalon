@@ -70,7 +70,7 @@ namespace MD2DocxCore {
             { "左对齐", JustificationValues.Left },
             { "居中", JustificationValues.Center },
             { "右对齐", JustificationValues.Right },
-            { "两端", JustificationValues.Both },
+            { "两端对齐", JustificationValues.Both },
             { "分散对齐", JustificationValues.Distribute }
         };
     #endregion
