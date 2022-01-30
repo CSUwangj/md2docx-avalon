@@ -38,9 +38,12 @@ namespace MD2DocxAvalon.ViewModels {
 
       AddStyle = ReactiveCommand.Create(() => Styles.Add(new StyleItem(index++)));
       DuplicateStyle = ReactiveCommand.Create<int>((id) => {
-        var style = Styles.First(s => s.ID == id).Clone();
-        style.ID = index++;
-        Styles.Add(style);
+        Style style = Styles.First(s => s.ID == id).Style.Clone();
+        StyleItem newItem = new(index++) {
+          Style = style
+        };
+        Styles.Add(newItem);
+        Console.WriteLine(Styles);
       });
       DeleteStyle = ReactiveCommand.Create<int>((id) => {
         Styles.Remove(Styles.First(s => s.ID == id));

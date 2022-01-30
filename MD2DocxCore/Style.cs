@@ -30,6 +30,18 @@ namespace MD2DocxCore {
     };
     public static List<string> Mappings { get => mappings; }
 
+    public Style Clone() {
+      Style newStyle = (Style)MemberwiseClone();
+      // stupid c#
+      newStyle.FontSizeString = new string(fontSizeString.ToCharArray());
+      newStyle.Justification = new string(Justification.ToCharArray());
+      newStyle.CnFont = new string(CnFont.ToCharArray());
+      newStyle.EnFont = new string(EnFont.ToCharArray());
+      newStyle.Mapping = new string(Mapping.ToCharArray());
+      newStyle.fontSizeString = new string(fontSizeString.ToCharArray()); 
+      return newStyle;
+    }
+
     private string fontSizeString = "四号";
     public string FontSize { get; set; } = "28";
     public string Justification { get; set; } = "两端对齐";

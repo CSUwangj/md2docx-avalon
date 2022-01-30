@@ -8,7 +8,7 @@ using System.Net;
 namespace MD2DocxCore {
   public class ImageGetter {
     public static bool Load(string origin, out byte[] imageData) {
-      imageData = new byte[] { };
+      imageData = Array.Empty<byte>();
       return false;
     }
 
