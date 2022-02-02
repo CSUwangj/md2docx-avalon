@@ -98,6 +98,23 @@ namespace MD2DocxCore {
             docBody.Append(para);
           }
           break;
+        case Markdig.Extensions.Yaml.YamlFrontMatterBlock:
+          // leave this empty case otherwise it will be convert as code block
+          break;
+        case CodeBlock code:
+          foreach(var line in code.Lines) {
+            Paragraph paragraph = new() {
+              ParagraphProperties = new ParagraphProperties {
+                ParagraphStyleId = new ParagraphStyleId { Val = "代码段" }
+              }
+            };
+            Run run = new() { RunProperties = new RunProperties() };
+            Text txt = new () { Text = line.ToString(), Space = SpaceProcessingModeValues.Preserve };
+            run.Append(txt);
+            paragraph.Append(run);
+            docBody.Append(paragraph);
+          }
+          break;
       }
     }
 
@@ -106,7 +123,7 @@ namespace MD2DocxCore {
         switch (inline) {
           case LiteralInline l:
             Run run = new() {
-              //if not clone, will throw "Cannot insert the OpenXmlElement \"newChild\" because it is part of a tree. "
+              //if not clone, will throw "Cannot insert the OpenXmlElement 'newChild' because it is part of a tree. "
               RunProperties = (RunProperties)runProperties.Clone(),
             };
             Text text = new() {
