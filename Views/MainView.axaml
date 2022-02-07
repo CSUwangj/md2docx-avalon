@@ -15,7 +15,9 @@
       </TabItem>
 
       <TabItem Header="Configuration">
-        <pages:Configuration />
+        <ScrollViewer MaxHeight="800">
+          <pages:Configuration />
+        </ScrollViewer>
       </TabItem>
 
       <TabItem Header="Other">
