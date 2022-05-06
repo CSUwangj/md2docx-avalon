@@ -832,13 +832,11 @@ namespace MD2DocxCore {
 
       SdtContentBlock sdtContentBlock1 = new();
 
-      Paragraph paragraph1 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "34D1FE1C", TextId = "7A33BCDB" };
+      Paragraph paragraph1 = new();
 
       ParagraphProperties paragraphProperties1 = new();
-      ParagraphStyleId paragraphStyleId1 = new() { Val = "a5" };
       Justification justification1 = new() { Val = JustificationValues.Center };
 
-      paragraphProperties1.Append(paragraphStyleId1);
       paragraphProperties1.Append(justification1);
 
       Run run1 = new();
@@ -892,7 +890,7 @@ namespace MD2DocxCore {
       sdtBlock1.Append(sdtEndCharProperties1);
       sdtBlock1.Append(sdtContentBlock1);
 
-      Paragraph paragraph2 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "2BB488F1", TextId = "77777777" };
+      Paragraph paragraph2 = new();
 
       ParagraphProperties paragraphProperties2 = new();
       ParagraphStyleId paragraphStyleId2 = new() { Val = "a5" };
@@ -961,13 +959,11 @@ namespace MD2DocxCore {
 
       SdtContentBlock sdtContentBlock1 = new();
 
-      Paragraph paragraph1 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "280F2866", TextId = "77777777" };
+      Paragraph paragraph1 = new();
 
       ParagraphProperties paragraphProperties1 = new();
-      ParagraphStyleId paragraphStyleId1 = new() { Val = "a5" };
       Justification justification1 = new() { Val = JustificationValues.Center };
 
-      paragraphProperties1.Append(paragraphStyleId1);
       paragraphProperties1.Append(justification1);
 
       Run run1 = new();
@@ -1016,7 +1012,7 @@ namespace MD2DocxCore {
       sdtBlock1.Append(sdtEndCharProperties1);
       sdtBlock1.Append(sdtContentBlock1);
 
-      Paragraph paragraph2 = new() { RsidParagraphAddition = "00826B60", RsidRunAdditionDefault = "00826B60", ParagraphId = "688DAA4B", TextId = "77777777" };
+      Paragraph paragraph2 = new();
 
       ParagraphProperties paragraphProperties2 = new();
       ParagraphStyleId paragraphStyleId2 = new() { Val = "a5" };
@@ -1031,8 +1027,8 @@ namespace MD2DocxCore {
       part.Footer = footer1;
     }
 
-    public static void GenerateCover(ref Body docBody, Dictionary<string, string> info, bool hasHeader) {
-      Paragraph paragraph1 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "71725C42", TextId = "77777777" };
+    public static void GenerateCover(ref Body docBody, ref PaperMeta metadata, bool hasHeader) {
+      Paragraph paragraph1 = new();
 
       ParagraphProperties paragraphProperties1 = new();
 
@@ -1047,7 +1043,7 @@ namespace MD2DocxCore {
 
       paragraph1.Append(paragraphProperties1);
 
-      Paragraph paragraph2 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4B4A54F9", TextId = "77777777" };
+      Paragraph paragraph2 = new();
 
       ParagraphProperties paragraphProperties2 = new();
       Justification justification1 = new() { Val = JustificationValues.Center };
@@ -1077,10 +1073,10 @@ namespace MD2DocxCore {
 
       Drawing drawing1 = new();
 
-      Wp.Inline inline1 = new() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, AnchorId = "5D1F2E59", EditId = "1041EDBE" };
+      Wp.Inline inline1 = new() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, AnchorId = "5D1F2E59", EditId = "1041EDBE" };
       Wp.Extent extent1 = new() { Cx = 4059555L, Cy = 1068070L };
       Wp.EffectExtent effectExtent1 = new() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 9525L, BottomEdge = 13970L };
-      Wp.DocProperties docProperties1 = new() { Id = (UInt32Value)1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
+      Wp.DocProperties docProperties1 = new() { Id = 1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
 
       Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new();
 
@@ -1098,7 +1094,7 @@ namespace MD2DocxCore {
       picture1.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
       Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new();
-      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = (UInt32Value)1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
+      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = 1U, Name = "图片 1", Description = "毕业设计(论文)图标" };
 
       Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new();
       A.PictureLocks pictureLocks1 = new() { NoChangeAspect = true };
@@ -1109,7 +1105,7 @@ namespace MD2DocxCore {
       nonVisualPictureProperties1.Append(nonVisualPictureDrawingProperties1);
 
       Pic.BlipFill blipFill1 = new();
-      A.Blip blip1 = new() { Embed = "rId2" };
+      A.Blip blip1 = new() { Embed = "CoverLogo" };
 
       A.Stretch stretch1 = new();
       A.FillRectangle fillRectangle1 = new();
@@ -1166,7 +1162,7 @@ namespace MD2DocxCore {
       paragraph2.Append(paragraphProperties2);
       paragraph2.Append(run1);
 
-      Paragraph paragraph3 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "7DAABE2D", TextId = "77777777" };
+      Paragraph paragraph3 = new();
 
       ParagraphProperties paragraphProperties3 = new();
 
@@ -1179,7 +1175,7 @@ namespace MD2DocxCore {
 
       paragraph3.Append(paragraphProperties3);
 
-      Paragraph paragraph4 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "1A4ECFDE", TextId = "77777777" };
+      Paragraph paragraph4 = new();
 
       ParagraphProperties paragraphProperties4 = new();
 
@@ -1192,7 +1188,7 @@ namespace MD2DocxCore {
 
       paragraph4.Append(paragraphProperties4);
 
-      Paragraph paragraph5 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "5C893384", TextId = "77777777" };
+      Paragraph paragraph5 = new();
 
       ParagraphProperties paragraphProperties5 = new();
 
@@ -1205,14 +1201,14 @@ namespace MD2DocxCore {
 
       paragraph5.Append(paragraphProperties5);
 
-      Paragraph paragraph6 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "168A2DD1", TextId = "77777777" };
+      Paragraph paragraph6 = new();
 
       ParagraphProperties paragraphProperties6 = new();
       Justification justification2 = new() { Val = JustificationValues.Center };
 
       ParagraphMarkRunProperties paragraphMarkRunProperties6 = new();
       RunFonts runFonts2 = new() { Ascii = "黑体", HighAnsi = "华文楷体", EastAsia = "黑体" };
-      Kern kern1 = new() { Val = (UInt32Value)0U };
+      Kern kern1 = new() { Val = 0U };
       FontSize fontSize7 = new() { Val = "90" };
       FontSizeComplexScript fontSizeComplexScript2 = new() { Val = "90" };
 
@@ -1228,7 +1224,7 @@ namespace MD2DocxCore {
 
       RunProperties runProperties2 = new();
       RunFonts runFonts3 = new() { Hint = FontTypeHintValues.EastAsia, Ascii = "黑体", HighAnsi = "华文楷体", EastAsia = "黑体" };
-      Kern kern2 = new() { Val = (UInt32Value)0U };
+      Kern kern2 = new() { Val = 0U };
       FontSize fontSize8 = new() { Val = "90" };
       FontSizeComplexScript fontSizeComplexScript3 = new() { Val = "90" };
 
@@ -1237,7 +1233,7 @@ namespace MD2DocxCore {
       runProperties2.Append(fontSize8);
       runProperties2.Append(fontSizeComplexScript3);
       Text text1 = new() {
-        Text = info["filename"]
+        Text = metadata.ReportName
       };
 
       run2.Append(runProperties2);
@@ -1246,7 +1242,7 @@ namespace MD2DocxCore {
       paragraph6.Append(paragraphProperties6);
       paragraph6.Append(run2);
 
-      Paragraph paragraph8 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4B4F29EF", TextId = "77777777" };
+      Paragraph paragraph8 = new();
 
       ParagraphProperties paragraphProperties8 = new();
 
@@ -1259,7 +1255,7 @@ namespace MD2DocxCore {
 
       paragraph8.Append(paragraphProperties8);
 
-      Paragraph paragraph9 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "37089D27", TextId = "77777777" };
+      Paragraph paragraph9 = new();
 
       ParagraphProperties paragraphProperties9 = new();
 
@@ -1272,7 +1268,7 @@ namespace MD2DocxCore {
 
       paragraph9.Append(paragraphProperties9);
 
-      Paragraph paragraph10 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "6081A726", TextId = "77777777" };
+      Paragraph paragraph10 = new();
 
       ParagraphProperties paragraphProperties10 = new();
 
@@ -1285,7 +1281,7 @@ namespace MD2DocxCore {
 
       paragraph10.Append(paragraphProperties10);
 
-      Paragraph paragraph11 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "68F64FAB", TextId = "77777777" };
+      Paragraph paragraph11 = new();
 
       ParagraphProperties paragraphProperties11 = new();
 
@@ -1298,7 +1294,7 @@ namespace MD2DocxCore {
 
       paragraph11.Append(paragraphProperties11);
 
-      Paragraph paragraph12 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "4C5B3E6B", TextId = "77777777" };
+      Paragraph paragraph12 = new();
 
       ParagraphProperties paragraphProperties12 = new();
 
@@ -1334,7 +1330,7 @@ namespace MD2DocxCore {
       TableRow tableRow1 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "264C4BA7", TextId = "77777777" };
 
       TableRowProperties tableRowProperties1 = new();
-      TableRowHeight tableRowHeight1 = new() { Val = (UInt32Value)744U };
+      TableRowHeight tableRowHeight1 = new() { Val = 744U };
       TableJustification tableJustification2 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties1.Append(tableRowHeight1);
@@ -1349,7 +1345,7 @@ namespace MD2DocxCore {
       tableCellProperties1.Append(tableCellWidth1);
       tableCellProperties1.Append(tableCellVerticalAlignment1);
 
-      Paragraph paragraph13 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "63766CE7", TextId = "19191671" };
+      Paragraph paragraph13 = new();
 
       ParagraphProperties paragraphProperties13 = new();
       AdjustRightIndent adjustRightIndent1 = new() { Val = false };
@@ -1402,7 +1398,7 @@ namespace MD2DocxCore {
       TableCellWidth tableCellWidth2 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
       TableCellBorders tableCellBorders1 = new();
-      BottomBorder bottomBorder1 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      BottomBorder bottomBorder1 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
       tableCellBorders1.Append(bottomBorder1);
       TableCellVerticalAlignment tableCellVerticalAlignment2 = new() { Val = TableVerticalAlignmentValues.Center };
@@ -1411,7 +1407,7 @@ namespace MD2DocxCore {
       tableCellProperties2.Append(tableCellBorders1);
       tableCellProperties2.Append(tableCellVerticalAlignment2);
 
-      Paragraph paragraph14 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "513CD88C", TextId = "4DAB3C6B" };
+      Paragraph paragraph14 = new();
 
       ParagraphProperties paragraphProperties14 = new();
       AdjustRightIndent adjustRightIndent2 = new() { Val = false };
@@ -1445,7 +1441,7 @@ namespace MD2DocxCore {
       runProperties8.Append(fontSize22);
       runProperties8.Append(fontSizeComplexScript11);
       Text text7 = new() {
-        Text = info["department"]
+        Text = metadata.Department
       };
 
       run8.Append(runProperties8);
@@ -1464,7 +1460,7 @@ namespace MD2DocxCore {
       TableRow tableRow2 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "1EF33043", TextId = "77777777" };
 
       TableRowProperties tableRowProperties2 = new();
-      TableRowHeight tableRowHeight2 = new() { Val = (UInt32Value)744U };
+      TableRowHeight tableRowHeight2 = new() { Val = 744U };
       TableJustification tableJustification3 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties2.Append(tableRowHeight2);
@@ -1479,7 +1475,7 @@ namespace MD2DocxCore {
       tableCellProperties3.Append(tableCellWidth3);
       tableCellProperties3.Append(tableCellVerticalAlignment3);
 
-      Paragraph paragraph15 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "57FF0282", TextId = "77777777" };
+      Paragraph paragraph15 = new();
 
       ParagraphProperties paragraphProperties15 = new();
       AdjustRightIndent adjustRightIndent3 = new() { Val = false };
@@ -1531,8 +1527,8 @@ namespace MD2DocxCore {
       TableCellWidth tableCellWidth4 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
       TableCellBorders tableCellBorders2 = new();
-      TopBorder topBorder1 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TopBorder topBorder1 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+      BottomBorder bottomBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
       tableCellBorders2.Append(topBorder1);
       tableCellBorders2.Append(bottomBorder2);
@@ -1542,7 +1538,7 @@ namespace MD2DocxCore {
       tableCellProperties4.Append(tableCellBorders2);
       tableCellProperties4.Append(tableCellVerticalAlignment4);
 
-      Paragraph paragraph16 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "6D1021F2", TextId = "5D0878E9" };
+      Paragraph paragraph16 = new();
 
       ParagraphProperties paragraphProperties16 = new();
       AdjustRightIndent adjustRightIndent4 = new() { Val = false };
@@ -1576,7 +1572,7 @@ namespace MD2DocxCore {
       runProperties10.Append(fontSize26);
       runProperties10.Append(fontSizeComplexScript15);
       Text text9 = new() {
-        Text = info["class"]
+        Text = metadata.Class
       };
 
       run10.Append(runProperties10);
@@ -1595,7 +1591,7 @@ namespace MD2DocxCore {
       TableRow tableRow3 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "06014780", TextId = "77777777" };
 
       TableRowProperties tableRowProperties3 = new();
-      TableRowHeight tableRowHeight3 = new() { Val = (UInt32Value)744U };
+      TableRowHeight tableRowHeight3 = new() { Val = 744U };
       TableJustification tableJustification4 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties3.Append(tableRowHeight3);
@@ -1610,7 +1606,7 @@ namespace MD2DocxCore {
       tableCellProperties5.Append(tableCellWidth5);
       tableCellProperties5.Append(tableCellVerticalAlignment5);
 
-      Paragraph paragraph17 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "728F2AD1", TextId = "77777777" };
+      Paragraph paragraph17 = new();
 
       ParagraphProperties paragraphProperties17 = new();
       AdjustRightIndent adjustRightIndent5 = new() { Val = false };
@@ -1661,8 +1657,8 @@ namespace MD2DocxCore {
       TableCellWidth tableCellWidth6 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
       TableCellBorders tableCellBorders3 = new();
-      TopBorder topBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder3 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TopBorder topBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+      BottomBorder bottomBorder3 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
       tableCellBorders3.Append(topBorder2);
       tableCellBorders3.Append(bottomBorder3);
@@ -1672,7 +1668,7 @@ namespace MD2DocxCore {
       tableCellProperties6.Append(tableCellBorders3);
       tableCellProperties6.Append(tableCellVerticalAlignment6);
 
-      Paragraph paragraph18 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "796A81C4", TextId = "4F2B62A8" };
+      Paragraph paragraph18 = new();
 
       ParagraphProperties paragraphProperties18 = new();
       AdjustRightIndent adjustRightIndent6 = new() { Val = false };
@@ -1706,7 +1702,7 @@ namespace MD2DocxCore {
       runProperties12.Append(fontSize30);
       runProperties12.Append(fontSizeComplexScript19);
       Text text11 = new() {
-        Text = info["teacher"]
+        Text = metadata.Teacher
       };
 
       run12.Append(runProperties12);
@@ -1725,7 +1721,7 @@ namespace MD2DocxCore {
       TableRow tableRow4 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "6B8171AE", TextId = "77777777" };
 
       TableRowProperties tableRowProperties4 = new();
-      TableRowHeight tableRowHeight4 = new() { Val = (UInt32Value)744U };
+      TableRowHeight tableRowHeight4 = new() { Val = 744U };
       TableJustification tableJustification5 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties4.Append(tableRowHeight4);
@@ -1740,7 +1736,7 @@ namespace MD2DocxCore {
       tableCellProperties7.Append(tableCellWidth7);
       tableCellProperties7.Append(tableCellVerticalAlignment7);
 
-      Paragraph paragraph19 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "7A20A062", TextId = "5D222DE0" };
+      Paragraph paragraph19 = new();
 
       ParagraphProperties paragraphProperties19 = new();
       AdjustRightIndent adjustRightIndent7 = new() { Val = false };
@@ -1829,8 +1825,8 @@ namespace MD2DocxCore {
       TableCellWidth tableCellWidth8 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
       TableCellBorders tableCellBorders4 = new();
-      TopBorder topBorder3 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder4 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TopBorder topBorder3 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+      BottomBorder bottomBorder4 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
       tableCellBorders4.Append(topBorder3);
       tableCellBorders4.Append(bottomBorder4);
@@ -1840,7 +1836,7 @@ namespace MD2DocxCore {
       tableCellProperties8.Append(tableCellBorders4);
       tableCellProperties8.Append(tableCellVerticalAlignment8);
 
-      Paragraph paragraph20 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "50B5DA38", TextId = "356A33C2" };
+      Paragraph paragraph20 = new();
 
       ParagraphProperties paragraphProperties20 = new();
       AdjustRightIndent adjustRightIndent8 = new() { Val = false };
@@ -1874,7 +1870,7 @@ namespace MD2DocxCore {
       runProperties16.Append(fontSize36);
       runProperties16.Append(fontSizeComplexScript25);
       Text text15 = new() {
-        Text = info["id"]
+        Text = metadata.Id
       };
 
       run16.Append(runProperties16);
@@ -1893,7 +1889,7 @@ namespace MD2DocxCore {
       TableRow tableRow5 = new() { RsidTableRowAddition = "003672AC", RsidTableRowProperties = "003672AC", ParagraphId = "7C122850", TextId = "77777777" };
 
       TableRowProperties tableRowProperties5 = new();
-      TableRowHeight tableRowHeight5 = new() { Val = (UInt32Value)744U };
+      TableRowHeight tableRowHeight5 = new() { Val = 744U };
       TableJustification tableJustification6 = new() { Val = TableRowAlignmentValues.Center };
 
       tableRowProperties5.Append(tableRowHeight5);
@@ -1908,7 +1904,7 @@ namespace MD2DocxCore {
       tableCellProperties9.Append(tableCellWidth9);
       tableCellProperties9.Append(tableCellVerticalAlignment9);
 
-      Paragraph paragraph21 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "003672AC", ParagraphId = "5FF30A28", TextId = "77777777" };
+      Paragraph paragraph21 = new();
 
       ParagraphProperties paragraphProperties21 = new();
       AdjustRightIndent adjustRightIndent9 = new() { Val = false };
@@ -1959,8 +1955,8 @@ namespace MD2DocxCore {
       TableCellWidth tableCellWidth10 = new() { Width = "4604", Type = TableWidthUnitValues.Dxa };
 
       TableCellBorders tableCellBorders5 = new();
-      TopBorder topBorder4 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-      BottomBorder bottomBorder5 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+      TopBorder topBorder4 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+      BottomBorder bottomBorder5 = new() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
       tableCellBorders5.Append(topBorder4);
       tableCellBorders5.Append(bottomBorder5);
@@ -1970,7 +1966,7 @@ namespace MD2DocxCore {
       tableCellProperties10.Append(tableCellBorders5);
       tableCellProperties10.Append(tableCellVerticalAlignment10);
 
-      Paragraph paragraph22 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "005351A2", RsidRunAdditionDefault = "00024893", ParagraphId = "09D99ABE", TextId = "40077ABC" };
+      Paragraph paragraph22 = new();
 
       ParagraphProperties paragraphProperties22 = new();
       AdjustRightIndent adjustRightIndent10 = new() { Val = false };
@@ -2004,7 +2000,7 @@ namespace MD2DocxCore {
       runProperties19.Append(fontSize41);
       runProperties19.Append(fontSizeComplexScript30);
       Text text18 = new() {
-        Text = info["name"]
+        Text = metadata.Name
       };
 
       run19.Append(runProperties19);
@@ -2028,7 +2024,7 @@ namespace MD2DocxCore {
       table1.Append(tableRow4);
       table1.Append(tableRow5);
 
-      Paragraph paragraph23 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "5FA1753B", TextId = "77777777" };
+      Paragraph paragraph23 = new();
 
       ParagraphProperties paragraphProperties23 = new();
 
@@ -2041,7 +2037,7 @@ namespace MD2DocxCore {
 
       paragraph23.Append(paragraphProperties23);
 
-      Paragraph paragraph24 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "501B2F20", TextId = "77777777" };
+      Paragraph paragraph24 = new();
 
       ParagraphProperties paragraphProperties24 = new();
 
@@ -2054,7 +2050,7 @@ namespace MD2DocxCore {
 
       paragraph24.Append(paragraphProperties24);
 
-      Paragraph paragraph25 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "3DEBBE89", TextId = "77777777" };
+      Paragraph paragraph25 = new();
 
       ParagraphProperties paragraphProperties25 = new();
 
@@ -2067,7 +2063,7 @@ namespace MD2DocxCore {
 
       paragraph25.Append(paragraphProperties25);
 
-      Paragraph paragraph26 = new() { RsidParagraphAddition = "003672AC", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "17F9546E", TextId = "77777777" };
+      Paragraph paragraph26 = new();
 
       ParagraphProperties paragraphProperties26 = new();
       Justification justification14 = new() { Val = JustificationValues.Center };
@@ -2086,13 +2082,13 @@ namespace MD2DocxCore {
 
       paragraph26.Append(paragraphProperties26);
 
-      Paragraph paragraph27 = new() { RsidParagraphMarkRevision = "0028483A", RsidParagraphAddition = "00415374", RsidParagraphProperties = "003672AC", RsidRunAdditionDefault = "003672AC", ParagraphId = "589A44F4", TextId = "46EA8F00" };
+      Paragraph paragraph27 = new();
 
       ParagraphProperties paragraphProperties27 = new();
       Justification justification15 = new() { Val = JustificationValues.Center };
       SectionProperties sectionProperties1 = new();
       if (hasHeader) {
-        HeaderReference headerReference1 = new() { Type = HeaderFooterValues.Default, Id = "rId3" };
+        HeaderReference headerReference1 = new() { Type = HeaderFooterValues.Default, Id = "Header" };
         sectionProperties1.Append(headerReference1);
       }
       PageSize pageSize1 = new() { Width = 11906U, Height = 16838U };
@@ -2189,7 +2185,7 @@ namespace MD2DocxCore {
       Bold bold1 = new();
       BoldComplexScript boldComplexScript1 = new();
       Color color1 = new() { Val = "auto" };
-      Kern kern1 = new() { Val = (UInt32Value)2U };
+      Kern kern1 = new() { Val = 2U };
       FontSize fontSize1 = new() { Val = "24" };
       FontSizeComplexScript fontSizeComplexScript1 = new() { Val = "24" };
 
@@ -2205,7 +2201,7 @@ namespace MD2DocxCore {
 
       SdtContentBlock sdtContentBlock1 = new();
 
-      Paragraph paragraph3 = new() { RsidParagraphAddition = "003863DC", RsidRunAdditionDefault = "003863DC", ParagraphId = "233F4095", TextId = "52301D4D" };
+      Paragraph paragraph3 = new();
 
       SimpleField simpleField1 = new() { Instruction = " TOC \\o \"1-3\" \\h \\z \\u " };
 
@@ -2249,11 +2245,11 @@ namespace MD2DocxCore {
 
       SectionProperties sectionProperties = new() { RsidR = "00160BE2", RsidSect = "00826B60" };
       if (hasHeader) {
-        HeaderReference headerReference1 = new() { Type = HeaderFooterValues.Default, Id = "rId3" };
+        HeaderReference headerReference1 = new() { Type = HeaderFooterValues.Default, Id = "Header" };
         sectionProperties.Append(headerReference1);
       }
       if (hasFooter) {
-        FooterReference footerReference4 = new() { Type = HeaderFooterValues.Default, Id = "rId5" };
+        FooterReference footerReference4 = new() { Type = HeaderFooterValues.Default, Id = "FrontFooter" };
         sectionProperties.Append(footerReference4);
       }
       PageSize pageSize2 = new() { Width = 11906U, Height = 16838U };
@@ -2373,7 +2369,7 @@ namespace MD2DocxCore {
       picture1.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
       Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new();
-      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = (UInt32Value)1U, Name = "" };
+      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = 1U, Name = "" };
       Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new();
 
       nonVisualPictureProperties1.Append(nonVisualDrawingProperties1);
@@ -2461,12 +2457,12 @@ namespace MD2DocxCore {
       header.AddNamespaceDeclaration("wne", "http://schemas.microsoft.com/office/word/2006/wordml");
       header.AddNamespaceDeclaration("wps", "http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
 
-      Paragraph paragraph1 = new() { RsidParagraphMarkRevision = "000724D3", RsidParagraphAddition = "000724D3", RsidParagraphProperties = "000724D3", RsidRunAdditionDefault = "000724D3", ParagraphId = "1A187061", TextId = "33744066" };
+      Paragraph paragraph1 = new();
 
       ParagraphProperties paragraphProperties1 = new();
 
       ParagraphBorders paragraphBorders2 = new();
-      BottomBorder bottomBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)6U, Space = (UInt32Value)0U };
+      BottomBorder bottomBorder2 = new() { Val = BorderValues.Single, Color = "auto", Size = 6U, Space = 0U };
 
       paragraphBorders2.Append(bottomBorder2);
 
@@ -2503,7 +2499,7 @@ namespace MD2DocxCore {
       Bold bold1 = new();
       BoldComplexScript boldComplexScript1 = new();
       NoProof noProof1 = new();
-      Kern kern2 = new() { Val = (UInt32Value)0U };
+      Kern kern2 = new() { Val = 0U };
       FontSize fontSize6 = new() { Val = "72" };
       FontSizeComplexScript fontSizeComplexScript6 = new() { Val = "72" };
 
@@ -2517,10 +2513,10 @@ namespace MD2DocxCore {
 
       Drawing drawing1 = new();
 
-      Wp.Inline inline1 = new() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "64BA7B75", EditId = "611F1D7B" };
+      Wp.Inline inline1 = new() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "64BA7B75", EditId = "611F1D7B" };
       Wp.Extent extent1 = new() { Cx = 1095375L, Cy = 285750L };
       Wp.EffectExtent effectExtent1 = new() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 9525L, BottomEdge = 0L };
-      Wp.DocProperties docProperties1 = new() { Id = (UInt32Value)141U, Name = "图片 141", Description = "毕业设计(论文)图标" };
+      Wp.DocProperties docProperties1 = new() { Id = 141U, Name = "图片 141", Description = "毕业设计(论文)图标" };
 
       Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new();
 
@@ -2538,7 +2534,7 @@ namespace MD2DocxCore {
       picture1.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
       Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new();
-      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = (UInt32Value)0U, Name = "Picture 10", Description = "毕业设计(论文)图标" };
+      Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new() { Id = 0U, Name = "Picture 10", Description = "毕业设计(论文)图标" };
 
       Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new();
       A.PictureLocks pictureLocks1 = new() { NoChangeAspect = true, NoChangeArrowheads = true };
@@ -2550,7 +2546,7 @@ namespace MD2DocxCore {
 
       Pic.BlipFill blipFill1 = new();
 
-      A.Blip blip1 = new() { Embed = "rId4" };
+      A.Blip blip1 = new() { Embed = "HeaderLogo" };
 
       A.BlipExtensionList blipExtensionList1 = new();
 

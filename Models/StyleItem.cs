@@ -8,7 +8,6 @@ namespace MD2DocxAvalon.Models {
     public int ID { get; set; }
     public Style Style { get; set; }
 
-
     public StyleItem(int id) {
       ID = id;
       Style = new();

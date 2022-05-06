@@ -176,7 +176,7 @@ namespace MD2DocxCoreTest {
       },
       new object[] {
         new Style {
-          Mapping = "正文",
+          Mapping = "正 文",
           CnFont = "宋体",
           EnFont = "Times New Roman",
           FontSize = "24",
@@ -194,9 +194,9 @@ namespace MD2DocxCoreTest {
         },
         new DocxStyle {
           Type = StyleValues.Paragraph,
-          StyleId = "正文",
+          StyleId = "正 文",
           StyleName = new() {
-            Val = "正文"
+            Val = "正 文"
           },
           StyleParagraphProperties = new() {
             Justification = new() {

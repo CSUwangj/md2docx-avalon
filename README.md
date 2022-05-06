@@ -21,18 +21,19 @@ dotnet build
 ## Progress
 
 - [X] basic GUI
-- [ ] convert markdown into docx file
-- [ ] yaml header parse
-- [ ] footnote & references
-- [ ] CSU specific feature
-  - [ ] cover
-  - [ ] TOC
-  - [ ] header
-  - [ ] footer
-- [ ] link
+- [X] convert markdown into docx file
+- [X] yaml header parse
+- [X] CSU specific feature
+  - [X] cover
+  - [X] TOC
+  - [X] header
+  - [X] footer
 - [ ] image
+- [ ] footnote & references
+- [ ] link
 - [ ] package, publish, install
 - [ ] features may not implement
   - [ ] list
+  - [ ] quote
   - [ ] math formula
   - [ ] table

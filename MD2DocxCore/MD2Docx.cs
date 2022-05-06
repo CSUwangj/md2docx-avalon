@@ -6,6 +6,10 @@ using Markdig;
 using System;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Markdig.Syntax.Inlines;
+using Markdig.Extensions.Yaml;
+using System.Linq;
+using System.Text.RegularExpressions;
+using YamlDotNet.Serialization;
 
 namespace MD2DocxCore {
   public class MD2Docx {
@@ -18,9 +22,24 @@ namespace MD2DocxCore {
          .Build();
         var markdownDocument = Markdown.Parse(md, pipeline);
 
-        WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
+        var frontmatter = markdownDocument
+            .Descendants<YamlFrontMatterBlock>().
+            FirstOrDefault();
+        var yaml = frontmatter
+          .Lines
+          .Lines
+          .OrderByDescending(x => x.Line)
+          .Select(x => $"{x}\n")
+          .ToList()
+          .Select(x => Regex.Replace(x, "---+", string.Empty))
+          .Where(x => !string.IsNullOrWhiteSpace(x))
+          .Aggregate((s, agg) => agg + s);
+        var deserializer = new DeserializerBuilder().Build();
+        var meta = deserializer.Deserialize<PaperMeta>(yaml);
+
+        using WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
         MainDocumentPart mainPart = document.AddMainDocumentPart();
-        GenerateMainPart(mainPart, markdownDocument);
+        GenerateMainPart(mainPart, markdownDocument, ref meta, ref extraConfig);
 
         StyleDefinitionsPart styleDefinitionsPart = mainPart.AddNewPart<StyleDefinitionsPart>("Styles");
         GenerateStyleDefinitions(styleDefinitionsPart, extraConfig.LatentStyle, styles);
@@ -30,20 +49,22 @@ namespace MD2DocxCore {
 
         if (extraConfig.Header) {
           HeaderPart headerPart = mainPart.AddNewPart<HeaderPart>("Header");
-          GeneratedCode.GenerateHeaderPartContent(headerPart, "//TODO");
-          GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "header-image"), HeaderImageData);
+          GeneratedCode.GenerateHeaderPartContent(headerPart, meta.MainTitle);
+          GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "HeaderLogo"), HeaderImageData);
         }
 
         if (extraConfig.Footer) {
-          FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("frontFooter");
+          FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("FrontFooter");
+          // two footer differ  ↓ at this position
           GeneratedCode.GenerateIFooterPart(frontFooter);
-          FooterPart bodyFooter = mainPart.AddNewPart<FooterPart>("bodyFooter");
+          FooterPart bodyFooter = mainPart.AddNewPart<FooterPart>("BodyFooter");
+          // two footer differ  ↓ at this position
           GeneratedCode.Generate1FooterPart(bodyFooter);
         }
 
         SetPackageProperties(document);
 
-        // feed image data and type
+        // @TODO: feed image data and type
         // foreach (int index in imageType.Keys) {
         //   ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"image/{imageType[index]}", $"image{index}");
         //   imagePart.FeedData(new MemoryStream(imageDatas[index]));
@@ -60,15 +81,16 @@ namespace MD2DocxCore {
         //   }
         //   Console.WriteLine("\nThis warning can also be closed by -q.");
         // }
-        document.Close();
       } catch (Exception e) {
         // @TODO: exception handle
         Console.WriteLine(e.Message);
       }
     }
 
-    private static void GenerateImage(ImagePart imagePart, object headerImageData) {
-      // TODO
+    private static void GenerateImage(ImagePart imagePart, string imageData) {
+      System.IO.Stream data = GetBinaryDataStream(imageData);
+      imagePart.FeedData(data);
+      data.Close();
     }
 
     private static void ConvertBlock(Block block, ref Body docBody) {
@@ -77,7 +99,7 @@ namespace MD2DocxCore {
         case ParagraphBlock paragraph:
           Paragraph docNormalParagraph = new() {
             ParagraphProperties = new ParagraphProperties {
-              ParagraphStyleId = new ParagraphStyleId { Val = "正文" }
+              ParagraphStyleId = new ParagraphStyleId { Val = "正 文" }
             }
           };
           ConvertInlines(new(), paragraph.Inline, ref docNormalParagraph, ref paragraphs);
@@ -98,8 +120,9 @@ namespace MD2DocxCore {
             docBody.Append(para);
           }
           break;
-        case Markdig.Extensions.Yaml.YamlFrontMatterBlock:
+        case YamlFrontMatterBlock:
           // leave this empty case otherwise it will be convert as code block
+          // handled individually
           break;
         case CodeBlock code:
           foreach(var line in code.Lines) {
@@ -163,10 +186,43 @@ namespace MD2DocxCore {
       }
     }
 
-    public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument) {
+    public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument, ref PaperMeta metadata, ref ExtraConfiguration extraConfig) {
       Document document = new() { MCAttributes = new MarkupCompatibilityAttributes() };
       Body docBody = new();
+
+      if (extraConfig.Cover) {
+        GenerateImage(mainPart.AddNewPart<ImagePart>("image/jpeg", "CoverLogo"), CoverImageData);
+        GeneratedCode.GenerateCover(ref docBody, ref metadata, extraConfig.Header);
+      }
+
+      if (extraConfig.Abstract) {
+        if (!string.IsNullOrEmpty(metadata.CNTitle)) {
+          AddAbstract(metadata.CNTitle, metadata.CNAbstract, metadata.CNKeyWords, true, ref docBody);
+        }
+        if (!string.IsNullOrEmpty(metadata.ENTitle)) {
+          AddAbstract(metadata.ENTitle, metadata.ENAbstract, metadata.ENKeyWords, false, ref docBody);
+        }
+      }
+
+      if (extraConfig.TOC) {
+        GeneratedCode.GenerateTOC(ref docBody, extraConfig.Header, extraConfig.Footer);
+      }
+
+      foreach (var block in markdownDocument) {
+        ConvertBlock(block, ref docBody);
+      }
+
       SectionProperties sectionProperties = new();
+      if (extraConfig.Header) {
+        HeaderReference headerReference = new() { Type = HeaderFooterValues.Default, Id = "Header" };
+        sectionProperties.Append(headerReference);
+      }
+      if (extraConfig.Footer) {
+        FooterReference footerReference = new() { Type = HeaderFooterValues.Default, Id = "BodyFooter" };
+        PageNumberType pageNumberType1 = new() { Start = 1 };
+        sectionProperties.Append(footerReference);
+        sectionProperties.Append(pageNumberType1);
+      }
       PageSize pageSize = new() { Width = 11906U, Height = 16838U };
       PageMargin pageMargin = new() { Top = 1418, Right = 1134U, Bottom = 1418, Left = 1701U, Header = 851U, Footer = 992U, Gutter = 0U };
       Columns columns = new() { Space = "425" };
@@ -178,10 +234,90 @@ namespace MD2DocxCore {
       docBody.Append(sectionProperties);
       document.Append(docBody);
       mainPart.Document = document;
-      // TODO Cover, TOC, etc.
-      foreach (var block in markdownDocument) {
-        ConvertBlock(block, ref docBody);
+    }
+
+    /// <summary>
+    /// Generate abstract and add it to document
+    /// </summary>
+    /// <param name="title">Abstract title</param>
+    /// <param name="abs">Abstract body</param>
+    /// <param name="keyWords">Key words</param>
+    /// <param name="isCN">If it's Chinese abstract</param>
+    /// <param name="docBody">In which we append our text</param>
+    private static void AddAbstract(string title, string abs, string keyWords, bool isCN, ref Body docBody) {
+      string subtitle = isCN ? "摘要" : "ABSTRACT";
+      string keyWT = isCN ? "关键词：" : "Key words: ";
+      Paragraph para = new() {
+        ParagraphProperties = new ParagraphProperties {
+          ParagraphStyleId = new ParagraphStyleId() { Val = "摘要标题" }
+        }
+      };
+      Run run = new() { RunProperties = new RunProperties() };
+      if (!isCN) {
+        run.RunProperties.Append(new Bold());
+        run.RunProperties.Append(new BoldComplexScript());
       }
+      Text txt = new() { Text = title, Space = SpaceProcessingModeValues.Preserve };
+      run.Append(txt);
+      para.Append(run);
+      docBody.Append(para);
+
+      para = new Paragraph {
+        ParagraphProperties = new ParagraphProperties {
+          ParagraphStyleId = new ParagraphStyleId { Val = "摘要副标题" }
+        }
+      };
+      run = new Run { RunProperties = new RunProperties() };
+      if (!isCN) {
+        run.RunProperties.Append(new Bold());
+        run.RunProperties.Append(new BoldComplexScript());
+      }
+      txt = new Text { Text = subtitle, Space = SpaceProcessingModeValues.Preserve };
+      run.Append(txt);
+      para.Append(run);
+      docBody.Append(para);
+
+      para = new Paragraph {
+        ParagraphProperties = new ParagraphProperties {
+          ParagraphStyleId = new ParagraphStyleId { Val = "正 文" }
+          }
+      };
+      run = new Run { RunProperties = new RunProperties() };
+      txt = new Text { Text = abs, Space = SpaceProcessingModeValues.Preserve };
+      run.Append(txt);
+      para.Append(run);
+      docBody.Append(para);
+
+      para = new Paragraph {
+        ParagraphProperties = new ParagraphProperties {
+          ParagraphStyleId = new ParagraphStyleId { Val = "正 文" }
+        }
+      };
+      run = new Run { RunProperties = new RunProperties() };
+      txt = new Text { Text = "", Space = SpaceProcessingModeValues.Preserve };
+      run.Append(txt);
+      para.Append(run);
+      docBody.Append(para);
+
+      para = new Paragraph {
+        ParagraphProperties = new ParagraphProperties {
+          ParagraphStyleId = new ParagraphStyleId { Val = "正 文" }
+        }
+      };
+      run = new Run {
+        RunProperties = new RunProperties {
+          Bold = new Bold(),
+          BoldComplexScript = new BoldComplexScript()
+        }
+      };
+      txt = new Text { Text = keyWT, Space = SpaceProcessingModeValues.Preserve };
+      run.Append(txt);
+      para.Append(run);
+      run = new Run { RunProperties = new RunProperties() };
+      txt = new Text { Text = keyWords, Space = SpaceProcessingModeValues.Preserve };
+      run.Append(txt);
+      para.Append(run);
+      docBody.Append(para);
     }
 
     public static void GenerateStyleDefinitions(StyleDefinitionsPart styleDefinitions, bool latentStyle, IEnumerable<Style> styles) {
@@ -191,10 +327,7 @@ namespace MD2DocxCore {
         RunPropertiesDefault = new() {
           RunPropertiesBaseStyle = new() {
             RunFonts = new() { Ascii = "Times New Roman", HighAnsi = "Times New Roman", EastAsia = "宋体", ComplexScript = "Times New Roman" },
-            Kern = new() { Val = 2U },
             Languages = new() { Val = "en-US", EastAsia = "zh-CN", Bidi = "ar-SA" },
-            FontSize = new() { Val = "24" },
-            FontSizeComplexScript = new() { Val = "24" }
           }
         },
         ParagraphPropertiesDefault = new ParagraphPropertiesDefault()

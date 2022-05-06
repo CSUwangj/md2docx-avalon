@@ -11,7 +11,7 @@ namespace MD2DocxCore {
     };
     public static List<string> Justifications { get => justifications; }
     private static readonly List<string> mappings = new() {
-      "正文",
+      "正 文",
       "一级标题",
       "二级标题",
       "三级标题",
@@ -24,8 +24,7 @@ namespace MD2DocxCore {
       "代码段",
       "引用段落",
       "摘要标题",
-      "摘要正文",
-      "摘要关键字",
+      "摘要副标题",
       "参考文献"
     };
     public static List<string> Mappings { get => mappings; }
