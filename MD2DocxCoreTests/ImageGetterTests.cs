@@ -11,9 +11,10 @@ namespace MD2DocxCoreTests {
       this.output = output;
     }
 
-    [Theory (Skip = "Not implement yet")]
+    [Theory]
     [InlineData("Fail.jpg")]
     public void DiskFileNotFound(string name) {
+      ImageGetter imageGetter = new();
       output.WriteLine(Directory.GetCurrentDirectory());
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, name);
@@ -21,50 +22,52 @@ namespace MD2DocxCoreTests {
       byte[] expected = File.ReadAllBytes(expectedPath);
 
       string pathNotExist = "/this/path/should/not/be/found/unless/!@#$%^&*()";
-      bool result = ImageGetter.Load(pathNotExist, out byte[] actual);
+      bool result = imageGetter.Load(pathNotExist, out byte[] actual);
       output.WriteLine(pathNotExist);
 
       Assert.False(result);
       Assert.Equal(expected, actual);
     }
 
-    [Theory(Skip = "Not implement yet")]
+    [Theory]
     [InlineData("Fail.jpg")]
     public void NetFileNotFound(string name) {
-
+      ImageGetter imageGetter = new();
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, name);
       byte[] expected = File.ReadAllBytes(expectedPath);
 
       string pathNotExist = "http://Idontcarewhatthiswebsiteis/but/it/should/not/exist!.jpg";
-      bool result = ImageGetter.Load(pathNotExist, out byte[] actual);
+      bool result = imageGetter.Load(pathNotExist, out byte[] actual);
 
       Assert.False(result);
       Assert.Equal(expected, actual);
     }
 
-    [Theory(Skip = "Not implement yet")]
+    [Theory]
     [InlineData("yaml.jpg", "yaml.jpg")]
     public void FileInDisk(string name, string data) {
+      ImageGetter imageGetter = new();
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, name);
       byte[] expected = File.ReadAllBytes(expectedPath);
 
       string actualPath = Path.Combine(sourceDir.FullName, data);
-      bool result = ImageGetter.Load(actualPath, out byte[] actual);
+      bool result = imageGetter.Load(actualPath, out byte[] actual);
 
       Assert.True(result);
       Assert.Equal(expected, actual);
     }
 
-    [Theory(Skip = "Not implement yet")]
-    [InlineData("https://raw.githubusercontent.com/CSUwangj/md2docx-csharp/master/docs/res/yaml.jpg", "yaml.jpg")]
+    [Theory]
+    [InlineData("https://raw.githubusercontent.com/CSUwangj/md2docx-avalon/master/MD2DocxCoreTests/TestFiles/yaml.jpg", "yaml.jpg")]
     public void FileInNetwork(string url, string data) {
+      ImageGetter imageGetter = new();
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, data);
       byte[] expected = File.ReadAllBytes(expectedPath);
 
-      bool result = ImageGetter.Load(url, out byte[] actual);
+      bool result = imageGetter.Load(url, out byte[] actual);
 
       Assert.True(result);
       Assert.Equal(expected, actual);

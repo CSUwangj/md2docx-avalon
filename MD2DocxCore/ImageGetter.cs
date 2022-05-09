@@ -6,8 +6,8 @@ using System.Net;
 
 namespace MD2DocxCore {
   public class ImageGetter {
-    Image image;
-    IImageFormat format;
+    public Image image;
+    public IImageFormat format;
     public bool Load(string origin, out byte[] data) {
       bool isUrl = Uri.TryCreate(origin, UriKind.Absolute, out Uri uriResult)
           && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
