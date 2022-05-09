@@ -1,27 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
+﻿using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
+using System;
 using System.IO;
 using System.Net;
 
 namespace MD2DocxCore {
   public class ImageGetter {
-    public static bool Load(string origin, out byte[] imageData) {
-      imageData = Array.Empty<byte>();
-      return false;
+    Image image;
+    IImageFormat format;
+    public bool Load(string origin, out byte[] data) {
+      bool isUrl = Uri.TryCreate(origin, UriKind.Absolute, out Uri uriResult)
+          && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+      try {
+        if (isUrl) {
+          GetImageFromUrl(origin, out data);
+        } else {
+          GetImageFromPath(origin, out data);
+        }
+        return true;
+      } catch {
+        GetFailedImage(out data);
+        return false;
+      }
     }
 
-    private static void GetImageFromPath(string path) {
+    // @TODO: path concatenation for relative path
+    private void GetImageFromPath(string path, out byte[] data) {
+      using var fs = File.OpenRead(path);
+      data = File.ReadAllBytes(path);
+      image = Image.Load(fs, out format);
     }
 
-    private static void GetImageFromUrl(string url) {
+    private void GetImageFromUrl(string url, out byte[] data) {
+      using WebClient webClient = new(); 
+      data = webClient.DownloadData(url);
+      using MemoryStream mem = new(data);
+      image = Image.Load(mem, out format);
     }
 
-    // private static void DealFormat(ref Image image, byte[] originalData) {
-    // }
 
-    private static void Fail() {
+    private void GetFailedImage(out byte[] data) {
+      data = hexData;
+      image = Image.Load(hexData, out format);
     }
 
     #region
