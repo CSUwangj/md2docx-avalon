@@ -10,12 +10,18 @@ using Markdig.Extensions.Yaml;
 using System.Linq;
 using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
+using System.IO;
 
 namespace MD2DocxCore {
   public class MD2Docx {
+    static readonly Dictionary<int, byte[]> imageDatas = new();
+    static readonly Dictionary<int, string> imageType = new();
+    static readonly List<int> failImage = new();
+    static int imageCount = 1;
+    static bool hasFailImage = false;
     public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles) {
       try {
-        var md = System.IO.File.ReadAllText(input);
+        var md = File.ReadAllText(input);
         var pipeline = new MarkdownPipelineBuilder()
          .UseAdvancedExtensions()
          .UseYamlFrontMatter()
@@ -64,23 +70,16 @@ namespace MD2DocxCore {
 
         SetPackageProperties(document);
 
-        // @TODO: feed image data and type
-        // foreach (int index in imageType.Keys) {
-        //   ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"image/{imageType[index]}", $"image{index}");
-        //   imagePart.FeedData(new MemoryStream(imageDatas[index]));
-        // }
-        // handle hyperlink
-        // foreach (KeyValuePair<string, string> urlId in mdLinkId) {
-        //   mainPart.AddHyperlinkRelationship(new System.Uri(urlId.Key, System.UriKind.Absolute), true, urlId.Value);
-        // }
-        // handle failed image
-        // if (hasFailImage && !quiet) {
-        //   Console.WriteLine("Some image failed to insert, please check and insert it manually. Their index are(count from 1):");
-        //   foreach (int index in failImage) {
-        //     Console.Write($"{index} ");
-        //   }
-        //   Console.WriteLine("\nThis warning can also be closed by -q.");
-        // }
+        foreach (int index in imageType.Keys) {
+          ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"{imageType[index]}", $"image{index}");
+          imagePart.FeedData(new MemoryStream(imageDatas[index]));
+        }
+        // error handling
+        if (hasFailImage) {
+          foreach (int index in failImage) {
+            Console.Write($"{index} ");
+          }
+        }
       } catch (Exception e) {
         // @TODO: exception handle
         Console.WriteLine(e.Message);
@@ -181,6 +180,39 @@ namespace MD2DocxCore {
                 break;
             }
             ConvertInlines(newRunProperties, em, ref paragraph, ref paragraphs);
+            break;
+          case LinkInline link:
+            if (link.IsImage) {
+              ParagraphProperties newpp = (ParagraphProperties)paragraph.ParagraphProperties.Clone();
+              paragraphs.Add(paragraph);
+              paragraph = new Paragraph {
+                ParagraphProperties = new ParagraphProperties {
+                  ParagraphStyleId = new ParagraphStyleId { Val = "图题图序" }
+                }
+              };
+              ImageGetter imageGetter = new();
+              if (!imageGetter.Load(link.Url, out byte[] data)) {
+                failImage.Add(imageCount);
+                hasFailImage = true;
+              }
+              imageType.Add(imageCount, imageGetter.format.MimeTypes.First());
+              imageDatas.Add(imageCount, data);
+              Run imageRun = GeneratedCode.GenerateImageReference(imageCount, imageGetter.Width, imageGetter.Height);
+              paragraph.Append(imageRun);
+              paragraphs.Add(paragraph);
+              imageCount += 1;
+              paragraph = new Paragraph {
+                ParagraphProperties = new ParagraphProperties {
+                  ParagraphStyleId = new ParagraphStyleId { Val = "图题图序" }
+                }
+              };
+              run = new Run();
+              Text txt = new() { Text = link.Title, Space = SpaceProcessingModeValues.Preserve };
+              run.Append(txt);
+              paragraph.Append(run);
+              paragraphs.Add(paragraph);
+              paragraph = new Paragraph { ParagraphProperties = newpp };
+            }
             break;
         }
       }

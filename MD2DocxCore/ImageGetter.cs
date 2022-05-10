@@ -8,7 +8,11 @@ namespace MD2DocxCore {
   public class ImageGetter {
     public Image image;
     public IImageFormat format;
+    public long Height;
+    public long Width;
+    private readonly static long ratio = 914400L;
     public bool Load(string origin, out byte[] data) {
+      bool success = true;
       bool isUrl = Uri.TryCreate(origin, UriKind.Absolute, out Uri uriResult)
           && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
       try {
@@ -17,11 +21,13 @@ namespace MD2DocxCore {
         } else {
           GetImageFromPath(origin, out data);
         }
-        return true;
       } catch {
         GetFailedImage(out data);
-        return false;
+        success = false;
       }
+      Height = (long)(image.Height / image.Metadata.VerticalResolution * ratio);
+      Width = (long)(image.Width / image.Metadata.HorizontalResolution * ratio);
+      return success;
     }
 
     // @TODO: path concatenation for relative path

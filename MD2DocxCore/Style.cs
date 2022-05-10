@@ -25,7 +25,9 @@ namespace MD2DocxCore {
       "引用段落",
       "摘要标题",
       "摘要副标题",
-      "参考文献"
+      "参考文献",
+      "图题图序",
+      "表题表序"
     };
     public static List<string> Mappings { get => mappings; }
 
