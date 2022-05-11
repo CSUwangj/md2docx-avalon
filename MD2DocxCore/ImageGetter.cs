@@ -6,38 +6,30 @@ using System.Net;
 
 namespace MD2DocxCore {
   public class ImageGetter {
-    public Image image;
-    public IImageFormat format;
-    public long Height;
-    public long Width;
-    private readonly static long ratio = 914400L;
-    public bool Load(string origin, out byte[] data) {
-      bool success = true;
+    public static bool Load(string origin, out byte[] data, out Image image, out IImageFormat format) {
       bool isUrl = Uri.TryCreate(origin, UriKind.Absolute, out Uri uriResult)
           && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
       try {
         if (isUrl) {
-          GetImageFromUrl(origin, out data);
+          GetImageFromUrl(origin, out data, out image, out format);
         } else {
-          GetImageFromPath(origin, out data);
+          GetImageFromPath(origin, out data, out image, out format);
         }
+        return true;
       } catch {
-        GetFailedImage(out data);
-        success = false;
+        GetFailedImage(out data, out image, out format);
+        return false;
       }
-      Height = (long)(image.Height / image.Metadata.VerticalResolution * ratio);
-      Width = (long)(image.Width / image.Metadata.HorizontalResolution * ratio);
-      return success;
     }
 
     // @TODO: path concatenation for relative path
-    private void GetImageFromPath(string path, out byte[] data) {
+    private static void GetImageFromPath(string path, out byte[] data, out Image image, out IImageFormat format) {
       using var fs = File.OpenRead(path);
       data = File.ReadAllBytes(path);
       image = Image.Load(fs, out format);
     }
 
-    private void GetImageFromUrl(string url, out byte[] data) {
+    private static void GetImageFromUrl(string url, out byte[] data, out Image image, out IImageFormat format) {
       using WebClient webClient = new(); 
       data = webClient.DownloadData(url);
       using MemoryStream mem = new(data);
@@ -45,7 +37,7 @@ namespace MD2DocxCore {
     }
 
 
-    private void GetFailedImage(out byte[] data) {
+    private static void GetFailedImage(out byte[] data, out Image image, out IImageFormat format) {
       data = hexData;
       image = Image.Load(hexData, out format);
     }

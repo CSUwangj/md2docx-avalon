@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
 using System.IO;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
 
 namespace MD2DocxCore {
   public class MD2Docx {
@@ -190,14 +192,13 @@ namespace MD2DocxCore {
                   ParagraphStyleId = new ParagraphStyleId { Val = "图题图序" }
                 }
               };
-              ImageGetter imageGetter = new();
-              if (!imageGetter.Load(link.Url, out byte[] data)) {
+              if (!ImageGetter.Load(link.Url, out byte[] data, out Image image, out IImageFormat format)) {
                 failImage.Add(imageCount);
                 hasFailImage = true;
               }
-              imageType.Add(imageCount, imageGetter.format.MimeTypes.First());
+              imageType.Add(imageCount, format.MimeTypes.First());
               imageDatas.Add(imageCount, data);
-              Run imageRun = GeneratedCode.GenerateImageReference(imageCount, imageGetter.Width, imageGetter.Height);
+              Run imageRun = GeneratedCode.GenerateImageReference(imageCount, ref image);
               paragraph.Append(imageRun);
               paragraphs.Add(paragraph);
               imageCount += 1;

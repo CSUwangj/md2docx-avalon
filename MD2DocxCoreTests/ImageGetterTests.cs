@@ -22,7 +22,7 @@ namespace MD2DocxCoreTests {
       byte[] expected = File.ReadAllBytes(expectedPath);
 
       string pathNotExist = "/this/path/should/not/be/found/unless/!@#$%^&*()";
-      bool result = imageGetter.Load(pathNotExist, out byte[] actual);
+      bool result = ImageGetter.Load(pathNotExist, out byte[] actual, out _, out _);
       output.WriteLine(pathNotExist);
 
       Assert.False(result);
@@ -38,7 +38,7 @@ namespace MD2DocxCoreTests {
       byte[] expected = File.ReadAllBytes(expectedPath);
 
       string pathNotExist = "http://Idontcarewhatthiswebsiteis/but/it/should/not/exist!.jpg";
-      bool result = imageGetter.Load(pathNotExist, out byte[] actual);
+      bool result = ImageGetter.Load(pathNotExist, out byte[] actual, out _, out _);
 
       Assert.False(result);
       Assert.Equal(expected, actual);
@@ -53,7 +53,7 @@ namespace MD2DocxCoreTests {
       byte[] expected = File.ReadAllBytes(expectedPath);
 
       string actualPath = Path.Combine(sourceDir.FullName, data);
-      bool result = imageGetter.Load(actualPath, out byte[] actual);
+      bool result = ImageGetter.Load(actualPath, out byte[] actual, out _, out _);
 
       Assert.True(result);
       Assert.Equal(expected, actual);
@@ -67,7 +67,7 @@ namespace MD2DocxCoreTests {
       string expectedPath = Path.Combine(sourceDir.FullName, data);
       byte[] expected = File.ReadAllBytes(expectedPath);
 
-      bool result = imageGetter.Load(url, out byte[] actual);
+      bool result = ImageGetter.Load(url, out byte[] actual, out _, out _);
 
       Assert.True(result);
       Assert.Equal(expected, actual);
