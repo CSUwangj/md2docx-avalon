@@ -13,6 +13,8 @@ using YamlDotNet.Serialization;
 using System.IO;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
+using Markdig.Extensions.Footnotes;
+using Footnote = Markdig.Extensions.Footnotes.Footnote;
 
 namespace MD2DocxCore {
   public class MD2Docx {
@@ -21,6 +23,9 @@ namespace MD2DocxCore {
     static readonly List<int> failImage = new();
     static int imageCount = 1;
     static bool hasFailImage = false;
+    static int referenceCount = 1;
+    static readonly Dictionary<string, int> referenceIndex = new();
+    static readonly Dictionary<int, string> references = new();
     public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles) {
       try {
         var md = File.ReadAllText(input);
@@ -89,7 +94,7 @@ namespace MD2DocxCore {
     }
 
     private static void GenerateImage(ImagePart imagePart, string imageData) {
-      System.IO.Stream data = GetBinaryDataStream(imageData);
+      Stream data = GetBinaryDataStream(imageData);
       imagePart.FeedData(data);
       data.Close();
     }
@@ -123,7 +128,7 @@ namespace MD2DocxCore {
           break;
         case YamlFrontMatterBlock:
           // leave this empty case otherwise it will be convert as code block
-          // handled individually
+          // we need handled it individually
           break;
         case CodeBlock code:
           foreach(var line in code.Lines) {
@@ -139,6 +144,34 @@ namespace MD2DocxCore {
             docBody.Append(paragraph);
           }
           break;
+        // End of document
+        case FootnoteGroup _:
+          {
+            Paragraph paragraph = new() {
+              ParagraphProperties = new ParagraphProperties {
+                ParagraphStyleId = new ParagraphStyleId { Val = "参考文献标题" },
+              }
+            };
+            Run run = new() { RunProperties = new RunProperties() };
+            Text txt = new() { Text = "参考文献" };
+            run.Append(txt);
+            paragraph.Append(run);
+            docBody.Append(paragraph);
+          }
+          for (int i = 1; i < referenceCount; ++i) {
+            Paragraph paragraph = new() {
+              ParagraphProperties = new ParagraphProperties {
+                ParagraphStyleId = new ParagraphStyleId { Val = "参考文献" },
+                Indentation = new Indentation { Left = "400", Hanging = "400", HangingChars = 200 }
+              }
+            };
+            Run run = new() { RunProperties = new RunProperties() };
+            Text txt = new() { Text = $"[{i}] {references[i]}" };
+            run.Append(txt);
+            paragraph.Append(run);
+            docBody.Append(paragraph);
+          }
+          break;
       }
     }
 
@@ -146,7 +179,7 @@ namespace MD2DocxCore {
       foreach (var inline in inlines) {
         switch (inline) {
           case LiteralInline l:
-            Run run = new() {
+            Run literalRun = new() {
               //if not clone, will throw "Cannot insert the OpenXmlElement 'newChild' because it is part of a tree. "
               RunProperties = (RunProperties)runProperties.Clone(),
             };
@@ -154,8 +187,8 @@ namespace MD2DocxCore {
               Text = l.ToString(),
               Space = SpaceProcessingModeValues.Preserve
             };
-            run.Append(text);
-            paragraph.Append(run);
+            literalRun.Append(text);
+            paragraph.Append(literalRun);
             break;
           case EmphasisInline em:
             string delimiter = new(em.DelimiterChar, em.DelimiterCount);
@@ -185,7 +218,7 @@ namespace MD2DocxCore {
             break;
           case LinkInline link:
             if (link.IsImage) {
-              ParagraphProperties newpp = (ParagraphProperties)paragraph.ParagraphProperties.Clone();
+              ParagraphProperties newParagraphProperties = (ParagraphProperties)paragraph.ParagraphProperties.Clone();
               paragraphs.Add(paragraph);
               paragraph = new Paragraph {
                 ParagraphProperties = new ParagraphProperties {
@@ -207,16 +240,43 @@ namespace MD2DocxCore {
                   ParagraphStyleId = new ParagraphStyleId { Val = "图题图序" }
                 }
               };
-              run = new Run();
-              Text txt = new() { Text = link.Title, Space = SpaceProcessingModeValues.Preserve };
-              run.Append(txt);
-              paragraph.Append(run);
+              Run imageTitleRun = new();
+              Text imageTitleText = new() { Text = link.Title, Space = SpaceProcessingModeValues.Preserve };
+              imageTitleRun.Append(imageTitleText);
+              paragraph.Append(imageTitleRun);
               paragraphs.Add(paragraph);
-              paragraph = new Paragraph { ParagraphProperties = newpp };
+              paragraph = new Paragraph { ParagraphProperties = newParagraphProperties };
             }
+            break;
+          case FootnoteLink foot:
+            if (!referenceIndex.ContainsKey(foot.Footnote.Label)) {
+              AddReference(foot.Footnote);
+            }
+            RunProperties referRunProperties = (RunProperties)runProperties.Clone();
+            referRunProperties.VerticalTextAlignment = new() { Val = VerticalPositionValues.Superscript };
+            Run refecrenceIndexRun = new() { RunProperties = referRunProperties };
+            Text referenceIndexText = new() { Text = $"[{referenceIndex[foot.Footnote.Label]}]", Space = SpaceProcessingModeValues.Preserve };
+            refecrenceIndexRun.Append(referenceIndexText);
+            paragraph.Append(refecrenceIndexRun);
             break;
         }
       }
+    }
+
+    private static void AddReference(Footnote footnote) {
+      referenceIndex[footnote.Label] = referenceCount;
+      var block = footnote.First();
+      if (block is not ParagraphBlock) {
+        throw new Exception("Complex reference");
+      }
+      var paragraph = (ParagraphBlock)block;
+      var inline = paragraph.Inline.First();
+      if (inline is not LiteralInline) {
+        throw new Exception("Complex reference");
+      }
+      var literal = (LiteralInline)inline;
+      references[referenceCount] = literal.ToString();
+      referenceCount += 1;
     }
 
     public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument, ref PaperMeta metadata, ref ExtraConfiguration extraConfig) {
@@ -394,8 +454,8 @@ namespace MD2DocxCore {
     /// </summary>
     /// <param name="base64String">base64 string</param>
     /// <returns>Binary stream data</returns>
-    private static System.IO.Stream GetBinaryDataStream(string base64String) {
-      return new System.IO.MemoryStream(Convert.FromBase64String(base64String));
+    private static Stream GetBinaryDataStream(string base64String) {
+      return new MemoryStream(Convert.FromBase64String(base64String));
     }
 
     #region Binary Data
