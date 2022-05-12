@@ -9,15 +9,11 @@ on:
 
 jobs:
   build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+    name: Build on windows
+    runs-on: windows-latest
     strategy:
       matrix:
-        include:
-          - os: ubuntu-latest
-            release: bin/Release/net5.0
-          - os: windows-latest
-            release: bin/Release/net5.0
+          rid: [win-x64, linux-x64, linux-musl-x64, osx-x64]
 
     steps:
     - uses: actions/checkout@v2
@@ -30,9 +26,14 @@ jobs:
     - name: Test
       run: dotnet test --verbosity normal
     - name: Build
-      run: dotnet build --no-restore -c Release
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v1.0.0
+      run: dotnet publish -c "Release" -r "${{ matrix.rid }}"  --self-contained
+    - name: Upload program
+      uses: actions/upload-artifact@v3
       with:
-        name: MD2DocxAvalon-${{ matrix.os }}
-        path: bin/Release/net5.0
+        name: MD2DocxAvalon-${{ matrix.rid }}
+        path: bin/Release/net5.0/${{ matrix.rid }}/publish
+    - name: Upload example
+      uses: actions/upload-artifact@v3
+      with:
+        name: example
+        path: example
