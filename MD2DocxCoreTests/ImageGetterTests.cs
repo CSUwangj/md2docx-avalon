@@ -14,7 +14,6 @@ namespace MD2DocxCoreTests {
     [Theory]
     [InlineData("Fail.jpg")]
     public void DiskFileNotFound(string name) {
-      ImageGetter imageGetter = new();
       output.WriteLine(Directory.GetCurrentDirectory());
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, name);
@@ -32,7 +31,6 @@ namespace MD2DocxCoreTests {
     [Theory]
     [InlineData("Fail.jpg")]
     public void NetFileNotFound(string name) {
-      ImageGetter imageGetter = new();
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, name);
       byte[] expected = File.ReadAllBytes(expectedPath);
@@ -47,7 +45,6 @@ namespace MD2DocxCoreTests {
     [Theory]
     [InlineData("yaml.jpg", "yaml.jpg")]
     public void FileInDisk(string name, string data) {
-      ImageGetter imageGetter = new();
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, name);
       byte[] expected = File.ReadAllBytes(expectedPath);
@@ -62,7 +59,6 @@ namespace MD2DocxCoreTests {
     [Theory]
     [InlineData("https://raw.githubusercontent.com/CSUwangj/md2docx-avalon/master/MD2DocxCoreTests/TestFiles/yaml.jpg", "yaml.jpg")]
     public void FileInNetwork(string url, string data) {
-      ImageGetter imageGetter = new();
       DirectoryInfo sourceDir = new("../../../TestFiles/");
       string expectedPath = Path.Combine(sourceDir.FullName, data);
       byte[] expected = File.ReadAllBytes(expectedPath);
