@@ -18,18 +18,18 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Test
       run: dotnet test --verbosity normal
     - name: Build
-      run: dotnet publish -c "Release" -r "${{ matrix.rid }}"  --self-contained
+      run: dotnet publish -c "Release" -r "${{ matrix.rid }}"  --self-contained -p:DebugType=None -p:DebugSymbols=false
     - name: Upload program
       uses: actions/upload-artifact@v3
       with:
         name: MD2DocxAvalon-${{ matrix.rid }}
-        path: bin/Release/net5.0/${{ matrix.rid }}/publish
+        path: bin/Release/net6.0/${{ matrix.rid }}/publish
     - name: Upload example
       uses: actions/upload-artifact@v3
       with:
