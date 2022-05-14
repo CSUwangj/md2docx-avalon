@@ -5,6 +5,7 @@ using MD2DocxAvalon.Views;
 using MD2DocxCore;
 using System.Collections.Generic;
 using System;
+using MessageBox.Avalonia;
 
 namespace MD2DocxAvalon.ViewModels {
   public class IOViewModel : ViewModelBase {
@@ -46,7 +47,8 @@ namespace MD2DocxAvalon.ViewModels {
         try {
           MD2Docx.Run(Input, Output, ConfigurationPageViewModel.Instance.ExtraConfig, styles);
         } catch (Exception e) {
-
+          var messageBoxStandardWindow = MessageBoxManager.GetMessageBoxStandardWindow("Error", $"{e.ToString()}\nFire a issue at https://github.com/CSUwangj/md2docx-avalon/issues.");
+          messageBoxStandardWindow.Show();
         }
       });
     }

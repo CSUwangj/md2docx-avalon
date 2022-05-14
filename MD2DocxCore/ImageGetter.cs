@@ -2,7 +2,6 @@
 using SixLabors.ImageSharp.Formats;
 using System;
 using System.IO;
-using System.Net;
 using System.Net.Http;
 
 namespace MD2DocxCore {
