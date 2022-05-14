@@ -3,6 +3,7 @@ using SixLabors.ImageSharp.Formats;
 using System;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 
 namespace MD2DocxCore {
   public class ImageGetter {
@@ -30,10 +31,12 @@ namespace MD2DocxCore {
     }
 
     private static void GetImageFromUrl(string url, out byte[] data, out Image image, out IImageFormat format) {
-      using WebClient webClient = new(); 
-      data = webClient.DownloadData(url);
-      using MemoryStream mem = new(data);
-      image = Image.Load(mem, out format);
+      using HttpClient httpClient = new(); 
+      var response = httpClient.GetAsync(url).Result;
+      MemoryStream ms = new();
+      response.Content.ReadAsStreamAsync().Result.CopyTo(ms);
+      data = ms.ToArray();
+      image = Image.Load(ms, out format);
     }
 
 
