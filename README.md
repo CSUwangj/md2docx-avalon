@@ -7,9 +7,12 @@ especially when they are graduating bachelor students or are writing experimenta
 
 ## Install
 
-### download from release
+### download from nightly build
 
-TODO
+1. go to <https://github.com/CSUwangj/md2docx-avalon/actions/workflows/build.yml>
+2. find a success build and click it
+3. find artifacts at the bottom of the page
+4. download
 
 ### build from source
 
@@ -28,12 +31,14 @@ dotnet build
   - [X] TOC
   - [X] header
   - [X] footer
-- [ ] image
-- [ ] footnote & references
+- [X] image
+- [X] footnote & references
 - [ ] link
-- [ ] package, publish, install
 - [ ] features may not implement
   - [ ] list
-  - [ ] quote
   - [ ] math formula
   - [ ] table
+  - [ ] package, publish, install
+  - [ ] configuration memorize
+- [ ] feature won't implement
+  - [ ] quote
