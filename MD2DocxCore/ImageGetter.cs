@@ -34,9 +34,9 @@ namespace MD2DocxCore {
       using HttpClient httpClient = new(); 
       var response = httpClient.GetAsync(url).Result;
       MemoryStream ms = new();
-      response.Content.ReadAsStreamAsync().Result.CopyTo(ms);
+      response.Content.CopyToAsync(ms).Wait();
       data = ms.ToArray();
-      image = Image.Load(ms, out format);
+      image = Image.Load(data, out format);
     }
 
 

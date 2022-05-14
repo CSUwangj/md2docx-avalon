@@ -27,69 +27,64 @@ namespace MD2DocxCore {
     static readonly Dictionary<string, int> referenceIndex = new();
     static readonly Dictionary<int, string> references = new();
     public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles) {
-      try {
-        var md = File.ReadAllText(input);
-        var pipeline = new MarkdownPipelineBuilder()
-         .UseAdvancedExtensions()
-         .UseYamlFrontMatter()
-         .Build();
-        var markdownDocument = Markdown.Parse(md, pipeline);
+      var md = File.ReadAllText(input);
+      var pipeline = new MarkdownPipelineBuilder()
+        .UseAdvancedExtensions()
+        .UseYamlFrontMatter()
+        .Build();
+      var markdownDocument = Markdown.Parse(md, pipeline);
 
-        var frontmatter = markdownDocument
-            .Descendants<YamlFrontMatterBlock>().
-            FirstOrDefault();
-        var yaml = frontmatter
-          .Lines
-          .Lines
-          .OrderByDescending(x => x.Line)
-          .Select(x => $"{x}\n")
-          .ToList()
-          .Select(x => Regex.Replace(x, "---+", string.Empty))
-          .Where(x => !string.IsNullOrWhiteSpace(x))
-          .Aggregate((s, agg) => agg + s);
-        var deserializer = new DeserializerBuilder().Build();
-        var meta = deserializer.Deserialize<PaperMeta>(yaml);
+      var frontmatter = markdownDocument
+          .Descendants<YamlFrontMatterBlock>().
+          FirstOrDefault();
+      var yaml = frontmatter
+        .Lines
+        .Lines
+        .OrderByDescending(x => x.Line)
+        .Select(x => $"{x}\n")
+        .ToList()
+        .Select(x => Regex.Replace(x, "---+", string.Empty))
+        .Where(x => !string.IsNullOrWhiteSpace(x))
+        .Aggregate((s, agg) => agg + s);
+      var deserializer = new DeserializerBuilder().Build();
+      var meta = deserializer.Deserialize<PaperMeta>(yaml);
 
-        using WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
-        MainDocumentPart mainPart = document.AddMainDocumentPart();
-        GenerateMainPart(mainPart, markdownDocument, ref meta, ref extraConfig);
+      using WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
+      MainDocumentPart mainPart = document.AddMainDocumentPart();
+      GenerateMainPart(mainPart, markdownDocument, ref meta, ref extraConfig);
 
-        StyleDefinitionsPart styleDefinitionsPart = mainPart.AddNewPart<StyleDefinitionsPart>("Styles");
-        GenerateStyleDefinitions(styleDefinitionsPart, extraConfig.LatentStyle, styles);
+      StyleDefinitionsPart styleDefinitionsPart = mainPart.AddNewPart<StyleDefinitionsPart>("Styles");
+      GenerateStyleDefinitions(styleDefinitionsPart, extraConfig.LatentStyle, styles);
 
-        FontTablePart fontTablePart1 = mainPart.AddNewPart<FontTablePart>("FootTable");
-        GeneratedCode.GenerateFontTablePartContent(fontTablePart1);
+      FontTablePart fontTablePart1 = mainPart.AddNewPart<FontTablePart>("FootTable");
+      GeneratedCode.GenerateFontTablePartContent(fontTablePart1);
 
-        if (extraConfig.Header) {
-          HeaderPart headerPart = mainPart.AddNewPart<HeaderPart>("Header");
-          GeneratedCode.GenerateHeaderPartContent(headerPart, meta.MainTitle);
-          GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "HeaderLogo"), HeaderImageData);
+      if (extraConfig.Header) {
+        HeaderPart headerPart = mainPart.AddNewPart<HeaderPart>("Header");
+        GeneratedCode.GenerateHeaderPartContent(headerPart, meta.MainTitle);
+        GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "HeaderLogo"), HeaderImageData);
+      }
+
+      if (extraConfig.Footer) {
+        FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("FrontFooter");
+        // two footer differ  ↓ at this position
+        GeneratedCode.GenerateIFooterPart(frontFooter);
+        FooterPart bodyFooter = mainPart.AddNewPart<FooterPart>("BodyFooter");
+        // two footer differ  ↓ at this position
+        GeneratedCode.Generate1FooterPart(bodyFooter);
+      }
+
+      SetPackageProperties(document);
+
+      foreach (int index in imageType.Keys) {
+        ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"{imageType[index]}", $"image{index}");
+        imagePart.FeedData(new MemoryStream(imageDatas[index]));
+      }
+      // error handling
+      if (hasFailImage) {
+        foreach (int index in failImage) {
+          Console.Write($"{index} ");
         }
-
-        if (extraConfig.Footer) {
-          FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("FrontFooter");
-          // two footer differ  ↓ at this position
-          GeneratedCode.GenerateIFooterPart(frontFooter);
-          FooterPart bodyFooter = mainPart.AddNewPart<FooterPart>("BodyFooter");
-          // two footer differ  ↓ at this position
-          GeneratedCode.Generate1FooterPart(bodyFooter);
-        }
-
-        SetPackageProperties(document);
-
-        foreach (int index in imageType.Keys) {
-          ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"{imageType[index]}", $"image{index}");
-          imagePart.FeedData(new MemoryStream(imageDatas[index]));
-        }
-        // error handling
-        if (hasFailImage) {
-          foreach (int index in failImage) {
-            Console.Write($"{index} ");
-          }
-        }
-      } catch (Exception e) {
-        // @TODO: exception handle
-        Console.WriteLine(e.Message);
       }
     }
 

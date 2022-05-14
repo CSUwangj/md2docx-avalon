@@ -4,6 +4,7 @@ using Avalonia.Controls;
 using MD2DocxAvalon.Views;
 using MD2DocxCore;
 using System.Collections.Generic;
+using System;
 
 namespace MD2DocxAvalon.ViewModels {
   public class IOViewModel : ViewModelBase {
@@ -42,7 +43,11 @@ namespace MD2DocxAvalon.ViewModels {
         foreach (var style in ConfigurationPageViewModel.Instance.Styles) {
           styles.Add(style.Style);
         }
-        MD2Docx.Run(Input, Output, ConfigurationPageViewModel.Instance.ExtraConfig, styles);
+        try {
+          MD2Docx.Run(Input, Output, ConfigurationPageViewModel.Instance.ExtraConfig, styles);
+        } catch (Exception e) {
+
+        }
       });
     }
 

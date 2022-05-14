@@ -1,4 +1,4 @@
-name: .NET
+name: publish to action artifact
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --verbosity normal
     - name: Build
-      run: dotnet publish -c "Release" -r "${{ matrix.rid }}"  --self-contained -p:DebugType=None -p:DebugSymbols=false
+      run: dotnet publish -c "Release" --self-contained -r "${{ matrix.rid }}" -p:DebugType=None -p:DebugSymbols=false
     - name: Upload program
       uses: actions/upload-artifact@v3
       with:
