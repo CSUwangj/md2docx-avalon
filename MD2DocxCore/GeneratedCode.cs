@@ -817,7 +817,7 @@ namespace MD2DocxCore {
       numbering1.AddNamespaceDeclaration("wps", "http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
 
       for(int i = 1; i <= listCount; i += 1) {
-        AbstractNum abstractNum1 = new() { AbstractNumberId = listCount };
+        AbstractNum abstractNum1 = new() { AbstractNumberId = i };
         abstractNum1.SetAttribute(new OpenXmlAttribute("w15", "restartNumberingAfterBreak", "http://schemas.microsoft.com/office/word/2012/wordml", "0"));
         Nsid nsid1 = new() { Val = $"{i}1D27284B" };
         MultiLevelType multiLevelType1 = new() { Val = MultiLevelValues.HybridMultilevel };
@@ -995,9 +995,9 @@ namespace MD2DocxCore {
         abstractNum1.Append(level8);
         abstractNum1.Append(level9);
 
-        NumberingInstance numberingInstance1 = new() { NumberID = listCount };
+        NumberingInstance numberingInstance1 = new() { NumberID = i };
         numberingInstance1.SetAttribute(new OpenXmlAttribute("w16cid", "durableId", "http://schemas.microsoft.com/office/word/2016/wordml/cid", $"{i}742339289"));
-        AbstractNumId abstractNumId1 = new() { Val = listCount };
+        AbstractNumId abstractNumId1 = new() { Val = i };
 
         numberingInstance1.Append(abstractNumId1);
         numbering1.Append(abstractNum1);
