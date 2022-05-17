@@ -174,36 +174,48 @@ namespace MD2DocxCore {
           }
           break;
         case ListBlock list:
-          listCount += 1;
-          foreach (var item in list) {
-            if (item is not ListItemBlock) {
-              continue;
-            }
-            var listItem = (ListItemBlock)item;
-            if (listItem.First() is not ParagraphBlock) {
-              continue;
-            }
-            var listParagraph = (ParagraphBlock)listItem.First();
-            Paragraph paragraph = new() {
-              ParagraphProperties = new ParagraphProperties {
-                ParagraphStyleId = new ParagraphStyleId { Val = "正 文" },
-                NumberingProperties = new NumberingProperties {
-                  NumberingLevelReference = new NumberingLevelReference { Val = 0 },
-                  NumberingId = new NumberingId { Val = listCount }
-                },
-                Indentation = new Indentation { FirstLineChars = 0, Left = "400", Hanging = "400", HangingChars = 200 }
-              }
-            };
-            ConvertInlines(new(), listParagraph.Inline, ref paragraph, ref paragraphs);
-            paragraphs.Add(paragraph);
-          }
-          foreach (var para in paragraphs) {
-            docBody.Append(para);
-          }
+          ConverList(list, ref docBody);
           break;
         default:
           Console.WriteLine(block);
           break;
+      }
+    }
+
+    private static void ConverList(ListBlock list, ref Body body, int level = 0) {
+      List<Paragraph> paragraphs = new();
+      if (level == 0) {
+        listCount += 1;
+      }
+      foreach (var item in list) {
+        if (item is not ListItemBlock) {
+          continue;
+        }
+        var listItem = (ListItemBlock)item;
+        foreach(var block in listItem) {
+          switch (block) {
+            case ListBlock childList:
+              ConverList(childList, ref body, level + 1);
+              break;
+
+            case ParagraphBlock listParagraph:
+              Paragraph paragraph = new() {
+                ParagraphProperties = new ParagraphProperties {
+                  ParagraphStyleId = new ParagraphStyleId { Val = "正 文" },
+                  NumberingProperties = new NumberingProperties {
+                    NumberingLevelReference = new NumberingLevelReference { Val = level },
+                    NumberingId = new NumberingId { Val = listCount }
+                  },
+                  Indentation = new Indentation { FirstLineChars = 0 }
+                }
+              };
+              ConvertInlines(new(), listParagraph.Inline, ref paragraph, ref paragraphs);
+              // we assume there is no image in list block
+              body.Append(paragraph);
+              break;
+          }
+       
+        }
       }
     }
 

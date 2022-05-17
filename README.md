@@ -33,9 +33,9 @@ dotnet build
   - [X] footer
 - [X] image
 - [X] footnote & references
+- [X] list
 - [ ] link
 - [ ] features may not implement
-  - [ ] list
   - [ ] math formula
   - [ ] table
   - [ ] package, publish, install
