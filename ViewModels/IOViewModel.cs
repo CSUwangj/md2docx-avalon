@@ -46,6 +46,8 @@ namespace MD2DocxAvalon.ViewModels {
         }
         try {
           MD2Docx.Run(Input, Output, ConfigurationPageViewModel.Instance.ExtraConfig, styles);
+          var messageBoxStandardWindow = MessageBoxManager.GetMessageBoxStandardWindow("Success", "Check your file, sir!");
+          messageBoxStandardWindow.Show();
         } catch (Exception e) {
           var messageBoxStandardWindow = MessageBoxManager.GetMessageBoxStandardWindow("Error", $"{e.ToString()}\nFire a issue at https://github.com/CSUwangj/md2docx-avalon/issues.");
           messageBoxStandardWindow.Show();
