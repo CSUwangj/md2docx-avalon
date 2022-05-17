@@ -19,7 +19,7 @@ namespace MD2DocxCore {
     /// Generate LatentStyles
     /// </summary>
     /// <returns>LatentStyles of default office2019 document</returns>
-    public static LatentStyles GenerateLatentStyles() {
+    internal static LatentStyles GenerateLatentStyles() {
       LatentStyles latentStyles = new() { DefaultLockedState = false, DefaultUiPriority = 99, DefaultSemiHidden = false, DefaultUnhideWhenUsed = false, DefaultPrimaryStyle = false, Count = 377 };
       LatentStyleExceptionInfo latentStyleExceptionInfo1 = new() { Name = "Normal", UiPriority = 0, PrimaryStyle = true };
       LatentStyleExceptionInfo latentStyleExceptionInfo2 = new() { Name = "heading 1", UiPriority = 9, PrimaryStyle = true };
@@ -780,11 +780,238 @@ namespace MD2DocxCore {
       return latentStyles;
     }
 
+    internal static void GenerateNumberingDefinitionsPartContent(NumberingDefinitionsPart numberingDefinitionsPart, int listCount) {
+      Numbering numbering1 = new() { MCAttributes = new MarkupCompatibilityAttributes() { Ignorable = "w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14" } };
+      numbering1.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
+      numbering1.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
+      numbering1.AddNamespaceDeclaration("cx1", "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex");
+      numbering1.AddNamespaceDeclaration("cx2", "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex");
+      numbering1.AddNamespaceDeclaration("cx3", "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex");
+      numbering1.AddNamespaceDeclaration("cx4", "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex");
+      numbering1.AddNamespaceDeclaration("cx5", "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex");
+      numbering1.AddNamespaceDeclaration("cx6", "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex");
+      numbering1.AddNamespaceDeclaration("cx7", "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex");
+      numbering1.AddNamespaceDeclaration("cx8", "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex");
+      numbering1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
+      numbering1.AddNamespaceDeclaration("aink", "http://schemas.microsoft.com/office/drawing/2016/ink");
+      numbering1.AddNamespaceDeclaration("am3d", "http://schemas.microsoft.com/office/drawing/2017/model3d");
+      numbering1.AddNamespaceDeclaration("o", "urn:schemas-microsoft-com:office:office");
+      numbering1.AddNamespaceDeclaration("oel", "http://schemas.microsoft.com/office/2019/extlst");
+      numbering1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
+      numbering1.AddNamespaceDeclaration("m", "http://schemas.openxmlformats.org/officeDocument/2006/math");
+      numbering1.AddNamespaceDeclaration("v", "urn:schemas-microsoft-com:vml");
+      numbering1.AddNamespaceDeclaration("wp14", "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing");
+      numbering1.AddNamespaceDeclaration("wp", "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing");
+      numbering1.AddNamespaceDeclaration("w10", "urn:schemas-microsoft-com:office:word");
+      numbering1.AddNamespaceDeclaration("w", "http://schemas.openxmlformats.org/wordprocessingml/2006/main");
+      numbering1.AddNamespaceDeclaration("w14", "http://schemas.microsoft.com/office/word/2010/wordml");
+      numbering1.AddNamespaceDeclaration("w15", "http://schemas.microsoft.com/office/word/2012/wordml");
+      numbering1.AddNamespaceDeclaration("w16cex", "http://schemas.microsoft.com/office/word/2018/wordml/cex");
+      numbering1.AddNamespaceDeclaration("w16cid", "http://schemas.microsoft.com/office/word/2016/wordml/cid");
+      numbering1.AddNamespaceDeclaration("w16", "http://schemas.microsoft.com/office/word/2018/wordml");
+      numbering1.AddNamespaceDeclaration("w16sdtdh", "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash");
+      numbering1.AddNamespaceDeclaration("w16se", "http://schemas.microsoft.com/office/word/2015/wordml/symex");
+      numbering1.AddNamespaceDeclaration("wpg", "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup");
+      numbering1.AddNamespaceDeclaration("wpi", "http://schemas.microsoft.com/office/word/2010/wordprocessingInk");
+      numbering1.AddNamespaceDeclaration("wne", "http://schemas.microsoft.com/office/word/2006/wordml");
+      numbering1.AddNamespaceDeclaration("wps", "http://schemas.microsoft.com/office/word/2010/wordprocessingShape");
+
+      for(int i = 1; i <= listCount; i += 1) {
+        AbstractNum abstractNum1 = new() { AbstractNumberId = listCount };
+        abstractNum1.SetAttribute(new OpenXmlAttribute("w15", "restartNumberingAfterBreak", "http://schemas.microsoft.com/office/word/2012/wordml", "0"));
+        Nsid nsid1 = new() { Val = $"{i}1D27284B" };
+        MultiLevelType multiLevelType1 = new() { Val = MultiLevelValues.HybridMultilevel };
+        TemplateCode templateCode1 = new() { Val = $"{i}F8AC761A" };
+
+        Level level1 = new() { LevelIndex = 0, TemplateCode = $"{i}075C9CD4" };
+        StartNumberingValue startNumberingValue1 = new() { Val = 1 };
+        NumberingFormat numberingFormat1 = new() { Val = NumberFormatValues.LowerLetter };
+        LevelText levelText1 = new() { Val = "%1." };
+        LevelJustification levelJustification1 = new() { Val = LevelJustificationValues.Left };
+
+        PreviousParagraphProperties previousParagraphProperties1 = new();
+        Indentation indentation2 = new() { Start = "360", Hanging = "360" };
+
+        previousParagraphProperties1.Append(indentation2);
+
+        NumberingSymbolRunProperties numberingSymbolRunProperties1 = new();
+        RunFonts runFonts2 = new() { Hint = FontTypeHintValues.Default };
+
+        numberingSymbolRunProperties1.Append(runFonts2);
+
+        level1.Append(startNumberingValue1);
+        level1.Append(numberingFormat1);
+        level1.Append(levelText1);
+        level1.Append(levelJustification1);
+        level1.Append(previousParagraphProperties1);
+        level1.Append(numberingSymbolRunProperties1);
+
+        Level level2 = new() { LevelIndex = 1, TemplateCode = $"{i}04090019", Tentative = true };
+        StartNumberingValue startNumberingValue2 = new() { Val = 1 };
+        NumberingFormat numberingFormat2 = new() { Val = NumberFormatValues.LowerLetter };
+        LevelText levelText2 = new() { Val = "%2)" };
+        LevelJustification levelJustification2 = new() { Val = LevelJustificationValues.Left };
+
+        PreviousParagraphProperties previousParagraphProperties2 = new();
+        Indentation indentation3 = new() { Start = "840", Hanging = "420" };
+
+        previousParagraphProperties2.Append(indentation3);
+
+        level2.Append(startNumberingValue2);
+        level2.Append(numberingFormat2);
+        level2.Append(levelText2);
+        level2.Append(levelJustification2);
+        level2.Append(previousParagraphProperties2);
+
+        Level level3 = new() { LevelIndex = 2, TemplateCode = $"{i}0409001B", Tentative = true };
+        StartNumberingValue startNumberingValue3 = new() { Val = 1 };
+        NumberingFormat numberingFormat3 = new() { Val = NumberFormatValues.LowerRoman };
+        LevelText levelText3 = new() { Val = "%3." };
+        LevelJustification levelJustification3 = new() { Val = LevelJustificationValues.Right };
+
+        PreviousParagraphProperties previousParagraphProperties3 = new();
+        Indentation indentation4 = new() { Start = "1260", Hanging = "420" };
+
+        previousParagraphProperties3.Append(indentation4);
+
+        level3.Append(startNumberingValue3);
+        level3.Append(numberingFormat3);
+        level3.Append(levelText3);
+        level3.Append(levelJustification3);
+        level3.Append(previousParagraphProperties3);
+
+        Level level4 = new() { LevelIndex = 3, TemplateCode = $"{i}0409000F", Tentative = true };
+        StartNumberingValue startNumberingValue4 = new() { Val = 1 };
+        NumberingFormat numberingFormat4 = new() { Val = NumberFormatValues.Decimal };
+        LevelText levelText4 = new() { Val = "%4." };
+        LevelJustification levelJustification4 = new() { Val = LevelJustificationValues.Left };
+
+        PreviousParagraphProperties previousParagraphProperties4 = new();
+        Indentation indentation5 = new() { Start = "1680", Hanging = "420" };
+
+        previousParagraphProperties4.Append(indentation5);
+
+        level4.Append(startNumberingValue4);
+        level4.Append(numberingFormat4);
+        level4.Append(levelText4);
+        level4.Append(levelJustification4);
+        level4.Append(previousParagraphProperties4);
+
+        Level level5 = new() { LevelIndex = 4, TemplateCode = $"{i}04090019", Tentative = true };
+        StartNumberingValue startNumberingValue5 = new() { Val = 1 };
+        NumberingFormat numberingFormat5 = new() { Val = NumberFormatValues.LowerLetter };
+        LevelText levelText5 = new() { Val = "%5)" };
+        LevelJustification levelJustification5 = new() { Val = LevelJustificationValues.Left };
+
+        PreviousParagraphProperties previousParagraphProperties5 = new();
+        Indentation indentation6 = new() { Start = "2100", Hanging = "420" };
+
+        previousParagraphProperties5.Append(indentation6);
+
+        level5.Append(startNumberingValue5);
+        level5.Append(numberingFormat5);
+        level5.Append(levelText5);
+        level5.Append(levelJustification5);
+        level5.Append(previousParagraphProperties5);
+
+        Level level6 = new() { LevelIndex = 5, TemplateCode = $"{i}0409001B", Tentative = true };
+        StartNumberingValue startNumberingValue6 = new() { Val = 1 };
+        NumberingFormat numberingFormat6 = new() { Val = NumberFormatValues.LowerRoman };
+        LevelText levelText6 = new() { Val = "%6." };
+        LevelJustification levelJustification6 = new() { Val = LevelJustificationValues.Right };
+
+        PreviousParagraphProperties previousParagraphProperties6 = new();
+        Indentation indentation7 = new() { Start = "2520", Hanging = "420" };
+
+        previousParagraphProperties6.Append(indentation7);
+
+        level6.Append(startNumberingValue6);
+        level6.Append(numberingFormat6);
+        level6.Append(levelText6);
+        level6.Append(levelJustification6);
+        level6.Append(previousParagraphProperties6);
+
+        Level level7 = new() { LevelIndex = 6, TemplateCode = $"{i}0409000F", Tentative = true };
+        StartNumberingValue startNumberingValue7 = new() { Val = 1 };
+        NumberingFormat numberingFormat7 = new() { Val = NumberFormatValues.Decimal };
+        LevelText levelText7 = new() { Val = "%7." };
+        LevelJustification levelJustification7 = new() { Val = LevelJustificationValues.Left };
+
+        PreviousParagraphProperties previousParagraphProperties7 = new();
+        Indentation indentation8 = new() { Start = "2940", Hanging = "420" };
+
+        previousParagraphProperties7.Append(indentation8);
+
+        level7.Append(startNumberingValue7);
+        level7.Append(numberingFormat7);
+        level7.Append(levelText7);
+        level7.Append(levelJustification7);
+        level7.Append(previousParagraphProperties7);
+
+        Level level8 = new() { LevelIndex = 7, TemplateCode = $"{i}04090019", Tentative = true };
+        StartNumberingValue startNumberingValue8 = new() { Val = 1 };
+        NumberingFormat numberingFormat8 = new() { Val = NumberFormatValues.LowerLetter };
+        LevelText levelText8 = new() { Val = "%8)" };
+        LevelJustification levelJustification8 = new() { Val = LevelJustificationValues.Left };
+
+        PreviousParagraphProperties previousParagraphProperties8 = new();
+        Indentation indentation9 = new() { Start = "3360", Hanging = "420" };
+
+        previousParagraphProperties8.Append(indentation9);
+
+        level8.Append(startNumberingValue8);
+        level8.Append(numberingFormat8);
+        level8.Append(levelText8);
+        level8.Append(levelJustification8);
+        level8.Append(previousParagraphProperties8);
+
+        Level level9 = new() { LevelIndex = 8, TemplateCode = $"{i}0409001B", Tentative = true };
+        StartNumberingValue startNumberingValue9 = new() { Val = 1 };
+        NumberingFormat numberingFormat9 = new() { Val = NumberFormatValues.LowerRoman };
+        LevelText levelText9 = new() { Val = "%9." };
+        LevelJustification levelJustification9 = new() { Val = LevelJustificationValues.Right };
+
+        PreviousParagraphProperties previousParagraphProperties9 = new();
+        Indentation indentation10 = new() { Start = "3780", Hanging = "420" };
+
+        previousParagraphProperties9.Append(indentation10);
+
+        level9.Append(startNumberingValue9);
+        level9.Append(numberingFormat9);
+        level9.Append(levelText9);
+        level9.Append(levelJustification9);
+        level9.Append(previousParagraphProperties9);
+
+        abstractNum1.Append(nsid1);
+        abstractNum1.Append(multiLevelType1);
+        abstractNum1.Append(templateCode1);
+        abstractNum1.Append(level1);
+        abstractNum1.Append(level2);
+        abstractNum1.Append(level3);
+        abstractNum1.Append(level4);
+        abstractNum1.Append(level5);
+        abstractNum1.Append(level6);
+        abstractNum1.Append(level7);
+        abstractNum1.Append(level8);
+        abstractNum1.Append(level9);
+
+        NumberingInstance numberingInstance1 = new() { NumberID = listCount };
+        numberingInstance1.SetAttribute(new OpenXmlAttribute("w16cid", "durableId", "http://schemas.microsoft.com/office/word/2016/wordml/cid", $"{i}742339289"));
+        AbstractNumId abstractNumId1 = new() { Val = listCount };
+
+        numberingInstance1.Append(abstractNumId1);
+        numbering1.Append(abstractNum1);
+        numbering1.Append(numberingInstance1);
+      }
+      numberingDefinitionsPart.Numbering = numbering1;
+
+    }
+
     /// <summary>
     /// 1 means page number using 1
     /// </summary>
     /// <param name="part">WordPress FooterPart</param>
-    public static void Generate1FooterPart(FooterPart part) {
+    internal static void Generate1FooterPart(FooterPart part) {
       Footer footer1 = new() { MCAttributes = new() { Ignorable = "w14 w15 w16se w16cid wp14" } };
       footer1.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
       footer1.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
@@ -911,7 +1138,7 @@ namespace MD2DocxCore {
     /// I means page number using I
     /// </summary>
     /// <param name="part">WordPress FooterPart</param>
-    public static void GenerateIFooterPart(FooterPart part) {
+    internal static void GenerateIFooterPart(FooterPart part) {
       Footer footer1 = new() { MCAttributes = new() { Ignorable = "w14 w15 w16se w16cid wp14" } };
       footer1.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
       footer1.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");
@@ -1029,7 +1256,7 @@ namespace MD2DocxCore {
       part.Footer = footer1;
     }
 
-    public static void GenerateCover(ref Body docBody, ref PaperMeta metadata, bool hasHeader) {
+    internal static void GenerateCover(ref Body docBody, ref PaperMeta metadata, bool hasHeader) {
       Paragraph paragraph1 = new();
 
       ParagraphProperties paragraphProperties1 = new();
@@ -2144,7 +2371,7 @@ namespace MD2DocxCore {
       docBody.Append(paragraph27);
     }
 
-    public static void GenerateTOC(ref Body docBody, bool hasHeader, bool hasFooter) {
+    internal static void GenerateTOC(ref Body docBody, bool hasHeader, bool hasFooter) {
       Paragraph para = new() {
         ParagraphProperties = new() {
           ParagraphStyleId = new() { Val = "Abstract Title" },
@@ -2273,7 +2500,7 @@ namespace MD2DocxCore {
       docBody.Append(para);
     }
 
-    public static void GenerateFontTablePartContent(FontTablePart fontTablePart1) {
+    internal static void GenerateFontTablePartContent(FontTablePart fontTablePart1) {
       Fonts fonts1 = new() { MCAttributes = new() };
 
       Font font1 = new() { Name = "Times New Roman" };
@@ -2340,7 +2567,7 @@ namespace MD2DocxCore {
       fontTablePart1.Fonts = fonts1;
     }
 
-    public static Run GenerateImageReference(int id, ref Image image) {
+    internal static Run GenerateImageReference(int id, ref Image image) {
       Run run1 = new();
 
       RunProperties runProperties1 = new();
@@ -2428,7 +2655,7 @@ namespace MD2DocxCore {
       return run1;
     }
 
-    public static void GenerateHeaderPartContent(HeaderPart headerPart, string title) {
+    internal static void GenerateHeaderPartContent(HeaderPart headerPart, string title) {
       Header header = new() { MCAttributes = new() { Ignorable = "w14 w15 w16se w16cid wp14" } };
       header.AddNamespaceDeclaration("wpc", "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas");
       header.AddNamespaceDeclaration("cx", "http://schemas.microsoft.com/office/drawing/2014/chartex");

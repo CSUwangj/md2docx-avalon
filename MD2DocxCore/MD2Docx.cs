@@ -24,6 +24,7 @@ namespace MD2DocxCore {
     static int imageCount = 1;
     static bool hasFailImage = false;
     static int referenceCount = 1;
+    static int listCount = 0;
     static readonly Dictionary<string, int> referenceIndex = new();
     static readonly Dictionary<int, string> references = new();
     public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles) {
@@ -65,6 +66,11 @@ namespace MD2DocxCore {
         GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "HeaderLogo"), HeaderImageData);
       }
 
+      if(listCount > 0) {
+        NumberingDefinitionsPart numberingDefinitionsPart = mainPart.AddNewPart<NumberingDefinitionsPart>("numbering");
+        GeneratedCode.GenerateNumberingDefinitionsPartContent(numberingDefinitionsPart, listCount);
+      }
+
       if (extraConfig.Footer) {
         FooterPart frontFooter = mainPart.AddNewPart<FooterPart>("FrontFooter");
         // two footer differ  ↓ at this position
@@ -87,7 +93,7 @@ namespace MD2DocxCore {
         }
       }
     }
-
+    
     private static void GenerateImage(ImagePart imagePart, string imageData) {
       Stream data = GetBinaryDataStream(imageData);
       imagePart.FeedData(data);
@@ -166,6 +172,37 @@ namespace MD2DocxCore {
             paragraph.Append(run);
             docBody.Append(paragraph);
           }
+          break;
+        case ListBlock list:
+          listCount += 1;
+          foreach (var item in list) {
+            if (item is not ListItemBlock) {
+              continue;
+            }
+            var listItem = (ListItemBlock)item;
+            if (listItem.First() is not ParagraphBlock) {
+              continue;
+            }
+            var listParagraph = (ParagraphBlock)listItem.First();
+            Paragraph paragraph = new() {
+              ParagraphProperties = new ParagraphProperties {
+                ParagraphStyleId = new ParagraphStyleId { Val = "正 文" },
+                NumberingProperties = new NumberingProperties {
+                  NumberingLevelReference = new NumberingLevelReference { Val = 0 },
+                  NumberingId = new NumberingId { Val = listCount }
+                },
+                Indentation = new Indentation { FirstLineChars = 0, Left = "400", Hanging = "400", HangingChars = 200 }
+              }
+            };
+            ConvertInlines(new(), listParagraph.Inline, ref paragraph, ref paragraphs);
+            paragraphs.Add(paragraph);
+          }
+          foreach (var para in paragraphs) {
+            docBody.Append(para);
+          }
+          break;
+        default:
+          Console.WriteLine(block);
           break;
       }
     }
