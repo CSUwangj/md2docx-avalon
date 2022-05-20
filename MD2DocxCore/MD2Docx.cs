@@ -151,6 +151,8 @@ namespace MD2DocxCore {
           }
           break;
         // End of document
+        case LinkReferenceDefinitionGroup _:
+          break;
         case FootnoteGroup _:
           {
             Paragraph paragraph = new() {
@@ -202,7 +204,6 @@ namespace MD2DocxCore {
             case ListBlock childList:
               ConverList(childList, ref body, ref failedElement, level + 1);
               break;
-
             case ParagraphBlock listParagraph:
               Paragraph paragraph = new() {
                 ParagraphProperties = new ParagraphProperties {
@@ -218,8 +219,10 @@ namespace MD2DocxCore {
               // we assume there is no image in list block
               body.Append(paragraph);
               break;
+            default:
+              failedElement.Add(block.ToString() + "in list block");
+              break;
           }
-       
         }
       }
     }
@@ -238,6 +241,16 @@ namespace MD2DocxCore {
             };
             literalRun.Append(text);
             paragraph.Append(literalRun);
+            break;
+          case CodeInline c:
+            RunProperties newCodeRunProperties = (RunProperties)runProperties.Clone();
+            newCodeRunProperties.RunFonts = new RunFonts() { Ascii = "Consolas", HighAnsi = "Consolas" };
+            Run crun = new() {
+              RunProperties = newCodeRunProperties
+            };
+            Text dcode = new() { Text = c.Content };
+            crun.Append(dcode);
+            paragraph.Append(crun);
             break;
           case EmphasisInline em:
             string delimiter = new(em.DelimiterChar, em.DelimiterCount);
@@ -307,6 +320,12 @@ namespace MD2DocxCore {
             Text referenceIndexText = new() { Text = $"[{referenceIndex[foot.Footnote.Label]}]", Space = SpaceProcessingModeValues.Preserve };
             refecrenceIndexRun.Append(referenceIndexText);
             paragraph.Append(refecrenceIndexRun);
+            break;
+          case LineBreakInline _:
+            paragraphs.Add(paragraph);
+            paragraph = new() {
+              ParagraphProperties = (ParagraphProperties)paragraph.ParagraphProperties.Clone(),
+            };
             break;
           default:
             failedElement.Add(inline.ToString());
