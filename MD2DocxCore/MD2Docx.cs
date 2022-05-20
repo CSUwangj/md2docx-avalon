@@ -15,6 +15,7 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
 using Markdig.Extensions.Footnotes;
 using Footnote = Markdig.Extensions.Footnotes.Footnote;
+using System.Text;
 
 namespace MD2DocxCore {
   public class MD2Docx {
@@ -27,13 +28,14 @@ namespace MD2DocxCore {
     static int listCount = 0;
     static readonly Dictionary<string, int> referenceIndex = new();
     static readonly Dictionary<int, string> references = new();
-    public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles) {
+    public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles, out List<string> failedElement) {
       var md = File.ReadAllText(input);
       var pipeline = new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
         .UseYamlFrontMatter()
         .Build();
       var markdownDocument = Markdown.Parse(md, pipeline);
+      failedElement = new();
 
       var frontmatter = markdownDocument
           .Descendants<YamlFrontMatterBlock>().
@@ -52,7 +54,7 @@ namespace MD2DocxCore {
 
       using WordprocessingDocument document = WordprocessingDocument.Create(output, WordprocessingDocumentType.Document);
       MainDocumentPart mainPart = document.AddMainDocumentPart();
-      GenerateMainPart(mainPart, markdownDocument, ref meta, ref extraConfig);
+      GenerateMainPart(mainPart, markdownDocument, ref meta, ref extraConfig, ref failedElement);
 
       StyleDefinitionsPart styleDefinitionsPart = mainPart.AddNewPart<StyleDefinitionsPart>("Styles");
       GenerateStyleDefinitions(styleDefinitionsPart, extraConfig.LatentStyle, styles);
@@ -86,11 +88,14 @@ namespace MD2DocxCore {
         ImagePart imagePart = mainPart.AddNewPart<ImagePart>($"{imageType[index]}", $"image{index}");
         imagePart.FeedData(new MemoryStream(imageDatas[index]));
       }
-      // error handling
+
       if (hasFailImage) {
+        StringBuilder sb = new("Image with these indice:");
         foreach (int index in failImage) {
-          Console.Write($"{index} ");
+          sb.Append($" {index}");
         }
+        sb.Append('.');
+        failedElement.Add(sb.ToString());
       }
     }
     
@@ -100,7 +105,7 @@ namespace MD2DocxCore {
       data.Close();
     }
 
-    private static void ConvertBlock(Block block, ref Body docBody) {
+    private static void ConvertBlock(Block block, ref Body docBody, ref List<string> failedElement) {
       List<Paragraph> paragraphs = new();
       switch (block) {
         case ParagraphBlock paragraph:
@@ -109,7 +114,7 @@ namespace MD2DocxCore {
               ParagraphStyleId = new ParagraphStyleId { Val = "正 文" }
             }
           };
-          ConvertInlines(new(), paragraph.Inline, ref docNormalParagraph, ref paragraphs);
+          ConvertInlines(new(), paragraph.Inline, ref docNormalParagraph, ref paragraphs, ref failedElement);
           paragraphs.Add(docNormalParagraph);
           foreach (var para in paragraphs) {
             docBody.Append(para);
@@ -121,7 +126,7 @@ namespace MD2DocxCore {
               ParagraphStyleId = new ParagraphStyleId { Val = number[heading.Level] + "级标题" }
             }
           };
-          ConvertInlines(new(), heading.Inline, ref docHeadingParagraph, ref paragraphs);
+          ConvertInlines(new(), heading.Inline, ref docHeadingParagraph, ref paragraphs, ref failedElement);
           paragraphs.Add(docHeadingParagraph);
           foreach (var para in paragraphs) {
             docBody.Append(para);
@@ -174,15 +179,15 @@ namespace MD2DocxCore {
           }
           break;
         case ListBlock list:
-          ConverList(list, ref docBody);
+          ConverList(list, ref docBody, ref failedElement);
           break;
         default:
-          Console.WriteLine(block);
+          failedElement.Add(block.ToString());
           break;
       }
     }
 
-    private static void ConverList(ListBlock list, ref Body body, int level = 0) {
+    private static void ConverList(ListBlock list, ref Body body, ref List<string> failedElement, int level = 0) {
       List<Paragraph> paragraphs = new();
       if (level == 0) {
         listCount += 1;
@@ -195,7 +200,7 @@ namespace MD2DocxCore {
         foreach(var block in listItem) {
           switch (block) {
             case ListBlock childList:
-              ConverList(childList, ref body, level + 1);
+              ConverList(childList, ref body, ref failedElement, level + 1);
               break;
 
             case ParagraphBlock listParagraph:
@@ -209,7 +214,7 @@ namespace MD2DocxCore {
                   Indentation = new Indentation { FirstLineChars = 0 }
                 }
               };
-              ConvertInlines(new(), listParagraph.Inline, ref paragraph, ref paragraphs);
+              ConvertInlines(new(), listParagraph.Inline, ref paragraph, ref paragraphs, ref failedElement);
               // we assume there is no image in list block
               body.Append(paragraph);
               break;
@@ -219,7 +224,7 @@ namespace MD2DocxCore {
       }
     }
 
-    private static void ConvertInlines(RunProperties runProperties, ContainerInline inlines, ref Paragraph paragraph, ref List<Paragraph> paragraphs) {
+    private static void ConvertInlines(RunProperties runProperties, ContainerInline inlines, ref Paragraph paragraph, ref List<Paragraph> paragraphs, ref List<string> failedElement) {
       foreach (var inline in inlines) {
         switch (inline) {
           case LiteralInline l:
@@ -258,7 +263,7 @@ namespace MD2DocxCore {
                 newRunProperties.VerticalTextAlignment = new() { Val = VerticalPositionValues.Subscript };
                 break;
             }
-            ConvertInlines(newRunProperties, em, ref paragraph, ref paragraphs);
+            ConvertInlines(newRunProperties, em, ref paragraph, ref paragraphs, ref failedElement);
             break;
           case LinkInline link:
             if (link.IsImage) {
@@ -303,6 +308,9 @@ namespace MD2DocxCore {
             refecrenceIndexRun.Append(referenceIndexText);
             paragraph.Append(refecrenceIndexRun);
             break;
+          default:
+            failedElement.Add(inline.ToString());
+            break;
         }
       }
     }
@@ -323,7 +331,7 @@ namespace MD2DocxCore {
       referenceCount += 1;
     }
 
-    public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument, ref PaperMeta metadata, ref ExtraConfiguration extraConfig) {
+    public static void GenerateMainPart(MainDocumentPart mainPart, MarkdownDocument markdownDocument, ref PaperMeta metadata, ref ExtraConfiguration extraConfig, ref List<string> failedElement) {
       Document document = new() { MCAttributes = new MarkupCompatibilityAttributes() };
       Body docBody = new();
 
@@ -346,7 +354,7 @@ namespace MD2DocxCore {
       }
 
       foreach (var block in markdownDocument) {
-        ConvertBlock(block, ref docBody);
+        ConvertBlock(block, ref docBody, ref failedElement);
       }
 
       SectionProperties sectionProperties = new();
