@@ -28,7 +28,12 @@ namespace MD2DocxCore {
     static int listCount = 0;
     static readonly Dictionary<string, int> referenceIndex = new();
     static readonly Dictionary<int, string> references = new();
+    static string codeFont;
     public static void Run(string input, string output, ExtraConfiguration extraConfig, IEnumerable<Style> styles, out List<string> failedElement) {
+      codeFont = styles.Where(x => x.Mapping == "代码段").FirstOrDefault().EnFont;
+      if (codeFont == "") {
+        codeFont = "Consolas";
+      }
       var md = File.ReadAllText(input);
       var pipeline = new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
@@ -94,7 +99,7 @@ namespace MD2DocxCore {
         foreach (int index in failImage) {
           sb.Append($" {index}");
         }
-        sb.Append('.');
+        sb.Append(". (1-indexed)");
         failedElement.Add(sb.ToString());
       }
     }
@@ -244,7 +249,7 @@ namespace MD2DocxCore {
             break;
           case CodeInline c:
             RunProperties newCodeRunProperties = (RunProperties)runProperties.Clone();
-            newCodeRunProperties.RunFonts = new RunFonts() { Ascii = "Consolas", HighAnsi = "Consolas" };
+            newCodeRunProperties.RunFonts = new RunFonts() { Ascii = codeFont, HighAnsi = codeFont };
             Run crun = new() {
               RunProperties = newCodeRunProperties
             };
@@ -512,12 +517,11 @@ namespace MD2DocxCore {
     /// </summary>
     /// <param name="document">Document file</param>
     private static void SetPackageProperties(OpenXmlPackage document) {
-      document.PackageProperties.Creator = "TODO";
-      document.PackageProperties.Title = "TODO";
+      document.PackageProperties.Creator = "md2docx-avalon";
       document.PackageProperties.Revision = "3";
       document.PackageProperties.Created = DateTime.Now;
       document.PackageProperties.Modified = DateTime.Now;
-      document.PackageProperties.LastModifiedBy = "md2docx_by_CSUwangj";
+      document.PackageProperties.LastModifiedBy = "md2docx-avalon";
     }
 
     /// <summary>
