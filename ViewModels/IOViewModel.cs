@@ -11,8 +11,18 @@ namespace MD2DocxAvalon.ViewModels {
   public class IOViewModel : ViewModelBase {
     private static readonly IOViewModel instance = new();
     public static IOViewModel Instance { get => instance; }
-    string input = "";
-    string output = "";
+    private string input = "";
+    private string output = "";
+    public string Input {
+      get => input;
+      set => this.RaiseAndSetIfChanged(ref input, value);
+    }
+
+    public string Output {
+      get => output;
+      set => this.RaiseAndSetIfChanged(ref output, value);
+    }
+
 
     public IOViewModel() {
       SetInput = ReactiveCommand.Create(() => {
@@ -54,16 +64,6 @@ namespace MD2DocxAvalon.ViewModels {
           messageBoxStandardWindow.Show();
         }
       });
-    }
-
-    public string Input {
-      get => input;
-      set => this.RaiseAndSetIfChanged(ref input, value);
-    }
-
-    public string Output {
-      get => output;
-      set => this.RaiseAndSetIfChanged(ref output, value);
     }
 
     public ReactiveCommand<Unit, Unit> SetInput { get; }

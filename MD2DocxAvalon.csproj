@@ -19,7 +19,6 @@
     <Compile Remove="MD2DocxCore\**" />
     <EmbeddedResource Remove="MD2DocxCoreTests\**" />
     <EmbeddedResource Remove="MD2DocxCore\**" />
-    <Folder Include="Services\" />
     <None Remove="MD2DocxCoreTests\**" />
     <None Remove="MD2DocxCore\**" />
     <Folder Include="Assets\" />

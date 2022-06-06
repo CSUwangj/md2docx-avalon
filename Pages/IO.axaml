@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.IO">
-  
   <StackPanel Spacing="20">
     <DockPanel LastChildFill="True" Margin="0 40 0 20">
       <Button DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetInput}">

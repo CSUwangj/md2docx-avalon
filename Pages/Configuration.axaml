@@ -15,7 +15,7 @@
       <Button Command="{Binding AddStyle}" Content="添加新样式" />
     </StackPanel>
     <StackPanel Orientation="Horizontal">
-      <CheckBox Content="目录" IsChecked="{Binding ExtraConfig.TOC}" IsThreeState="False" />
+      <CheckBox Content="目录" IsChecked="{Binding ExtraConfig.TOC}"/>
       <CheckBox Content="摘要" IsChecked="{Binding ExtraConfig.Abstract}" />
       <CheckBox Content="延迟样式（建议勾选）" IsChecked="{Binding ExtraConfig.LatentStyle}" />
     </StackPanel>
