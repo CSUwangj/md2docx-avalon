@@ -1,21 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml;
-using Markdig.Syntax;
-using Markdig;
-using System;
 using DocumentFormat.OpenXml.Wordprocessing;
-using Markdig.Syntax.Inlines;
+using Markdig;
+using Markdig.Extensions.Footnotes;
 using Markdig.Extensions.Yaml;
-using System.Linq;
-using System.Text.RegularExpressions;
-using YamlDotNet.Serialization;
-using System.IO;
+using Markdig.Syntax;
+using Markdig.Syntax.Inlines;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
-using Markdig.Extensions.Footnotes;
-using Footnote = Markdig.Extensions.Footnotes.Footnote;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using YamlDotNet.Serialization;
+using Footnote = Markdig.Extensions.Footnotes.Footnote;
 
 namespace MD2DocxCore {
   public class MD2Docx {
@@ -73,7 +73,7 @@ namespace MD2DocxCore {
         GenerateImage(headerPart.AddNewPart<ImagePart>("image/jpeg", "HeaderLogo"), HeaderImageData);
       }
 
-      if(listCount > 0) {
+      if (listCount > 0) {
         NumberingDefinitionsPart numberingDefinitionsPart = mainPart.AddNewPart<NumberingDefinitionsPart>("numbering");
         GeneratedCode.GenerateNumberingDefinitionsPartContent(numberingDefinitionsPart, listCount);
       }
@@ -103,7 +103,7 @@ namespace MD2DocxCore {
         failedElement.Add(sb.ToString());
       }
     }
-    
+
     private static void GenerateImage(ImagePart imagePart, string imageData) {
       Stream data = GetBinaryDataStream(imageData);
       imagePart.FeedData(data);
@@ -126,7 +126,7 @@ namespace MD2DocxCore {
           }
           break;
         case HeadingBlock heading:
-          Paragraph docHeadingParagraph= new() {
+          Paragraph docHeadingParagraph = new() {
             ParagraphProperties = new ParagraphProperties {
               ParagraphStyleId = new ParagraphStyleId { Val = number[heading.Level] + "级标题" }
             }
@@ -142,14 +142,14 @@ namespace MD2DocxCore {
           // we need handled it individually
           break;
         case CodeBlock code:
-          foreach(var line in code.Lines) {
+          foreach (var line in code.Lines) {
             Paragraph paragraph = new() {
               ParagraphProperties = new ParagraphProperties {
                 ParagraphStyleId = new ParagraphStyleId { Val = "代码段" }
               }
             };
             Run run = new() { RunProperties = new RunProperties() };
-            Text txt = new () { Text = line.ToString(), Space = SpaceProcessingModeValues.Preserve };
+            Text txt = new() { Text = line.ToString(), Space = SpaceProcessingModeValues.Preserve };
             run.Append(txt);
             paragraph.Append(run);
             docBody.Append(paragraph);
@@ -158,8 +158,7 @@ namespace MD2DocxCore {
         // End of document
         case LinkReferenceDefinitionGroup _:
           break;
-        case FootnoteGroup _:
-          {
+        case FootnoteGroup _: {
             Paragraph paragraph = new() {
               ParagraphProperties = new ParagraphProperties {
                 ParagraphStyleId = new ParagraphStyleId { Val = "参考文献标题" },
@@ -204,7 +203,7 @@ namespace MD2DocxCore {
           continue;
         }
         var listItem = (ListItemBlock)item;
-        foreach(var block in listItem) {
+        foreach (var block in listItem) {
           switch (block) {
             case ListBlock childList:
               ConverList(childList, ref body, ref failedElement, level + 1);
@@ -449,7 +448,7 @@ namespace MD2DocxCore {
       para = new Paragraph {
         ParagraphProperties = new ParagraphProperties {
           ParagraphStyleId = new ParagraphStyleId { Val = "正 文" }
-          }
+        }
       };
       run = new Run { RunProperties = new RunProperties() };
       txt = new Text { Text = abs, Space = SpaceProcessingModeValues.Preserve };
@@ -505,7 +504,7 @@ namespace MD2DocxCore {
       if (latentStyle) {
         wordStyles.Append(GeneratedCode.GenerateLatentStyles());
       }
-      foreach(var style in styles) {
+      foreach (var style in styles) {
         wordStyles.Append(StyleFactory.GenerateStyle(style));
       }
 
@@ -539,7 +538,7 @@ namespace MD2DocxCore {
     #endregion
 
     #region Chinese Number
-    private static readonly string[] number = {"零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
+    private static readonly string[] number = { "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" };
     #endregion
   }
 }

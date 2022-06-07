@@ -1,11 +1,11 @@
 using DocumentFormat.OpenXml.Wordprocessing;
+using MD2DocxCore;
+using System.Collections;
 using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
-using MD2DocxCore;
 using DocxStyle = DocumentFormat.OpenXml.Wordprocessing.Style;
 using Style = MD2DocxCore.Style;
-using System.Collections;
 
 namespace MD2DocxCoreTest {
   public class StyleFactoryTests {

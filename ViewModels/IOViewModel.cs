@@ -1,11 +1,11 @@
-﻿using System.Reactive;
-using ReactiveUI;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 using MD2DocxAvalon.Views;
 using MD2DocxCore;
-using System.Collections.Generic;
-using System;
 using MessageBox.Avalonia;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
+using System.Reactive;
 
 namespace MD2DocxAvalon.ViewModels {
   public class IOViewModel : ViewModelBase {
@@ -60,7 +60,7 @@ namespace MD2DocxAvalon.ViewModels {
           var messageBoxStandardWindow = MessageBoxManager.GetMessageBoxStandardWindow("Success", info);
           messageBoxStandardWindow.Show();
         } catch (Exception e) {
-          var messageBoxStandardWindow = MessageBoxManager.GetMessageBoxStandardWindow("Error", $"{e.ToString()}\nFire a issue at https://github.com/CSUwangj/md2docx-avalon/issues.");
+          var messageBoxStandardWindow = MessageBoxManager.GetMessageBoxStandardWindow("Error", $"{e}\nFire a issue at https://github.com/CSUwangj/md2docx-avalon/issues.");
           messageBoxStandardWindow.Show();
         }
       });

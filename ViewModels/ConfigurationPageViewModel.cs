@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using Avalonia.Controls;
+using MD2DocxAvalon.Models;
+using MD2DocxAvalon.Views;
+using MD2DocxCore;
+using Newtonsoft.Json;
+using ReactiveUI;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Reactive;
-using ReactiveUI;
-using MD2DocxAvalon.Models;
-using Avalonia.Controls;
-using MD2DocxAvalon.Views;
-using System;
-using Newtonsoft.Json;
-using System.IO;
-using MD2DocxCore;
 
 namespace MD2DocxAvalon.ViewModels {
   public class ConfigurationPageViewModel : ViewModelBase {

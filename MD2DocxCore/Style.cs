@@ -40,7 +40,7 @@ namespace MD2DocxCore {
       newStyle.CnFont = new string(CnFont.ToCharArray());
       newStyle.EnFont = new string(EnFont.ToCharArray());
       newStyle.Mapping = new string(Mapping.ToCharArray());
-      newStyle.fontSizeString = new string(fontSizeString.ToCharArray()); 
+      newStyle.fontSizeString = new string(fontSizeString.ToCharArray());
       return newStyle;
     }
 
@@ -73,7 +73,7 @@ namespace MD2DocxCore {
     }
 
     #region Chinese font mapping
-    static private readonly Dictionary<string, string> fontmap = new() {
+    private static readonly Dictionary<string, string> fontmap = new() {
       { "初号", "84" },
       { "小初", "72" },
       { "一号", "52" },

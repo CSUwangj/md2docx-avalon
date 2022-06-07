@@ -1,12 +1,9 @@
 ﻿using Avalonia.Data;
 using Avalonia.Data.Converters;
+using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using ReactiveUI;
-using System.Threading.Tasks;
 
 namespace MD2DocxAvalon.Services {
   public enum BibliographyType {
@@ -20,13 +17,13 @@ namespace MD2DocxAvalon.Services {
     网页,
     计算机程序,
   }
-  public class BibliographyGenerator: ReactiveObject {
+  public class BibliographyGenerator : ReactiveObject {
     private BibliographyType type = BibliographyType.图书;
     public BibliographyType Type {
       get => type;
       set {
         type = value;
-        if(locationMap.ContainsKey(value)) {
+        if (locationMap.ContainsKey(value)) {
           LocationText = locationMap[value];
           LocationEnabled = true;
         } else {
@@ -38,14 +35,14 @@ namespace MD2DocxAvalon.Services {
     private string sourceText = sourceMap[BibliographyType.图书];
     private string locationText = locationMap[BibliographyType.图书];
     private bool locationEnabled = true;
-    public string SourceText { 
-      get => sourceText; 
-      set => this.RaiseAndSetIfChanged(ref sourceText, value); 
+    public string SourceText {
+      get => sourceText;
+      set => this.RaiseAndSetIfChanged(ref sourceText, value);
     }
-    public string LocationText { 
-      get => locationText; 
-      set => this.RaiseAndSetIfChanged(ref locationText, value); 
-    } 
+    public string LocationText {
+      get => locationText;
+      set => this.RaiseAndSetIfChanged(ref locationText, value);
+    }
     public bool LocationEnabled {
       get => locationEnabled;
       set => this.RaiseAndSetIfChanged(ref locationEnabled, value);
@@ -60,33 +57,18 @@ namespace MD2DocxAvalon.Services {
     private string result = "";
     public string Result {
       get => result;
-      set => this.RaiseAndSetIfChanged(ref result, value); 
+      set => this.RaiseAndSetIfChanged(ref result, value);
     }
 
     public void Generate() {
-      switch (Type) {
-        case BibliographyType.图书:
-        case BibliographyType.学位论文:
-          Result = $"{Author}.{Title}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Location}:{Source}.{Year}.";
-          break;
-        case BibliographyType.会议:
-          Result = $"{Author}.{Title}:{Source}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Location}.{Year}.";
-          break;
-        case BibliographyType.期刊:
-          Result = $"{Author}.{Title}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Source}.{Year}.";
-          break;
-        case BibliographyType.专利:
-          Result = $"{Author}.{Title}:{Source}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Year}.";
-          break;
-        case BibliographyType.报告:
-        case BibliographyType.数据库:
-        case BibliographyType.网页:
-        case BibliographyType.计算机程序:
-          Result = $"{Author}.{Title}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Year}.{Source}";
-          break;
-        default:
-          throw new ArgumentException();
-      }
+      Result = Type switch {
+        BibliographyType.图书 or BibliographyType.学位论文 => $"{Author}.{Title}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Location}:{Source}.{Year}.",
+        BibliographyType.会议 => $"{Author}.{Title}:{Source}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Location}.{Year}.",
+        BibliographyType.期刊 => $"{Author}.{Title}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Source}.{Year}.",
+        BibliographyType.专利 => $"{Author}.{Title}:{Source}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Year}.",
+        BibliographyType.报告 or BibliographyType.数据库 or BibliographyType.网页 or BibliographyType.计算机程序 => $"{Author}.{Title}[{codeMap[Type]}{(IsOnline ? "/OL" : "")}].{Year}.{Source}",
+        _ => throw new ArgumentException(),
+      };
     }
 
     static private readonly Dictionary<BibliographyType, string> sourceMap = new() {

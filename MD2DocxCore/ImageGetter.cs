@@ -30,7 +30,7 @@ namespace MD2DocxCore {
     }
 
     private static void GetImageFromUrl(string url, out byte[] data, out Image image, out IImageFormat format) {
-      using HttpClient httpClient = new(); 
+      using HttpClient httpClient = new();
       var response = httpClient.GetAsync(url).Result;
       MemoryStream ms = new();
       response.Content.CopyToAsync(ms).Wait();
