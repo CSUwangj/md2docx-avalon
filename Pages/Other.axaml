@@ -25,7 +25,6 @@
     <TextBox Text="{Binding Path=bibliographyGenerator.Author}" />
     <TextBlock>标题：</TextBlock>
     <TextBox Text="{Binding Path=bibliographyGenerator.Title}" />
-    <!--@TODO: useless enable setting-->
     <TextBlock Text="{Binding Path=bibliographyGenerator.LocationText, Mode=TwoWay}" IsVisible="{Binding Path=bibliographyGenerator.LocationEnabled}"></TextBlock>
     <TextBox Text="{Binding Path=bibliographyGenerator.Location}" IsVisible="{Binding Path=bibliographyGenerator.LocationEnabled}" />
     <TextBlock Text="{Binding Path=bibliographyGenerator.SourceText, Mode=TwoWay }"></TextBlock>
