@@ -26,14 +26,16 @@
     <TextBlock>标题：</TextBlock>
     <TextBox Text="{Binding Path=bibliographyGenerator.Title}" />
     <!--@TODO: useless enable setting-->
-    <TextBlock Text="{Binding Path=bibliographyGenerator.LocationText, Mode=TwoWay} IsVisiable={Binding Path=bibliographyGenerator.LocationEnabled}"></TextBlock>
-    <TextBox Text="{Binding Path=bibliographyGenerator.Location} IsVisiable={Binding Path=bibliographyGenerator.LocationEnabled}" />
+    <TextBlock Text="{Binding Path=bibliographyGenerator.LocationText, Mode=TwoWay}" IsVisible="{Binding Path=bibliographyGenerator.LocationEnabled}"></TextBlock>
+    <TextBox Text="{Binding Path=bibliographyGenerator.Location}" IsVisible="{Binding Path=bibliographyGenerator.LocationEnabled}" />
     <TextBlock Text="{Binding Path=bibliographyGenerator.SourceText, Mode=TwoWay }"></TextBlock>
     <TextBox Text="{Binding Path=bibliographyGenerator.Source}" />
     <TextBlock>年份：</TextBlock>
     <TextBox Text="{Binding Path=bibliographyGenerator.Year}" />
-    <Button Command="{Binding Gen}">参考文献生成</Button>
-    <Button Command="{Binding GenAndCopy}">生成并粘贴</Button>
+    <StackPanel Orientation="Horizontal">
+      <Button Command="{Binding Gen}">参考文献生成</Button>
+      <Button Command="{Binding GenAndCopy}">生成并复制</Button>
+    </StackPanel>
     <TextBlock>参考文献：</TextBlock>
     <TextBox Text="{Binding Path=bibliographyGenerator.Result}" />
   </StackPanel>
