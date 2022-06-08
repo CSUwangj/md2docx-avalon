@@ -17,6 +17,7 @@
     <Style Selector="TitleBar:fullscreen">
       <Setter Property="Background" Value="#7f000000" />
     </Style>
+    <StyleInclude Source="/Styles/Styles.axaml" />
   </FluentWindow.Styles>
 
   <Design.DataContext>

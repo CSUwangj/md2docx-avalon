@@ -2,9 +2,6 @@
   <UserControl.Resources>
     <core:Style x:Key="style"/>
   </UserControl.Resources>
-  <UserControl.Styles>
-    <StyleInclude Source="/Styles/Styles.axaml"></StyleInclude>
-  </UserControl.Styles>
   <StackPanel HorizontalAlignment="Left">
     <StackPanel Orientation="Horizontal" Spacing="20">
       <Button Command="{Binding LoadConfig}" Content="读取配置文件"/>
