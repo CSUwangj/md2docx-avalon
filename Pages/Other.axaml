@@ -1,41 +1,51 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             xmlns:services="clr-namespace:MD2DocxAvalon.Services"
-             x:Class="MD2DocxAvalon.Pages.Other">
-  <StackPanel>
-    <TextBlock Text="参考文献生成" Classes="header" />
-    <StackPanel Orientation="Horizontal">
-      <StackPanel.Resources>
-        <services:ComparisonConverter x:Key="ComparisonConverter" />
-      </StackPanel.Resources>
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.图书 }}" Content="图书" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.会议 }}" Content="会议" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.期刊 }}" Content="期刊" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.学位论文 }}" Content="学位论文" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.专利 }}" Content="专利" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.报告 }}" Content="报告" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.数据库 }}" Content="数据库" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.网页 }}" Content="网页" Margin="0,8,0,0" />
-      <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.计算机程序 }}" Content="计算机程序" Margin="0,8,0,0" />
-    </StackPanel>
-    <TextBlock>作者：</TextBlock>
-    <TextBox Text="{Binding Path=BibliographyGenerator.Author}" />
-    <TextBlock>标题：</TextBlock>
-    <TextBox Text="{Binding Path=BibliographyGenerator.Title}" />
-    <TextBlock Text="{Binding Path=BibliographyGenerator.LocationText, Mode=TwoWay}" IsVisible="{Binding Path=BibliographyGenerator.LocationEnabled}"></TextBlock>
-    <TextBox Text="{Binding Path=BibliographyGenerator.Location}" IsVisible="{Binding Path=BibliographyGenerator.LocationEnabled}" />
-    <TextBlock Text="{Binding Path=BibliographyGenerator.SourceText, Mode=TwoWay }"></TextBlock>
-    <TextBox Text="{Binding Path=BibliographyGenerator.Source}" />
-    <TextBlock>年份：</TextBlock>
-    <TextBox Text="{Binding Path=BibliographyGenerator.Year}" />
-    <StackPanel Orientation="Horizontal">
-      <Button Command="{Binding Gen}">参考文献生成</Button>
-      <Button Command="{Binding GenAndCopy}">生成并复制</Button>
-    </StackPanel>
-    <TextBlock>参考文献：</TextBlock>
-    <TextBox Text="{Binding Path=BibliographyGenerator.Result}" />
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" xmlns:services="clr-namespace:MD2DocxAvalon.Services" x:Class="MD2DocxAvalon.Pages.Other">
+  <UserControl.Styles>
+    <StyleInclude Source="/Styles/Styles.axaml"></StyleInclude>
+  </UserControl.Styles>
+  <StackPanel HorizontalAlignment="Left">
+    <StackPanel.Resources>
+      <services:ComparisonConverter x:Key="ComparisonConverter"/>
+    </StackPanel.Resources>
+    <HeaderedContentControl Header="参考文献生成" Background="Black" Classes="GroupBox" Width="800">
+      <StackPanel Width="750" Spacing="10">
+        <StackPanel Orientation="Horizontal" Spacing="10">
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.图书 }}" Content="图书" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.会议 }}" Content="会议" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.期刊 }}" Content="期刊" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.学位论文 }}" Content="学位论文" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.专利 }}" Content="专利" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.报告 }}" Content="报告" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.数据库 }}" Content="数据库" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.网页 }}" Content="网页" Margin="0,8,0,0"/>
+          <RadioButton IsChecked="{Binding Path=BibliographyGenerator.Type, Mode=TwoWay, Converter={StaticResource ComparisonConverter}, ConverterParameter={x:Static services:BibliographyType.计算机程序 }}" Content="计算机程序" Margin="0,8,0,0"/>
+        </StackPanel>
+        <DockPanel LastChildFill="True">
+          <TextBlock Classes="BibGenItem">作者：</TextBlock>
+          <TextBox Text="{Binding Path=BibliographyGenerator.Author}"/>
+        </DockPanel>
+        <DockPanel LastChildFill="True">
+          <TextBlock Classes="BibGenItem">标题：</TextBlock>
+          <TextBox Text="{Binding Path=BibliographyGenerator.Title}"/>
+        </DockPanel>
+        <DockPanel LastChildFill="True">
+          <TextBlock Classes="BibGenItem" Text="{Binding Path=BibliographyGenerator.LocationText, Mode=TwoWay}" IsVisible="{Binding Path=BibliographyGenerator.LocationEnabled}"></TextBlock>
+          <TextBox Text="{Binding Path=BibliographyGenerator.Location}" IsVisible="{Binding Path=BibliographyGenerator.LocationEnabled}"/>
+        </DockPanel>
+        <DockPanel LastChildFill="True">
+          <TextBlock Classes="BibGenItem" Text="{Binding Path=BibliographyGenerator.SourceText, Mode=TwoWay }"></TextBlock>
+          <TextBox Text="{Binding Path=BibliographyGenerator.Source}"/>
+        </DockPanel>
+        <DockPanel LastChildFill="True">
+          <TextBlock Classes="BibGenItem">年份：</TextBlock>
+          <TextBox Text="{Binding Path=BibliographyGenerator.Year}"/>
+        </DockPanel>
+        <StackPanel Orientation="Horizontal" Spacing="20">
+          <Button Command="{Binding Gen}">参考文献生成</Button>
+          <Button Command="{Binding GenAndCopy}">生成并复制</Button>
+        </StackPanel>
+        <TextBlock>参考文献：</TextBlock>
+        <TextBox Text="{Binding Path=BibliographyGenerator.Result}" Margin="0,0,0,20" Padding="20"/>
+      </StackPanel>
+    </HeaderedContentControl>
   </StackPanel>
 </UserControl>

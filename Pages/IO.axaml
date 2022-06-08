@@ -4,21 +4,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MD2DocxAvalon.Pages.IO">
+  <UserControl.Styles>
+    <StyleInclude Source="/Styles/Styles.axaml"></StyleInclude>
+  </UserControl.Styles>
   <StackPanel Spacing="20">
     <DockPanel LastChildFill="True" Margin="0 40 0 20">
-      <Button DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetInput}">
+      <Button Classes="IO" DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetInput}">
         <TextBlock>Set Input Markdown</TextBlock>
       </Button>
-      <TextBox DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Input}" FontFamily="Microsoft YaHei,Simsun,苹方-简,宋体-简"></TextBox>
+      <TextBox Classes="IO" DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Input}"></TextBox>
     </DockPanel>
     <DockPanel LastChildFill="True">
-      <Button DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetOutput}">
+      <Button Classes="IO" DockPanel.Dock="Right" Margin="10 0" Command="{Binding SetOutput}">
         <TextBlock>Set Output docx</TextBlock>
       </Button>
-      <TextBox DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Output}"></TextBox>
+      <TextBox Classes="IO" DockPanel.Dock="Left" HorizontalAlignment="Stretch" Text="{Binding Output}"></TextBox>
     </DockPanel>
     <DockPanel>
-      <Button Command="{Binding Run}">MD2Docx!</Button>
+      <Button Classes="IO" Command="{Binding Run}">
+        <TextBlock>MD2Docx!</TextBlock></Button>
     </DockPanel>
   </StackPanel>
 </UserControl>

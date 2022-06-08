@@ -1,88 +1,120 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:core="clr-namespace:MD2DocxCore;assembly=MD2DocxCore"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MD2DocxAvalon.Pages.Configuration">
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:core="clr-namespace:MD2DocxCore;assembly=MD2DocxCore" mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="MD2DocxAvalon.Pages.Configuration">
   <UserControl.Resources>
     <core:Style x:Key="style"/>
   </UserControl.Resources>
-  <StackPanel>
-    <StackPanel Orientation="Horizontal">
-      <Button Command="{Binding LoadConfig}" Content="读取配置文件" />
-      <Button Command="{Binding SaveConfig}" Content="保存配置文件" />
-      <Button Command="{Binding AddStyle}" Content="添加新样式" />
+  <UserControl.Styles>
+    <StyleInclude Source="/Styles/Styles.axaml"></StyleInclude>
+  </UserControl.Styles>
+  <StackPanel HorizontalAlignment="Left">
+    <StackPanel Orientation="Horizontal" Spacing="20">
+      <Button Command="{Binding LoadConfig}" Content="读取配置文件"/>
+      <Button Command="{Binding SaveConfig}" Content="保存配置文件"/>
+      <Button Command="{Binding AddStyle}" Content="添加新样式"/>
     </StackPanel>
-    <StackPanel Orientation="Horizontal">
-      <CheckBox Content="目录" IsChecked="{Binding ExtraConfig.TOC}"/>
-      <CheckBox Content="摘要" IsChecked="{Binding ExtraConfig.Abstract}" />
-      <CheckBox Content="延迟样式（建议勾选）" IsChecked="{Binding ExtraConfig.LatentStyle}" />
-    </StackPanel>
-    <StackPanel Orientation="Horizontal">
+    <StackPanel Orientation="Horizontal" Spacing="20" VerticalAlignment="Center">
+      <StackPanel>
+        <TextBlock>目录</TextBlock>
+        <CheckBox Content="" IsChecked="{Binding ExtraConfig.TOC}"/>
+      </StackPanel>
+      <StackPanel>
+        <TextBlock>摘要</TextBlock>
+        <CheckBox Content="" IsChecked="{Binding ExtraConfig.Abstract}"/>
+      </StackPanel>
+      <StackPanel>
+        <TextBlock>延迟样式（建议勾选）</TextBlock>
+        <CheckBox Content="" IsChecked="{Binding ExtraConfig.LatentStyle}"/>
+      </StackPanel>
       <TextBlock>中南专用：</TextBlock>
-      <CheckBox Content="封面" IsChecked="{Binding ExtraConfig.Cover}" />
-      <CheckBox Content="页眉" IsChecked="{Binding ExtraConfig.Header}" />
-      <CheckBox Content="页脚" IsChecked="{Binding ExtraConfig.Footer}" />
+      <StackPanel>
+        <TextBlock>封面</TextBlock>
+        <CheckBox Content="" IsChecked="{Binding ExtraConfig.Cover}"/>
+      </StackPanel>
+      <StackPanel>
+        <TextBlock>页眉</TextBlock>
+        <CheckBox Content="" IsChecked="{Binding ExtraConfig.Header}"/>
+      </StackPanel>
+      <StackPanel>
+        <TextBlock>页脚</TextBlock>
+        <CheckBox Content="" IsChecked="{Binding ExtraConfig.Footer}"/>
+      </StackPanel>
     </StackPanel>
     <ItemsControl Items="{Binding Styles}">
       <ItemsControl.ItemTemplate>
         <DataTemplate>
-          <StackPanel>
-            <StackPanel Orientation="Horizontal">
-              <Button Content="复制样式" Command="{Binding $parent[ItemsControl].DataContext.DuplicateStyle}" CommandParameter="{Binding ID}" />
-              <Separator />
-              <Button Content="删除样式" Command="{Binding $parent[ItemsControl].DataContext.DeleteStyle}" CommandParameter="{Binding ID}" />
-              <Separator />
-              <TextBlock>对应格式：</TextBlock>
-              <ComboBox
-                SelectedItem="{Binding Style.Mapping}"
-                Items="{Binding Source={StaticResource style}, Path=Mappings, Mode=OneWay}"
-              />
+          <Border BorderBrush="Black" BorderThickness="1" Classes="StyleRule">
+            <StackPanel Classes="StyleRule">
+              <StackPanel Orientation="Horizontal" Classes="RuleLine">
+                <Button Content="复制样式" Command="{Binding $parent[ItemsControl].DataContext.DuplicateStyle}" CommandParameter="{Binding ID}"/>
+                <Button Content="删除样式" Command="{Binding $parent[ItemsControl].DataContext.DeleteStyle}" CommandParameter="{Binding ID}"/>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>对应格式：</TextBlock>
+                  <ComboBox SelectedItem="{Binding Style.Mapping}" Items="{Binding Source={StaticResource style}, Path=Mappings, Mode=OneWay}"/>
+                </StackPanel>
+              </StackPanel>
+              <StackPanel Orientation="Horizontal" Classes="RuleLine">
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>对齐方式：</TextBlock>
+                  <ComboBox SelectedItem="{Binding Style.Justification}" Items="{Binding Source={StaticResource style}, Path=Justifications, Mode=OneWay}"/>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>中文字体：</TextBlock>
+                  <TextBox Text="{Binding Style.CnFont}"></TextBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>英文字体：</TextBlock>
+                  <TextBox Text="{Binding Style.EnFont}"></TextBox>
+                </StackPanel>
+              </StackPanel>
+              <StackPanel Orientation="Horizontal" Classes="RuleLine">
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>字体大小：</TextBlock>
+                  <TextBox Text="{Binding Style.FontSizeString}"></TextBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>大纲中显示</TextBlock>
+                  <CheckBox IsChecked="{Binding Style.Outline}"></CheckBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>大纲等级：</TextBlock>
+                  <NumericUpDown ToolTip.Tip="若不在大纲中显示则此条无效" Value="{Binding Style.OutlineLevel}" Increment="1" Maximum="8" Minimum="0"/>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>首行缩进：</TextBlock>
+                  <NumericUpDown Value="{Binding Style.Indentation}" Increment="0.25"/>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>行间距：</TextBlock>
+                  <NumericUpDown Value="{Binding Style.SpacingBetweenLines}" Increment="0.25"/>
+                </StackPanel>
+              </StackPanel>
+              <StackPanel Orientation="Horizontal" Classes="RuleLine">
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>粗体</TextBlock>
+                  <CheckBox IsChecked="{Binding Style.Bold}"></CheckBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>斜体</TextBlock>
+                  <CheckBox IsChecked="{Binding Style.Italic}"></CheckBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>下划线</TextBlock>
+                  <CheckBox IsChecked="{Binding Style.Underline}"></CheckBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>删除线</TextBlock>
+                  <CheckBox IsChecked="{Binding Style.Strike}"></CheckBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>段前分页</TextBlock>
+                  <CheckBox IsChecked="{Binding Style.PageBreakBefore}"></CheckBox>
+                </StackPanel>
+                <StackPanel Classes="RuleItem">
+                  <TextBlock>段前后空行：</TextBlock>
+                  <NumericUpDown Value="{Binding Style.LineBeforeAndAfter}" Increment="0.25"/>
+                </StackPanel>
+              </StackPanel>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-              <TextBlock>对齐方式：</TextBlock>
-              <ComboBox
-                SelectedItem="{Binding Style.Justification}"
-                Items="{Binding Source={StaticResource style}, Path=Justifications, Mode=OneWay}"
-               />
-              <Separator />
-              <TextBlock>中文字体：</TextBlock>
-              <TextBox Text="{Binding Style.CnFont}"></TextBox>
-              <Separator />
-              <TextBlock>英文字体：</TextBlock>
-              <TextBox Text="{Binding Style.EnFont}"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-              <TextBlock>字体大小：</TextBlock>
-              <TextBox Text="{Binding Style.FontSizeString}"></TextBox>
-              <Separator />
-              <CheckBox IsChecked="{Binding Style.Outline}" Content="大纲中显示"></CheckBox>
-              <Separator />
-              <TextBlock>大纲等级：</TextBlock>
-              <NumericUpDown ToolTip.Tip="若不在大纲中显示则此条无效" Value="{Binding Style.OutlineLevel}" Increment="1" Maximum="8" Minimum="0" />
-              <Separator />
-              <TextBlock>首行缩进：</TextBlock>
-              <NumericUpDown Value="{Binding Style.Indentation}" Increment="0.25" />
-              <Separator />
-              <TextBlock>行间距：</TextBlock>
-              <NumericUpDown Value="{Binding Style.SpacingBetweenLines}" Increment="0.25" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-              <CheckBox Content="粗体" IsChecked="{Binding Style.Bold}"></CheckBox>
-              <Separator />
-              <CheckBox Content="斜体" IsChecked="{Binding Style.Italic}"></CheckBox>
-              <Separator />
-              <CheckBox Content="下划线" IsChecked="{Binding Style.Underline}"></CheckBox>
-              <Separator />
-              <CheckBox Content="删除线" IsChecked="{Binding Style.Strike}"></CheckBox>
-              <Separator />
-              <CheckBox Content="段前分页" IsChecked="{Binding Style.PageBreakBefore}"></CheckBox>
-              <Separator />
-              <TextBlock>段前后空行：</TextBlock>
-              <NumericUpDown Value="{Binding Style.LineBeforeAndAfter}" Increment="0.25" />
-            </StackPanel>
-          </StackPanel>
+          </Border>
         </DataTemplate>
       </ItemsControl.ItemTemplate>
     </ItemsControl>

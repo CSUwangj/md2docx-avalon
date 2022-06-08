@@ -21,7 +21,7 @@
     <EmbeddedResource Remove="MD2DocxCore\**" />
     <None Remove="MD2DocxCoreTests\**" />
     <None Remove="MD2DocxCore\**" />
-    <Folder Include="Assets\" />
+    <AvaloniaResource Remove="Styles\Styles.axaml" />
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
@@ -40,5 +40,13 @@
     <Compile Update="Pages\IO.axaml.cs">
       <DependentUpon>IO.axaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaXaml Update="Styles\Styles.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaXaml>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
 </Project>
