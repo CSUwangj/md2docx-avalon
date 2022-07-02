@@ -34,11 +34,12 @@ dotnet build
 - [X] image
 - [X] footnote & references
 - [X] list
+- [X] bibliography generator
 - [ ] link
 - [ ] features may not implement
   - [ ] math formula
   - [ ] table
   - [ ] package, publish, install
   - [ ] configuration memorize
-- [ ] feature won't implement
-  - [ ] quote
+- feature won't implement
+  - quote

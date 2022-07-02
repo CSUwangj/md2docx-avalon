@@ -36,6 +36,10 @@
           <TextBlock Classes="BibGenItem">年份：</TextBlock>
           <TextBox Text="{Binding Path=BibliographyGenerator.Year}"/>
         </DockPanel>
+        <DockPanel>
+          <TextBlock Classes="BibGenItem">在线资源</TextBlock>
+          <CheckBox IsChecked="{Binding Path=BibliographyGenerator.IsOnline}"></CheckBox>
+        </DockPanel>
         <StackPanel Orientation="Horizontal" Spacing="20">
           <Button Command="{Binding Gen}">参考文献生成</Button>
           <Button Command="{Binding GenAndCopy}">生成并复制</Button>
